@@ -34,15 +34,17 @@
         </a>
       </div>
 
-      <div class="app-pane__body">
-      {% comment %}
-      <div class="app-pane__body"{{ " data-module=\"#{yield_content(:toc_module)}\"" if content_for? :toc_module }}>
-      {% endcomment %}
+      <div class="app-pane__body" data-module="in-page-navigation">
         <div class="app-pane__toc">
           <div class="toc" data-module="table-of-contents">
             <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
             <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
-              {% comment %}{{ yield_content :sidebar }}{% endcomment %}
+              {% capture toc_markdown %}
+{{ page.content }}
+* auto-gen TOC:
+{:toc}
+              {% endcapture %}
+              {{ toc_markdown | markdownify | replace: content, '' }}
             </nav>
           </div>
         </div>
