@@ -32,7 +32,7 @@
         <nav id="navigation" class="header__navigation js-nav" aria-label="Top Level Navigation" aria-hidden="true">
           <ul>
             {% for link in site.header_links %}
-              <li{% if link[1] == current_page.url %} class="active"{% endif %}>
+              <li{% if link[1] == page.url %} class="active"{% endif %}>
                 <a href="{{ link[1] }}">
                   {{ link[0] }}
                 </a>

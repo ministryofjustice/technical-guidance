@@ -9,12 +9,12 @@
     {% endif %}
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>{{ current_page.data.title || "GOV.UK Documentation" }}</title>
+    <title>{{ page.title | default: "GOV.UK Documentation" }}</title>
 
     <!--[if gt IE 8]><!--><link href="{{ "/stylesheets/screen.css" | relative_url }}" media="screen" rel="stylesheet" ><!--<![endif]-->
     <!--[if lte IE 8]><link href="{{ "/stylesheets/screen-old-ie.css" | relative_url }}" media="screen" rel="stylesheet" ><![endif]-->
 
-    <link rel="canonical" href="{{ site.host }}{{ current_page.url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
 
     <link href="{{ "/stylesheets/print.css" | relative_url }}" media="print" rel="stylesheet" >
     {{ javascript_include_tag :application }}
