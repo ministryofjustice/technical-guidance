@@ -19,3 +19,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Ministry of Justice's technical guidance site incorporates code from
+[GDS's Tech Docs Template](https://github.com/alphagov/tech-docs-template),
+Copyright (c) 2016 Crown Copyright (Government Digital Service).
+GDS's Tech Docs Template is distributed under the terms of the MIT
+License
