@@ -45,10 +45,12 @@
             <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
               {% capture toc_markdown %}
 {{ page.content }}
+<!-- TOC-start-marker -->
 * auto-gen TOC:
 {:toc}
               {% endcapture %}
-              {{ toc_markdown | markdownify | replace: content, '' }}
+              {% assign rendered_markdown_with_toc = toc_markdown | markdownify | split: '<!-- TOC-start-marker -->' %}
+              {{ rendered_markdown_with_toc[1] }}
             </nav>
           </div>
         </div>
