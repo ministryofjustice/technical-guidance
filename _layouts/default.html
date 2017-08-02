@@ -9,7 +9,11 @@
     {% endif %}
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>{{ page.title | default: "GOV.UK Documentation" }}</title>
+    {% if page.title and page.url != "/" %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title | default: "GOV.UK Documentation" }}</title>
+    {% endif %}
 
     <!--[if gt IE 8]><!--><link href="{{ "/stylesheets/screen.css" | relative_url }}" media="screen" rel="stylesheet" ><!--<![endif]-->
     <!--[if lte IE 8]><link href="{{ "/stylesheets/screen-old-ie.css" | relative_url }}" media="screen" rel="stylesheet" ><![endif]-->
