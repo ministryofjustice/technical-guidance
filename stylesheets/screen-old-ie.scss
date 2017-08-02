@@ -1,0 +1,7 @@
+---
+---
+$path: '{{ "/images/" | relative_url }}';
+$is-ie: true;
+$ie-version: 8;
+
+@import "core";
