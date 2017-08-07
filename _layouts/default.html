@@ -9,7 +9,11 @@
     {% endif %}
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>{{ page.title | default: "GOV.UK Documentation" }}</title>
+    {% if page.title and page.url != "/" %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title | default: "GOV.UK Documentation" }}</title>
+    {% endif %}
 
     <!--[if gt IE 8]><!--><link href="{{ "/stylesheets/screen.css" | relative_url }}" media="screen" rel="stylesheet" ><!--<![endif]-->
     <!--[if lte IE 8]><link href="{{ "/stylesheets/screen-old-ie.css" | relative_url }}" media="screen" rel="stylesheet" ><![endif]-->
@@ -41,10 +45,12 @@
             <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
               {% capture toc_markdown %}
 {{ page.content }}
+<!-- TOC-start-marker -->
 * auto-gen TOC:
 {:toc}
               {% endcapture %}
-              {{ toc_markdown | markdownify | replace: content, '' }}
+              {% assign rendered_markdown_with_toc = toc_markdown | markdownify | split: '<!-- TOC-start-marker -->' %}
+              {{ rendered_markdown_with_toc[1] }}
             </nav>
           </div>
         </div>
