@@ -1,11 +1,7 @@
 <header class="header header--full-width">
   <div class="header__container">
     <div class="header__brand">
-      {% if site.service_link %}
-        <a href="{{ site.service_link }}">
-      {% else %}
-        <span>
-      {% endif %}
+        <a href="{{ site.url }}">
         {% if site.show_govuk_logo %}
           <span class="govuk-logo">
             <img class="govuk-logo__printable-crown" src="{{ "/images/gov.uk_logotype_crown_invert_trans.png" | relative_url }}" height="32" width="36">
@@ -13,16 +9,12 @@
           </span>
         {% endif %}
         <span class="header__title">
-          {{ site.service_name }}
+          {{ site.title }}
           {% if site.phase %}
             <span class="phase-banner">{{ site.phase }}</span>
           {% endif %}
         </span>
-      {% if site.service_link %}
         </a>
-      {% else %}
-        </span>
-      {% endif %}
     </div>
 
     {% if site.header_links %}
