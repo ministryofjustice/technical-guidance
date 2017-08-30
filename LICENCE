@@ -25,3 +25,9 @@ Ministry of Justice's technical guidance site incorporates code from
 Copyright (c) 2016 Crown Copyright (Government Digital Service).
 GDS's Tech Docs Template is distributed under the terms of the MIT
 License
+
+Ministry of Justice's technical guidance site incorporates [@allejo's
+Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
+Copyright (c) 2017 Vladimir Jimenez.
+Pure Liquid Jekyll Table of Contents is distributed under the terms of
+the BSD-3 License
