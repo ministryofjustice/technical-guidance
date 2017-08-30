@@ -7,6 +7,26 @@ has made for the products we operate.
 It complements the [Service Manual](https://www.gov.uk/service-manual),
 which covers service design more broadly.
 
+## Standards
+
+{% assign standards = site.pages
+  | where: "standard", true
+  | group_by: "category" %}
+
+{% for standard_group in standards %}
+{% if standard_group.name != "" %}
+### {{ standard_group.name }}
+{:.no_toc}
+{% else %}
+### General standards
+{:.no_toc}
+{% endif %}
+
+{% for standard in standard_group.items %}
+- [{{ standard.title }}]({{ standard.url }})
+{% endfor %}
+{% endfor %}
+
 ## Adding new guidance
 
 Create a new Markdown file that follows this pattern, add a link to it
@@ -14,6 +34,7 @@ from this page, and make a pull request:
 
 ```markdown
 ---
+category: The broader area this fits into
 expires: yyyy-mm-dd (6 months from now)
 ---
 # Thing you're writing a standard about
