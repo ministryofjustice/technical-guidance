@@ -16,10 +16,8 @@ which covers service design more broadly.
 {% for standard_group in standards %}
 {% if standard_group.name != "" %}
 ### {{ standard_group.name }}
-{:.no_toc}
 {% else %}
 ### General standards
-{:.no_toc}
 {% endif %}
 
 {% for standard in standard_group.items %}
