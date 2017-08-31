@@ -21,7 +21,7 @@ which covers service design more broadly.
 {% endif %}
 
 {% for standard in standard_group.items %}
-- [{{ standard.title }}]({{ standard.url }})
+- [{{ standard.title }}]({{ standard.url | relative_url }})
 {% endfor %}
 {% endfor %}
 
