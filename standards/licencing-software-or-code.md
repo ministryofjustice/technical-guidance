@@ -43,3 +43,18 @@ shown as a period from first to most recent update (e.g. 2015-2017).
 ### Example
 
 `repo-audit` has a good [example of our licence](https://github.com/ministryofjustice/repo-audit/blob/master/LICENSE).
+
+## Reusing or incorporating others' work
+
+If a repository or package you want to reuse or build on doesn't have a
+licence, we can't be sure we legally have the right to use it in the
+way we want.
+
+When adapting an existing project, or incorporating code from one, you
+should provide proper attribution to the source in your licence.
+There's a good [guide to proper copyright and licence
+attribution](https://make.wordpress.org/themes/2014/07/08/proper-copyrightlicense-attribution-for-themes/)
+from the WordPress Theme Review Team.
+
+[This repository's licence file](https://github.com/ministryofjustice/technical-guidance/blob/master/LICENCE)
+is a good example of how to attribute incorporated works' licences.
