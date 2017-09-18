@@ -2,6 +2,8 @@
 category: Building software
 expires: 2018-03-15
 ---
+# Naming things
+
 ## User needs
 
 Users should to be able to infer a basic understanding of what a given
