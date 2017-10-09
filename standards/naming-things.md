@@ -22,6 +22,14 @@ by anyone coming to your thing later. Version numbers and brand names
 (including names of parts of government) are likely to change over time
 as the thing adapts to changing user needs and policies.
 
+If your service is an instance of a well-known type of system (like an
+intranet or help desk), it is appropriate to include the name of the
+government body it's associated with so people can understand the
+context it applies to. Where possible, avoid exposing that name to
+people (usually citizens or organisations outside government) who
+shouldn't have to understand how government is structured to do what
+they're trying to do.
+
 Ensure you use the same name consistently whenever you're referring to
 the same thing. For example, in most cases the name of an application's
 GitHub repository should match its hostname. Similarly, the team
@@ -35,8 +43,8 @@ reasonably clearly:
 
 - Help with Fees
 - Send Money to a Prisoner
-- Claim for Crown Court Defence
-- Intranet
+- Claim for Crown Court Defence (but not as CCCD)
+- MOJ Intranet
 - Peoplefinder
 
 The names of these applications are ambiguous and possibly confusing:
@@ -46,6 +54,7 @@ The names of these applications are ambiguous and possibly confusing:
 - Mojular
 - CLA
 - Sirius
+- Common Platform
 
 ## Other resources
 
