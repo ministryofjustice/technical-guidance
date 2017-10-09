@@ -18,7 +18,7 @@ environment (with appropriate configuration) and have it present an
 appropriately-secured interface to the network.
 
 A failure (including high latency) in a downstream service should not
-inherently mean a failure a consuming service, but it is not possible
+inherently mean a failure in a consuming service, but it is not possible
 for a third party service to accurately decide the appropriate response
 in the case of a failure. Only the provider or consumer of the API can
 have enough knowledge of failure states to handle them.
