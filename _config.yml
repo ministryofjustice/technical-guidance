@@ -8,3 +8,8 @@ defaults:
       path: "standards"
     values:
       standard: true
+  -
+    scope:
+      path: "guides"
+    values:
+      guide: true 

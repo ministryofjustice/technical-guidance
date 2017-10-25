@@ -25,6 +25,24 @@ which covers service design more broadly.
 {% endfor %}
 {% endfor %}
 
+## Guides
+
+{% assign guides = site.pages
+  | where: "guide", true
+  | group_by: "category" %}
+
+{% for guide_group in guides %}
+{% if guide_group.name != "" %}
+### {{ guide_group.name }}
+{% else %}
+### General guides
+{% endif %}
+
+{% for guide in guide_group.items %}
+- [{{ guide.title }}]({{ guide.url | relative_url }})
+{% endfor %}
+{% endfor %}
+
 ## Adding new guidance
 
 Create a new Markdown file that follows this pattern, add a link to it
@@ -35,12 +53,12 @@ from this page, and make a pull request:
 category: The broader area this fits into
 expires: yyyy-mm-dd (6 months from now)
 ---
-# Thing you're writing a standard about
+# Thing you're writing about
 
 Introduction of a couple of paragraphs to explain why the thing you're
-writing a standard about is important. The [title should probably be a
-verb, not a noun][good-services-are-verbs] (e.g. “Storing source code”,
-not “Code repositories”).
+writing about is important. The [title should probably be a verb, not a
+noun][good-services-are-verbs] (e.g. “Storing source code”, not “Code
+repositories”).
 
 [good-services-are-verbs]: https://designnotes.blog.gov.uk/2015/06/22/good-services-are-verbs-2/
 
