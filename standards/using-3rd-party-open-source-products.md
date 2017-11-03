@@ -42,9 +42,12 @@ vendor. This usually means that we should consider the product as a
 commercial product, and evaluate it alongside others with licensing and
 support costs.
 
-### If commercial support is available for advanced use, a marketplace exists to choose between different suppliers
+### Multiple independent suppliers offer commercial support for advanced use
 
-If support for advanced use is only available from a single commercial provider, then this could represent a trap later in development forcing the use of this uncompetitive paid-for support
+Truly open source products are surrounded by ecosystems of independent
+suppliers that are able to offer support. Without such an ecosystem, we
+risk getting locked in to uncompetitive support contracts depending on
+single suppliers.
 
 ### The product is fully open source. Closed source extensions or plug-ins, if they exist, aren’t required for the normal operation or scaling of the product
 
