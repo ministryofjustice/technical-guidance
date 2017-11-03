@@ -39,3 +39,7 @@ If support for advanced use is only available from a single commercial provider,
 ## The product is fully open source. Closed source extensions or plug-ins, if they exist, aren’t required for the normal operation or scaling of the product 
 
 If the product is partially closed source, this could introduce commercial implications if the closed source features become essential over time
+
+## Other Considerations
+
+GDS guidance on [choosing technology](https://www.gov.uk/service-manual/technology/choosing-technology-an-introduction#what-to-consider-when-choosing-technology) and the [technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice) should also be considered.
