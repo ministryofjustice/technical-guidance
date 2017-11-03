@@ -35,10 +35,12 @@ If the open source code is used for a critical security function, the community 
 
 Responses should include healthy discussion of the severity/validity of a given issue, and timely fixes for vulnerabilities which are deemed to be serious.
 
-### Support for the normal use of the code can be obtained from the community at zero cost
+### A broad community supports users of the product outside official forums
 
-If this is not present, then this is a commercial product, and must be considered alongside other products with licensing or support costs
-If not present, then this software would be considered inferior to like-for-like FLOSS alternatives
+Without community engagement, we are reliant on support through the
+vendor. This usually means that we should consider the product as a
+commercial product, and evaluate it alongside others with licensing and
+support costs.
 
 ### If commercial support is available for advanced use, a marketplace exists to choose between different suppliers
 
