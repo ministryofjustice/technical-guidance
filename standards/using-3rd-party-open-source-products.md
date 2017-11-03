@@ -49,9 +49,12 @@ suppliers that are able to offer support. Without such an ecosystem, we
 risk getting locked in to uncompetitive support contracts depending on
 single suppliers.
 
-### The product is fully open source. Closed source extensions or plug-ins, if they exist, aren’t required for the normal operation or scaling of the product
+### No closed source extensions or plug-ins are required for normal operation or scaling
 
-If the product is partially closed source, this could introduce commercial implications if the closed source features become essential over time
+Truly open source products don't require the purchase or licensing of
+closed source extras to operate at scale. If products can only be
+operated at scale by purchasing closed-source plug-ins, this could
+introduce commercial implications over time.
 
 ## Other Considerations
 
