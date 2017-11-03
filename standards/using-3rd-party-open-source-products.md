@@ -15,15 +15,19 @@ However, many organisations ‘open’ their code, but monetise the software thr
 
 Each of these criteria should be considered for the product in question. If it doesn't meet any one of them, you should understand what risks that presents and consider if that risk is acceptable.
 
-### A strong community exists to maintain the code
+### The code is maintained by a mature, diverse community
 
-If this is not present, the software presents a sustainability and security risk to the MOJ. There is no established method for assessing the maturity of open source communities, however factors to consider are:
+If the code for the product you're evaluating doesn't have an active community working on it, the software presents a sustainability and security risk to the MOJ.
 
-- The activity of its contributors and contributions
+There is no established method for assessing the maturity of open source communities, however factors to consider include:
+
+- The activity of its contributors and contributions (regular commits)
+- Healthy throughput for issues
 - The patterns of its release history
+- Active discussion lists
 - The health and diversity of its community of users
 - Trust established through longevity of use
-- The ecosystem it belongs to
+- The ecosystem it belongs to (other projects/products being built using the code)
 
 ### The responsiveness of the community to emerging security issues is acceptable, given the context of use
 
