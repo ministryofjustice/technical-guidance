@@ -1,6 +1,15 @@
 # Using 3rd-party open source products
 
-In order to make effective commercial decisions, it is important to recognise the characteristics of open source software that we find desirable. Many organisations ‘open’ their code, but monetise the software through means that restrict the freedom of the user. Some open source software does not have a strong community, and can be risky to use should problems arise which the MOJ does not understand how to resolve.
+In order to make effective commercial decisions, it is important to recognise the characteristics of open source software that we find desirable. These include:
+
+* Avoidance of vendor or proprietary 'lock-in'.
+* Flexibility of customisation.
+* Faster and more transparent patching and security fixes.
+* Highly cost effective.
+* Common convergence on standards.
+* Transparent record of development.
+
+However, many organisations ‘open’ their code, but monetise the software through means that restrict the freedom of the user. Some open source software does not have a strong community, and can be risky to use should problems arise which the MOJ does not understand how to resolve.
 
 The following checklist must be followed, and the risks understood and considered if the criteria is not met.
 
