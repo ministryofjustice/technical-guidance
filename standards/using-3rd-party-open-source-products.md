@@ -33,6 +33,8 @@ There is no established method for assessing the maturity of open source communi
 
 If the open source code is used for a critical security function, the community must be very responsive to emerging vulnerabilities. Equally, a much slower response is acceptable for non-critical code libraries.
 
+Responses should include healthy discussion of the severity/validity of a given issue, and timely fixes for vulnerabilities which are deemed to be serious.
+
 ### Support for the normal use of the code can be obtained from the community at zero cost
 
 If this is not present, then this is a commercial product, and must be considered alongside other products with licensing or support costs
