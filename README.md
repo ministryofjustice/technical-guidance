@@ -1,7 +1,7 @@
 # Technical guidance
 
 How we build and operate products at the Ministry of Justice. This repo
-is inspired by, and borrows from, [GDS's technical guidance][gds-tech]
+is inspired by, and borrows from, [GDS's technical guidance][gds-way]
 site.
 
 It's built using [Jekyll][], and hosted using [GitHub Pages][]. It
@@ -9,7 +9,7 @@ incorporates HTML, SCSS, JavaScript, and images from [GDS's Tech Docs
 Template][tech-docs-template], and reworks them to work with Jekyll
 instead of [Middleman][].
 
-[gds-tech]: https://github.com/alphagov/gds-tech
+[gds-way]: https://github.com/alphagov/gds-way
 [Jekyll]: https://jekyllrb.com
 [GitHub Pages]: https://pages.github.com
 [tech-docs-template]: https://github.com/alphagov/tech-docs-template

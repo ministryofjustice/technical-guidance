@@ -28,7 +28,8 @@ Ask the Digital Service Desk or a member of the webops team to add you
 to the organisation. Our GitHub organisation requires that you use
 two-factor authorisation.
 
-Repositories should be clearly named, and have an appropriate licence
+Repositories should be [clearly named]({{ '/standards/naming-things' | relative_url }}),
+and have an [appropriate licence]({{ '/standards/licencing-software-or-code' | relative_url }})
 and enough documentation that someone new can get started with the
 project.
 
