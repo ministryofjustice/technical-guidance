@@ -12,4 +12,9 @@ defaults:
     scope:
       path: "guides"
     values:
-      guide: true 
+      guide: true
+  -
+    scope:
+      path: "principles"
+    values:
+      principle: true
