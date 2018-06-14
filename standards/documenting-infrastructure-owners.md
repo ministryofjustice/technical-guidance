@@ -13,6 +13,8 @@ You should do this even if you're managing infrastructure in your own account: o
 
 All of our existing cloud hosting providers support tagging ([AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html), [Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags), [vCloud](https://blogs.vmware.com/vsphere/2012/03/creating-custom-metadata-using-the-vcloud-api.html)). If your infrastructure is defined in code ([as it should be](https://www.gov.uk/service-manual/technology/manage-your-software-configuration#use-infrastructure-as-code)), you can probably specify your tags in that code.
 
+[AWS limits the names and values of tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html) to alphanumeric, space, and a limited set of punctuation (`+-=._:/`), so it's worth avoiding characters outside this set on all providers for maximum portability.
+
 ## Tags you should use
 
 To ensure we can consistently search for, and report on, the tags we use, you should use the following tags. In all values, only use acronyms if you're confident that someone from another part of government would understand them.
