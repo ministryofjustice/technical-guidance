@@ -13,16 +13,18 @@ You should do this even if you're managing infrastructure in your own account: o
 
 All of our existing cloud hosting providers support tagging ([AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html), [Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags), [vCloud](https://blogs.vmware.com/vsphere/2012/03/creating-custom-metadata-using-the-vcloud-api.html)). If your infrastructure is defined in code ([as it should be](https://www.gov.uk/service-manual/technology/manage-your-software-configuration#use-infrastructure-as-code)), you can probably specify your tags in that code.
 
+[AWS limits the names and values of tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html) to alphanumeric, space, and a limited set of punctuation (`+-=._:/`), so it's worth avoiding characters outside this set on all providers for maximum portability.
+
 ## Tags you should use
 
 To ensure we can consistently search for, and report on, the tags we use, you should use the following tags. In all values, only use acronyms if you're confident that someone from another part of government would understand them.
 
 - `business-unit`: Should be one of `HQ`, `HMPPS`, `OPG`, `LAA`, `HMCTS`, or `CICA`. If none of these are appropriate, use an appropriate name for the area of the MOJ responsible for the service.
-- `application`: Should be the full name of the application or service (and acronym version, if commonly used), e.g. `Prison Visits Booking`, `Claim for Crown Court Defence (CCCD)`.
+- `application`: Should be the full name of the application or service (and acronym version, if commonly used), e.g. `Prison Visits Booking`, `Claim for Crown Court Defence/CCCD`.
 - `component` (optional): Which part of the system this infrastructure is for, e.g. `Staff booking interface`, `API gateway`. If there's a common name for the type of component, use that (e.g. `front-end`, `api`, `message-queue`)
 - `is-production`: `true` or `false`, to indicate if the infrastructure is part of, or supports, live production services
 - `environment-name`: The name the owners use to refer to the environment; typically something like `production`, `staging`, `test`, or `development`.
-- `owner`: The team responsible for the overall service. Should be of the form `<team-name> (<team-email>)`.
-- `infrastructure-support`: The team responsible for managing the infrastructure. Should be of the form `<team-name> (<team-email>)`.
+- `owner`: The team responsible for the overall service. Should be of the form `<team-name>: <team-email>`.
+- `infrastructure-support`: The team responsible for managing the infrastructure. Should be of the form `<team-name>: <team-email>`.
 - `runbook` (optional): The URL of the service's runbook.
 - `source-code` (optional): The URL(s) for any source code repositories related to this infrastructure, comma separated.
