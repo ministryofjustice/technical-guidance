@@ -32,3 +32,9 @@ Repositories should be [clearly named]({{ '/standards/naming-things' | relative_
 and have an [appropriate licence]({{ '/standards/licencing-software-or-code' | relative_url }})
 and enough documentation that someone new can get started with the
 project.
+
+### Private repositories
+
+We [make source code open](https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable) but there may be times where making a repository private may be the best thing to do. Using private repositories should be relatively rare.
+
+Currently due to Github.com permission structures, private repositories in the `ministryofjustice` Github.com organisation can be viewed by any member of the `ministryofjustice` organisation therefore are better described as "non-public" repositories.
