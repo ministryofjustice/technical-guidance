@@ -32,8 +32,3 @@ Repositories should be [clearly named]({{ '/standards/naming-things' | relative_
 and have an [appropriate licence]({{ '/standards/licencing-software-or-code' | relative_url }})
 and enough documentation that someone new can get started with the
 project.
-
-If the repository contains secrets rather than code, make it private
-and restrict the people who have access to it. Discuss with the
-security engineering team whether you should encrypt the contents of
-the repository.
