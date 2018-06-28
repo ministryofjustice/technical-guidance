@@ -12,4 +12,4 @@ Where possible, use infrastructure-based secrets management services such as [AW
 
 If you need to store secrets within Github.com, you must use [git-crypt](https://github.com/AGWA/git-crypt) to encrypt those secrets and control who has the ability to view (decrypt) those secrets.
 
-You must never store secrets or otherwise sensitive information in code repositories.
+You must never store unencrypted secrets in code repositories.
