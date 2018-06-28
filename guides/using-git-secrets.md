@@ -14,9 +14,9 @@ You must use [git-secrets](https://github.com/awslabs/git-secrets) on your devic
 
 ## How-to
 
-### Install git-crypt
+### Install git-secrets
 
-Installation instructions can be found in the [git-crypt repository](https://github.com/awslabs/git-secrets).
+Installation instructions can be found in the [git-secrets repository](https://github.com/awslabs/git-secrets).
 
 ### Use our base configuration
 
