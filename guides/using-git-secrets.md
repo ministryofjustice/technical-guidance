@@ -6,11 +6,7 @@ expires: 2019-01-31
 
 ## Overview
 
-We use [git][git] is a [distributed version-control system][dvcs]. Git primarily works by comparing a local working copy of repository content against another branch, highlighting and controlling any changes.
-
-As Git utilises a local folder structure (a clone of a repository) on your device, it is possible to inadvertently upload unintended files to Github.com - for example, private keys and other secrets which should not be uploaded or shared with anyone else.
-
-You must use [git-secrets](https://github.com/awslabs/git-secrets) on your device to limit the possibility of accidentally uploading secrets files or information.
+[git-secrets](https://github.com/awslabs/git-secrets) can be installed on your device to help you to limit the possibility of accidentally uploading secrets files or information from your device to locations like github.com
 
 ## How-to
 
