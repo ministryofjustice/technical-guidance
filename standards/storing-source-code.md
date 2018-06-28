@@ -36,7 +36,7 @@ You should update your GitHub account profile so it is clear who you are, such a
 
 Our GitHub organisation requires that you use two-factor authorisation.
 
-Ask the Digital Service Desk or a member of the webops team to add you to the organisation.
+Ask the [Digital Service Desk](https://mojdt.slack.com/messages/C59CX1RHN) to add you to the organisation.
 
 ### Private repositories
 
