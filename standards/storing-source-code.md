@@ -34,7 +34,7 @@ and maybe [use that for notifications](https://help.github.com/articles/managing
 
 You should update your GitHub account profile so it is clear who you are, such as your display name or profile picture. This helps others easily identify who has made requests, added comments or provided approvals.
 
-Our GitHub organisation requires that you use two-factor authorisation.
+Our GitHub organisation requires that you use [two-factor authentication](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
 
 Ask the [Digital Service Desk](https://mojdt.slack.com/messages/C59CX1RHN) to add you to the organisation.
 
