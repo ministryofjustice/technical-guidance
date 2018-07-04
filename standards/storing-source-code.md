@@ -43,3 +43,7 @@ Ask the [Digital Service Desk](https://mojdt.slack.com/messages/C59CX1RHN) to ad
 We [make source code open](https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable) but there may be times where making a repository private may be the best thing to do. Using private repositories should be relatively rare.
 
 Currently due to Github.com permission structures, private repositories in the `ministryofjustice` Github.com organisation can be viewed by any member of the `ministryofjustice` organisation therefore are better described as "non-public" repositories.
+
+### Use `.gitignore`
+
+To help prevent the inadvertent upload of files not usually associated with application, configuration or infrastructure code (for example, .xlsx .tar.gz .zip .exe) use `.gitignore` so that `git` on your device will ignore these files and not upload them during a commit.
