@@ -22,4 +22,4 @@ We use [git][git] is a [distributed version-control system][dvcs]. Git primarily
 
 As Git utilises a local folder structure (a clone of a repository) on your device, it is possible to inadvertently upload unintended files to Github.com - for example, private keys and other secrets which should not be uploaded or shared with anyone else.
 
-You should use a secret scanner on your device to help you detect and prevent accidental committal of secrets and other private information to github.com. MOJ has used `git-secrets` in the past and there is some [guidance here on using `git-secrets`](https://github.com/ministryofjustice/technical-guidance/guides/using-git-secrets.md)
+You should use a secret scanner on your device to help you detect and prevent accidental committal of secrets and other private information to github.com. MOJ has used `git-secrets` in the past and there is some [guidance here on using `git-secrets`](https://github.com/ministryofjustice/technical-guidance/guides/using-git-secrets.md). GDS has used [`talisman`](https://github.com/thoughtworks/talisman) as well.
