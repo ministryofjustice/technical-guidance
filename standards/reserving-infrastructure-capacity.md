@@ -7,6 +7,11 @@ To get the best value for money from cloud infrastructure, we should
 pay in advance for parts of it that are going to be in active use over
 a long period.
 
+This guidance should be followed wherever possible, but is particularly
+applicable to
+[AWS](https://aws.amazon.com/ec2/pricing/reserved-instances/) and
+[Azure](https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/).
+
 ## Principles
 
 ### Only reserve instances for long-lived infrastructure
