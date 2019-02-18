@@ -53,3 +53,13 @@ useful for people working on the service to not modify real data in
 production than to keep real users out. GOV.UK publishing apps do this,
 for example compare GOV.UK Signon in their [Staging](https://signon.staging.publishing.service.gov.uk)
 and [Production](https://signon.publishing.service.gov.uk) environments.
+
+## Non .gov.uk domains
+
+Don't use domains other than *.gov.uk for services that look like GOV.UK because sooner or later Google will flag it as a phishing site and Chrome users will be unable to use it. This is the error they see instead:
+
+[
+<img src="/images/deceptive-site-alert.png" style="width: 450px;">
+](/images/deceptive-site-alert.png)
+
+Whilst we can get Google to remove the flag, it will keep happening.
