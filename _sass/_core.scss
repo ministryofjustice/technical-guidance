@@ -31,6 +31,8 @@ $desktop-breakpoint: 992px !default;
 
 @import "accessibility";
 
+@import "moj_technical_guidance";
+
 html, body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
