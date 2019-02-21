@@ -56,10 +56,22 @@ and [Production](https://signon.publishing.service.gov.uk) environments.
 
 ## Non .gov.uk domains
 
-Don't use domains other than *.gov.uk for services that look like GOV.UK because sooner or later Google will flag it as a phishing site and Chrome users will be unable to use it. This is the error they see instead:
+Don't use domains other than *.gov.uk for services that look like GOV.UK, because:
 
-[
-<img class="img-medium" src="{{ "/images/deceptive-site-alert.png" | relative_url }}">
-]({{ "/images/deceptive-site-alert.png" | relative_url }})
+- Service Manual says [not to use the crown, New Transport font etc](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk))
 
-Whilst we can get Google to remove the flag, it will keep happening.
+- Unfamiliar domains look untrustworthy, putting off internal staff from using
+the service
+
+- Normalizing the use of unfamiliar domains increases the risk of phishing
+
+- When the domain is not renewed, it can be snapped up by a squatter
+
+- Sooner or later Google appears to flag a site like this as a phishing site
+and Chrome users will be unable to use it. This is the error they see instead:
+
+  [
+    <img class="img-medium" src="{{ "/images/deceptive-site-alert.png" | relative_url }}">
+  ]({{ "/images/deceptive-site-alert.png" | relative_url }})
+
+  Whilst we can get Google to remove the flag, it will keep happening.
