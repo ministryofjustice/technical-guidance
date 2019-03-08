@@ -4,24 +4,32 @@ category: Operating services
 # Naming domains
 
 All services with real users and which look like GOV.UK should be on
-`*.service.gov.uk` or `*.service.justice.gov.uk`.
+`*.service.gov.uk` or `*.service.justice.gov.uk`. MOJ infrastructure or
+justice-wide services may be eligible for a `*.justice.gov.uk` domain.
 
-### service.gov.uk
+### `service.gov.uk`
 
 The [service standard](https://www.gov.uk/service-manual/technology/get-a-domain-name)
 already sets out when and how to get a `*.service.gov.uk` subdomain:
 public-facing services which have passed their beta assessment should
 be able to get one.
 
-### service.justice.gov.uk
+### `service.justice.gov.uk`
 
 All other services with real users and which look like GOV.UK should be
 on here, including:
 
 - public-facing services which haven’t yet passed their beta assessment
 (but may be in private beta with a restricted set of real users)
-- internal services which look like GOV.UK (although [they can’t use the
+- internal services, which may look like GOV.UK (although [they can’t use the
 crown, New Transport font etc](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk))
+
+### `justice.gov.uk`
+
+Only services which are core, MOJ-wide infrastructure, like email or
+videoconferencing, or otherwise applicable to users across the entire
+justice system (like the intranet) may use a `*.justice.gov.uk`
+subdomain.
 
 ## Staff-facing sites
 
