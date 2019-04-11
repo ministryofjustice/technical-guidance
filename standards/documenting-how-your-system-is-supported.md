@@ -27,6 +27,7 @@ To ensure that people looking at your runbook can get the information they need 
 - **Expected speed and frequency of releases**: How often are you able to release changes to your service, and how long do those changes take?
 - **Automatic alerts**: List, briefly, problems (or types of problem) that will automatically alert your team when they occur.
 - **Impact of an outage**: A short description of the risks if your service is down for an extended period of time.
+- **Out of hours response types**: How do incidents that page someone get responded to? How long are out-of-hours responders allowed to spend trying to resolve issues before they stop working, put the service into maintenance mode, and hand the issue to in-hours support?
 
 ## Where to publish your service's runbook
 
