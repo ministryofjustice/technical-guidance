@@ -30,6 +30,7 @@ To ensure that people looking at your runbook can get the information they need 
 - **Out of hours response types**: Describe how incidents that page a person on call are responded to. How long are out-of-hours responders expected to spend trying to resolve issues before they stop working, put the service into maintenance mode, and hand the issue to in-hours support?
 - **Consumers of this service**: List which other services (with links to their runbooks) rely on this service.
 - **Restrictions on access**: Describe any conditions which restrict access to the service, such as if it's IP-restricted or only accessible from a private network.
+- **How to resolve specific issues**: Describe the steps someone might take to resolve a specific issue or incident, often for use when on call. This may be a large amount of information, so may need to be split out into multiple pages.
 
 ## Where to publish your service's runbook
 
