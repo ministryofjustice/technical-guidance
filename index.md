@@ -2,10 +2,12 @@
 
 This site documents some of the technical decisions that the
 [Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
-has made for the products we operate.
+ (MOJ) has made for the products we operate.
 
 It complements the [Service Manual](https://www.gov.uk/service-manual),
 which covers service design more broadly.
+
+[Security guidance](https://ministryofjustice.github.io/security-guidance/) is an accompanying source of security-specific guidance.
 
 ## Principles
 
@@ -52,6 +54,10 @@ which covers service design more broadly.
 {% endfor %}
 {% endfor %}
 
+## Security Guidance
+
+The [security guidance](https://ministryofjustice.github.io/security-guidance/) should be read together with this technical guidance.
+
 ## Adding new guidance
 
 Create a new Markdown file that follows this pattern, add a link to it
@@ -84,6 +90,3 @@ What broad approaches do we follow when we do this thing?
 What specific bits of software (commercial or open source) do
 we use to help us do this thing?
 ```
-
-The service manual has some useful information on
-[learning about and writing user needs](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs).
