@@ -90,3 +90,5 @@ What broad approaches do we follow when we do this thing?
 What specific bits of software (commercial or open source) do
 we use to help us do this thing?
 ```
+
+The service manual has some useful information on [learning about and writing user needs](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs).
