@@ -14,7 +14,7 @@ To ensure that people looking at your runbook can get the information they need 
 ### Mandatory
 
 - **Last review date**: The date your service's runbook was last checked to be accurate.
-- **Description**: A short (less than 50 word) description of what your service is, and who it's for.
+- **Description**: A short (less than 50 word) description of what your service does, and who it's for.
 - **Service URLs**: The URL(s) of the service's production environment(s)
 - **Incident response hours**: When your service receives support for urgent issues. This should be written in a clear, unambiguous way. For example: `24/7/365`, `Office hours, usually 9am-6pm on working days`, or `7am-10pm, 365 days a year`.
 - **Incident contact details**: How people can raise an urgent issue with your service. This **must not** be the email address or phone number of an individual on your team, it should be a shared email address, phone number, or website that allows someone with an urgent issue to raise it quickly.
