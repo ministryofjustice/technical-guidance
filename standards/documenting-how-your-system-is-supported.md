@@ -9,6 +9,25 @@ Without this, people supporting your service (or just interested in it) may not 
 
 ## What you should include in your service's runbook
 
+To ensure that people looking at your runbook can get the information they need quickly, your runbook should be short but clear. Throughout, only use acronyms if you're confident that someone who has just been woken up at 3am would understand them.
+
+### Mandatory
+
+- **Last review date**: The date your service's runbook was last checked to be accurate.
+- **Description**: A short (less than 50 word) description of what your service is, and who it's for.
+- **Service URLs**: The URL(s) of the service's production environment(s)
+- **Incident response hours**: When your service receives support for urgent issues. This should be written in a clear, unambiguous way. For example: `24/7/365`, `Office hours, usually 9am-6pm on working days`, or `7am-10pm, 365 days a year`.
+- **Incident contact details**: How people can raise an urgent issue with your service. This **must not** be the email address or phone number of an individual on your team, it should be a shared email address, phone number, or website that allows someone with an urgent issue to raise it quickly.
+- **Service team contact**: How people with non-urgent issues or questions can get in touch with your team. As with incident contact details, this **must not** be the email address or phone number of an individual on the team, it should be a shared email address or a ticket tracking system.
+- **Hosting environment**: If your service is hosted on another MOJ team's infrastructure, link to their runbook. If your service has another arrangement or runs its own infrastructure, you should list the supplier of that infrastructure (ideally linking to your account's login page) and describe, simply and briefly, how to raise an issue with them.
+
+### Optional
+
+- **Other URLs**: If you can, provide links to the service's monitoring dashboard(s), health checks, documentation (ideally describing how to run/work with the service), and [main GitHub repository]({% link standards/storing-source-code.md %}).
+- **Expected speed and frequency of releases**: How often are you able to release changes to your service, and how long do those changes take?
+- **Automatic alerts**: List, briefly, problems (or types of problem) that will automatically alert your team when they occur.
+- **Impact of an outage**: A short description of the risks if your service is down for an extended period of time.
+
 ## Where to publish your service's runbook
 
 Your service's runbook doesn't need to be hosted in a central repository, but you should make sure that all your stakeholders and peers are aware of how to find it and link to it from [your infrastructure tags](https://ministryofjustice.github.io/technical-guidance/standards/documenting-infrastructure-owners/#optional) so that people supporting your service's infrastructure can find it if they need to.
