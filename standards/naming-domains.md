@@ -7,6 +7,18 @@ All MOJ services should be served from `*.service.gov.uk` or
 `*.service.justice.gov.uk` domains. MOJ infrastructure or justice-wide services
 may be eligible for a `*.justice.gov.uk` domain.
 
+## Requesting domain changes
+
+If you need to request a new domain or changes to an existing domain,
+email the [MOJ Domains team](mailto:domains@digital.justice.gov.uk),
+who will help ensure that your domain meets this standard and our
+[wider standards for naming]({% link standards/naming-things.md
+%}#naming-things). The Domains team can also help identify which of the
+domains below that your service is eligible to be hosted in.
+
+
+## Domain your service can have a subdomain of
+
 ### `service.gov.uk`
 
 The [service standard](https://www.gov.uk/service-manual/technology/get-a-domain-name)
@@ -21,14 +33,21 @@ All other MOJ services should be served from a
 
 - public-facing services which haven’t yet passed a beta assessment
   (but may be in private beta with a restricted set of users)
-- internal services
+- internal-facing services
+
+Cloud-hosted software-as-a-service used by MOJ staff (like Gmail or
+Office365), or on which MOJ has a corporate presence
+(like [GitHub](https://github.com/ministryofjustice/) or
+[Trello](https://trello.com/mojds/home)) are not required to be served
+from a `*.service.justice.gov.uk` subdomain
 
 ### `justice.gov.uk`
 
 Only services which are core, MOJ-wide infrastructure, like email or
 videoconferencing, or otherwise applicable to users across the entire
 justice system (like the intranet) may use a `*.justice.gov.uk`
-subdomain.
+subdomain. Contact the [MOJ Domains team](mailto:domains@digital.justice.gov.uk)
+to find out if your service is eligible.
 
 ## Staff-facing sites
 
