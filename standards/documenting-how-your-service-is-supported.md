@@ -28,7 +28,8 @@ To ensure that people looking at your runbook can get the information they need 
 - **Automatic alerts**: List, briefly, problems (or types of problem) that will automatically alert your team when they occur.
 - **Impact of an outage**: A short description of the risks if your service is down for an extended period of time.
 - **Out of hours response types**: Describe how incidents that page a person on call are responded to. How long are out-of-hours responders expected to spend trying to resolve issues before they stop working, put the service into maintenance mode, and hand the issue to in-hours support?
-- **Consumers of this service**: List which other services (with links to their runbooks) rely on this service.
+- **Consumers of this service**: List which other services (with links to their runbooks) rely on this service. If your service is considered a platform, these may be too numerous to reasonably list.
+- **Services consumed by this**: List which other services (with links to their runbooks) this service relies on.
 - **Restrictions on access**: Describe any conditions which restrict access to the service, such as if it's IP-restricted or only accessible from a private network.
 - **How to resolve specific issues**: Describe the steps someone might take to resolve a specific issue or incident, often for use when on call. This may be a large amount of information, so may need to be split out into multiple pages.
 
