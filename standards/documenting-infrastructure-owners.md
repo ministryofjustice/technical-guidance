@@ -31,5 +31,5 @@ To ensure we can consistently search for, and report on, the tags we use, you sh
 - `environment-name`: The name the owners use to refer to the environment; typically something like `production`, `staging`, `test`, or `development`.
 - `component`: Which part of the application this infrastructure is for, e.g. `Staff booking interface`, `API gateway`. If there's a common name for the type of component, use that (e.g. `front-end`, `api`, `message-queue`)
 - `infrastructure-support`: The team responsible for managing the infrastructure. Should be of the form `<team-name>: <team-email>`.
-- `runbook`: The URL of the service's runbook.
+- `runbook`: The URL of [the service's runbook]({% link standards/documenting-how-your-service-is-supported.md %}).
 - `source-code`: The URL(s) for any source code repositories related to this infrastructure, comma separated.
