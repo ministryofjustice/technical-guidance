@@ -40,4 +40,4 @@ the repository.
 
 ### Private repositories
 
-By default, any [ministryofjustice organisation](https://github.com/ministryofjustice) member can view private repositories. Unless explicitly and strictly defined on a per-repository basis to override default permissions: private repositories should be considered "not public" as opposed to "private" to your team/project.
+By default, any [ministryofjustice organisation](https://github.com/ministryofjustice) member can view private repositories. Unless explicitly and strictly defined on a per-repository basis to override default permissions: private repositories should be considered "organisation public" as opposed to "private" to your team/project.
