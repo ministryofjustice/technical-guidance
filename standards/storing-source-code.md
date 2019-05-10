@@ -37,3 +37,7 @@ If the repository contains secrets rather than code, make it private
 and restrict the people who have access to it. Discuss with the
 security engineering team whether you should encrypt the contents of
 the repository.
+
+### Private repositories
+
+By default, any [ministryofjustice organisation](https://github.com/ministryofjustice) member can view private repositories. Unless explicitly and strictly defined on a per-repository basis to override default permissions: private repositories should be considered "organisation public" as opposed to "private" to your team/project.
