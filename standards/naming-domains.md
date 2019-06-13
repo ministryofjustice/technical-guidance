@@ -12,7 +12,7 @@ may be eligible for a `*.justice.gov.uk` domain.
 If you need to request a new domain or changes to an existing domain,
 email the [MOJ Domains team](mailto:domains@digital.justice.gov.uk),
 who will help ensure that your domain meets this standard and our
-[wider standards for naming](https://ministryofjustice.github.io/technical-guidance/standards/naming-things/#naming-things). The Domains team can also help identify which of the
+[wider standards for naming]({{ '/standards/naming-things' | relative_url }}). The Domains team can also help identify which of the
 domains below that your service is eligible to be hosted in.
 
 
