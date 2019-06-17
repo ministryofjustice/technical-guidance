@@ -10,7 +10,7 @@ encouraged to follow when implementing a service’s frontend. These principles
 aren’t mandatory, but you should be able to provide a good argument if you
 choose to depart from them.
 
-These principles are in addition to [MoJ Development Principles]({{ '/standards/development-principles' | relative_url }})
+These principles are in addition to [MoJ Development Principles]({{ '/principles/development-principles' | relative_url }})
 
 ## 1. Follow Government Service Design Manual
 
