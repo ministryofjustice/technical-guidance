@@ -23,7 +23,7 @@ To ensure that people looking at your runbook can get the information they need 
 
 ### Optional
 
-- **Other URLs**: If you can, provide links to the service's monitoring dashboard(s), health checks, documentation (ideally describing how to run/work with the service), and [main GitHub repository]({% link standards/storing-source-code.md %}).
+- **Other URLs**: If you can, provide links to the service's monitoring dashboard(s), health checks, documentation (ideally describing how to run/work with the service), and [main GitHub repository]({{ '/standards/storing-source-code' | relative_url }}).
 - **Expected speed and frequency of releases**: How often are you able to release changes to your service, and how long do those changes take?
 - **Automatic alerts**: List, briefly, problems (or types of problem) that will automatically alert your team when they occur.
 - **Impact of an outage**: A short description of the risks if your service is down for an extended period of time.
@@ -35,6 +35,6 @@ To ensure that people looking at your runbook can get the information they need 
 
 ## Where to publish your service's runbook
 
-Your service's runbook doesn't need to be hosted in a central repository, but you should make sure that all your stakeholders and peers are aware of how to find it and link to it from [your infrastructure tags]({% link standards/documenting-infrastructure-owners.md %}#optional) so that people supporting your service's infrastructure can find it if they need to.
+Your service's runbook doesn't need to be hosted in a central repository, but you should make sure that all your stakeholders and peers are aware of how to find it and link to it from [your infrastructure tags]({{ '/standards/documenting-infrastructure-owners' | relative_url }}#optional) so that people supporting your service's infrastructure can find it if they need to.
 
 You should also make sure that anyone who is likely to need to access your runbook *can* access it. The easiest way to do this is to [publish it openly](https://www.gov.uk/guidance/government-design-principles#make-things-open-it-makes-things-better) on the internet, but your service may have security constraints that mean that isn't possible at the moment.
