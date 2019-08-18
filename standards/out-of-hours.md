@@ -17,7 +17,7 @@ The kinds of issues that might suggest out of hours support is necessary include
 
 - Danger to someone's life
 - The MOJ's ability to provide critical, time-sensitive justice services
-- Impact to staff's and suppliers' ability to do carry out their job safely and to the best of their ability
+- Impact to staff's and suppliers' ability to carry out their job safely and to the best of their ability
 - Impairing citizens', suppliers', and partners' ability to interact with MOJ services in a way that meets their needs
 
 These and similar issues should be considered alongside your service's robustness.
@@ -34,7 +34,7 @@ Or:
 
 - You have budget to pay a third party to provide your support sustainably, and have the ability to train them sufficiently before they are expected to start supporting it.
 
-If you are unable to do either of these, you cannot support your service out of hours without risking people's health and well-being. If that is the case, you should escalate this risk and not try to provide out-of-hours support until you are in a position to do one or other of those.
+If you are unable to do either of these, you cannot support your service out of hours without risking people's health and well-being. If that is the case, you should escalate this risk and not try to provide out-of-hours support until you are in a position to do one or the other of those.
 
 It may be appropriate for a few related teams (for example, in a single service area) to share a common rota. This can allow teams that would otherwise be unable to run a rota sustainably to do so with some of their colleagues. To do this, though, you must ensure that everyone on the rota is sufficiently trained to support all of the services their rota is responsible for.
 

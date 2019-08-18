@@ -47,7 +47,7 @@ should the need arise.
 
 ### Only reserve non-production infrastructure if it can't easily be switched off
 
-All our systems should able to scale up and down according to the
+All our systems should be able to scale up and down according to the
 demand for them at any given moment, so we're only paying for
 infrastructure when it's in active use. By extension, that means that
 all non-production infrastructure should be able to be entirely
@@ -64,7 +64,7 @@ infrastructure that can be switched off out of hours**.
 
 Non-production **infrastructure that is too difficult (or costly) to
 make able to be switched off out of hours may be considered for
-reservation** if it is expected to be required long term, .
+reservation** if it is expected to be required long term.
 
 ### Don't use reserved instances to guarantee capacity
 
