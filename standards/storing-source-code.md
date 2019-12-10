@@ -33,7 +33,11 @@ and have an [appropriate licence]({{ '/standards/licencing-software-or-code' | r
 and enough documentation that someone new can get started with the
 project.
 
-If the repository contains secrets rather than code, make it private
+Creating a new project from this [template repository] will add the
+correct licence file, as well as adding our organisation default
+`.gitignore` file and [github actions].
+
+If your repository contains secrets rather than code, make it private
 and restrict the people who have access to it. Discuss with the
 security engineering team whether you should encrypt the contents of
 the repository.
@@ -41,3 +45,7 @@ the repository.
 ### Private repositories
 
 By default, any [ministryofjustice organisation](https://github.com/ministryofjustice) member has no additional privileges. This means they can clone and pull public and internal repos only. Internal repos are essentially org-public, and anyone in the organisation can interact with them. Unless explicitly and strictly defined on a per-repository basis to override default permissions: private repositories should be considered "private" to your team/project.
+
+
+[template repository]: https://github.com/ministryofjustice/template-repository
+[github actions]: https://github.com/ministryofjustice/github-actions
