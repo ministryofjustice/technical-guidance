@@ -21,13 +21,6 @@ New repositories for products and services live in the
 [ministryofjustice organisation](https://github.com/ministryofjustice)
 on GitHub.
 
-You can use your personal GitHub account (but you should [add your MOJ
-email address to your account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/),
-and maybe [use that for notifications](https://help.github.com/articles/managing-notification-emails-for-organizations/)).
-Ask the Digital Service Desk or a member of the webops team to add you
-to the organisation. Our GitHub organisation requires that you use
-two-factor authorisation.
-
 Repositories should be [clearly named]({{ '/standards/naming-things' | relative_url }}),
 and have an [appropriate licence]({{ '/standards/licencing-software-or-code' | relative_url }})
 and enough documentation that someone new can get started with the
@@ -49,3 +42,25 @@ By default, any [ministryofjustice organisation](https://github.com/ministryofju
 
 [template repository]: https://github.com/ministryofjustice/template-repository
 [github actions]: https://github.com/ministryofjustice/github-actions
+
+### GitHub user accounts
+
+If you already have a GitHub account from before you joined MOJ, you can choose whether to continue using it at MOJ or create a new one. Some people prefer to have continuity with previous work; others value the separation.
+
+You must [add your MOJ email address to your
+account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/)
+It doesn't matter if it's the 'primary email' or not and it's ok to make it private.
+Maybe [use that email for notifications](https://help.github.com/articles/managing-notification-emails-for-organizations/)).
+
+Bear in mind that you may wish to also have a home email address added to the
+account as the 'backup email', so that you can keep control of the account after
+you leave MOJ. Because whilst you won't retain MOJ repo permissions, it might be
+prudent to retain the ability to change your account's public profile or delete
+public comments. Home email addresses are not exposed to GitHub organisation
+admins, aside from what is already public.
+
+You don't have to use your real name or photo - just let your colleagues know
+your username.
+
+Ask the Digital Service Desk or a member of the webops team to add you
+to the MOJ organisation. Our GitHub organisation requires that you use two-factor authorisation.
