@@ -45,19 +45,22 @@ By default, any [ministryofjustice organisation](https://github.com/ministryofju
 
 ### GitHub user accounts
 
-If you already have a GitHub account from before you joined MOJ, you can choose whether to continue using it at MOJ or create a new one. Some people prefer to have continuity with previous work; others value the separation.
+If you already have a GitHub account from before you joined MOJ, you can choose to use it at MOJ or create a new one. Some people prefer to have continuity with previous work; others value the separation.
 
 You must [add your MOJ email address to your
-account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/)
+account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/).
 It doesn't matter if it's the 'primary email' or not and it's ok to make it private.
-Maybe [use that email for notifications](https://help.github.com/articles/managing-notification-emails-for-organizations/)).
+You may want to [use that email for notifications](https://help.github.com/articles/managing-notification-emails-for-organizations/)).
 
-Bear in mind that you may wish to also have a home email address added to the
-account as the 'backup email', so that you can keep control of the account after
-you leave MOJ. Because whilst you won't retain MOJ repo permissions, it might be
-prudent to retain the ability to change your account's public profile or delete
-public comments. Home email addresses are not exposed to GitHub organisation
-admins, aside from what is already public.
+In preparation for when you leave MoJ, it's suggested you add a home email
+address to your account as the 'backup email'. The reason is that the account is
+yours, not MoJ's, so it remains your responsibility. When you leave you should
+actively close or keep control of the account. Whilst you won't retain MOJ repo
+permissions, you may have to relinquish other access you've gained in the course
+of your work (check your user settings for Organizations, Repos and
+Applications). And it might be prudent to retain the ability to change your
+account's public profile or delete public comments. Home email addresses are not
+exposed to GitHub organisation admins, aside from what is already public.
 
 You don't have to use your real name or photo - just let your colleagues know
 your username.
