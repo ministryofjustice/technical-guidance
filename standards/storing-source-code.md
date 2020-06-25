@@ -39,10 +39,6 @@ the repository.
 
 By default, any [ministryofjustice organisation](https://github.com/ministryofjustice) member has no additional privileges. This means they can clone and pull public and internal repos only. Internal repos are essentially org-public, and anyone in the organisation can interact with them. Unless explicitly and strictly defined on a per-repository basis to override default permissions: private repositories should be considered "private" to your team/project.
 
-
-[template repository]: https://github.com/ministryofjustice/template-repository
-[github actions]: https://github.com/ministryofjustice/github-actions
-
 ### GitHub user accounts
 
 If you already have a GitHub account from before you joined MOJ, you can choose to use it at MOJ or create a new one. Some people prefer to have continuity with previous work; others value the separation.
@@ -67,3 +63,7 @@ your username.
 
 Ask the Digital Service Desk or a member of the webops team to add you
 to the MOJ organisation. Our GitHub organisation requires that you use two-factor authorisation.
+
+
+[template repository]: https://github.com/ministryofjustice/template-repository
+[github actions]: https://github.com/ministryofjustice/github-actions
