@@ -39,6 +39,13 @@ the repository.
 
 By default, any [ministryofjustice organisation](https://github.com/ministryofjustice) member has no additional privileges. This means they can clone and pull public and internal repos only. Internal repos are essentially org-public, and anyone in the organisation can interact with them. Unless explicitly and strictly defined on a per-repository basis to override default permissions: private repositories should be considered "private" to your team/project.
 
+Delivery teams are responsible for setting correct permissions on their repos.
+This includes ensuring the right users have access, and removing privileges when
+they leave the team. It's often helpful to manage permissions across all of a
+delivery team's GitHub repositories in one place, by setting up a GitHub team
+for the people on a delivery team, and giving that GitHub team read/write
+privileges for the repos.
+
 ### GitHub user accounts
 
 If you already have a GitHub account from before you joined MOJ, you can choose to use it at MOJ or create a new one. Some people prefer to have continuity with previous work; others value the separation.
