@@ -1,0 +1,82 @@
+# MOJ technical guidance
+
+This site documents some of the technical decisions that the
+[Ministry of Justice](https://www.gov.uk/government/organisations/ministry-of-justice)
+ (MOJ) has made for the products we operate.
+
+It complements the [Service Manual](https://www.gov.uk/service-manual),
+which covers service design more broadly.
+
+[Security guidance](https://ministryofjustice.github.io/security-guidance/) is an accompanying source of security-specific guidance.
+
+## Principles
+
+* [Development Principles](documentation/principles/development-principles.html)
+* [Frontend Development Principles](documentation/principles/frontend-development-principles.html)
+
+## Standards
+
+### Operating services
+
+* [Documenting how your service is supported](documentation/standards/documenting-how-your-service-is-supported.html)
+* [Documenting owners of infrastructure](documentation/standards/documenting-infrastructure-owners.html)
+* [Naming domains](documentation/standards/naming-domains.html)
+* [Supporting services out of hours](documentation/standards/out-of-hours.html)
+* [Reserving infrastructure capacity](documentation/standards/reserving-infrastructure-capacity.html)
+
+### Building software
+
+* [Licensing software or code](documentation/standards/licencing-software-or-code.html)
+* [Naming things](documentation/standards/naming-things.html)
+* [Storing source code](documentation/standards/storing-source-code.html)
+
+### General standards
+
+* [Using 3rd-party open source products](documentation/standards/using-3rd-party-open-source-products.html)
+
+## Guides
+
+### Tools
+
+* [Using Git](documentation/guides/using-git.html)
+
+## Security Guidance
+
+The [security guidance](https://ministryofjustice.github.io/security-guidance/) should be read together with this technical guidance.
+
+## Adding new guidance
+
+Create a new Markdown file that follows this pattern, add a link to it
+from this page, and make a pull request:
+
+```markdown
+---
+title: The Title of Your Page
+last_reviewed_on: 2020-08-05
+review_in: 3 months
+---
+
+# The Title of Your Page
+
+Introduction of a couple of paragraphs to explain why the thing you're
+writing about is important. The [title should probably be a verb, not a
+noun][good-services-are-verbs] (e.g. “Storing source code”, not “Code
+repositories”).
+
+[good-services-are-verbs]: https://designnotes.blog.gov.uk/2015/06/22/good-services-are-verbs-2/
+
+## User needs
+
+Why do we do this thing? Who is it helping?
+
+## Principles
+
+What broad approaches do we follow when we do this thing?
+
+## Tools
+
+What specific bits of software (commercial or open source) do
+we use to help us do this thing?
+```
+
+The service manual has some useful information on [learning about and writing user needs](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs).
