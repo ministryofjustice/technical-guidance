@@ -47,13 +47,11 @@ from a `*.service.justice.gov.uk` subdomain
 If you're using the Cloud or Modernisation Platform to host your service, you will get a subdomain
 that uses the service name of the platform.
 
-**Cloud Platform**:
+- `*.live-1.cloud-platform.service.justice.gov.uk`
+- `*.modernisation-platform.service.justice.gov.uk`
 
-`cloud-platform.service.justice.gov.uk`
-
-**Modernisation Platform**:
-
-`modernisation-platform.service.justice.gov.uk`
+These domains are not for production use, and we will work with you when your service is
+ready to go live to get a production `<application>.service(.justice).gov.uk` domain.
 
 ### `justice.gov.uk`
 
@@ -114,6 +112,8 @@ Whilst we can get Google to remove the flag, it will keep happening.
 
 To reduce our reliance on non `.gov.uk` domains, the following are no longer acceptable to use for new services:
 
-- `dsd.io` subdomains
+- `dsd.io`, which was historically used for staff services, non-production environments, and internal tools; but suffered the issues
+listed within [Pitfalls of non `.gov.uk` domains](#pitfalls-of-non-gov-uk-domains).
 
-There is a wider drive to reduce and stop the use of these domains within MOJ.
+We would also advise moving existing services off of these domains as soon as you are able as we are planning to
+decommission these domains in the near future.
