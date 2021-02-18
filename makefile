@@ -8,3 +8,9 @@ preview:
 		-v $$(pwd)/source:/app/source \
 		-p 4567:4567 \
 		-it $(IMAGE) /publishing-scripts/preview.sh
+
+check:
+	docker run --rm \
+		-v $$(pwd)/config:/app/config \
+		-v $$(pwd)/source:/app/source \
+		-it $(IMAGE) /publishing-scripts/publish.sh no-repository-changes
