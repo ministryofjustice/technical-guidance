@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Reserving infrastructure capacity - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/standards/reserving-infrastructure-capacity.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="Reserving infrastructure capacity - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/reserving-infrastructure-capacity.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="Reserving infrastructure capacity" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/reserving-infrastructure-capacity.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#reserving-infrastructure-capacity"><span>Reserving infrastructure capacity</span></a>
+    <ul>
+      <li>
+        <a href="#principles"><span>Principles</span></a>
+        <ul>
+          <li>
+            <a href="#only-reserve-instances-for-long-lived-infrastructure"><span>Only reserve instances for long-lived infrastructure</span></a>
+          </li>
+          <li>
+            <a href="#allow-for-change-without-wasting-reservations"><span>Allow for change without wasting reservations</span></a>
+          </li>
+          <li>
+            <a href="#only-reserve-non-production-infrastructure-if-it-can-39-t-easily-be-switched-off"><span>Only reserve non-production infrastructure if it can’t easily be switched off</span></a>
+          </li>
+          <li>
+            <a href="#don-39-t-use-reserved-instances-to-guarantee-capacity"><span>Don’t use reserved instances to guarantee capacity</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="reserving-infrastructure-capacity">Reserving infrastructure capacity</h1><p>To get the best value for money from cloud infrastructure, we should
+pay in advance for parts of it that are going to be in active use over
+a long period.</p>
+<p>This guidance should be followed wherever possible, but is particularly
+applicable to
+<a href="https://aws.amazon.com/ec2/pricing/reserved-instances/">AWS</a> and
+<a href="https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/">Azure</a>.</p>
+<h2 id="principles">Principles</h2><h3 id="only-reserve-instances-for-long-lived-infrastructure">Only reserve instances for long-lived infrastructure</h3><p>Reserving infrastructure allows us to make a significant saving over
+paying for it on demand, but only if that class of infrastructure is in
+use over the period in which the savings are made.</p>
+<p>The best indicator that we have of this is if that class of
+infrastructure has been (and, therefore, is likely to continue to be)
+in active use for the length of the reservation.</p>
+<p>Given that most infrastructure reservation systems operate on a one- or
+three-year basis, we should <strong>only consider for reservation any
+infrastructure that has existed for at least one year</strong>.</p>
+<h3 id="allow-for-change-without-wasting-reservations">Allow for change without wasting reservations</h3><p>Our infrastructure estate is undergoing a lot of changes at the moment,
+with consolidation, re-hosting, and re-architecting taking place on
+many fronts. This means it&rsquo;s difficult to predict what infrastructure
+we&rsquo;ll need in future, so we should <strong>only make reservations for one
+year at a time</strong>.</p>
+<p>In addition, to avoid reserving infrastructure that we end up not
+needing as a result of those changes, we should <strong>only reserve up to
+70% of the infrastructure we&rsquo;d consider for reservation</strong>.</p>
+<p><strong>Teams provisioning infrastructure should ensure they can easily
+change instance types within a given family</strong>, to allow ease of
+upgrading to more cost-efficient instance types within that family,
+should the need arise.</p>
+<h3 id="only-reserve-non-production-infrastructure-if-it-can-39-t-easily-be-switched-off">Only reserve non-production infrastructure if it can&rsquo;t easily be switched off</h3><p>All our systems should be able to scale up and down according to the
+demand for them at any given moment, so we&rsquo;re only paying for
+infrastructure when it&rsquo;s in active use. By extension, that means that
+all non-production infrastructure should be able to be entirely
+switched off outside business hours.</p>
+<p>To that end, teams should <strong>work to allow non-production infrastructure
+to be switched off out of hours before it is considered for
+reservation</strong>.</p>
+<p>If, after this work is done, the non-production infrastructure is
+actively used for more than a year, and is expected to remain so, we
+should <strong>consider using &ldquo;scheduled&rdquo; reserved instances for
+infrastructure that can be switched off out of hours</strong>.</p>
+<p>Non-production <strong>infrastructure that is too difficult (or costly) to
+make able to be switched off out of hours may be considered for
+reservation</strong> if it is expected to be required long term.</p>
+<h3 id="don-39-t-use-reserved-instances-to-guarantee-capacity">Don&rsquo;t use reserved instances to guarantee capacity</h3><p>While it&rsquo;s appealing to reserve capacity to ensure the provider
+guarantees that capacity will be available, the MOJ are currently not
+working at a scale that warrants this level of guarantee. Rather, we
+should emphasise flexibility of deployment, and services ability to
+redeploy into other environments, and optimising costs when we do so.</p>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2020-11-05">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 5 August 2020.
+
+        It needs to be reviewed again on 5 November 2020
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 5 November 2020.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/standards/reserving-infrastructure-capacity.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'Reserving%20infrastructure%20capacity'&amp;body=Problem%20with%20'Reserving%20infrastructure%20capacity'%20(https://ministryofjustice.github.io/technical-guidance/documentation/standards/reserving-infrastructure-capacity.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

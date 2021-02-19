@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Using Git - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/guides/using-git.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="Using Git - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/guides/using-git.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="Using Git" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/guides/using-git.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#using-git"><span>Using Git</span></a>
+    <ul>
+      <li>
+        <a href="#overview"><span>Overview</span></a>
+      </li>
+      <li>
+        <a href="#tutorials"><span>Tutorials</span></a>
+      </li>
+      <li>
+        <a href="#how-to"><span>How-to</span></a>
+        <ul>
+          <li>
+            <a href="#set-up-to-start-contributing"><span>Set up to start contributing</span></a>
+          </li>
+          <li>
+            <a href="#work-locally"><span>Work locally</span></a>
+          </li>
+          <li>
+            <a href="#commit-locally-regularly"><span>Commit locally regularly</span></a>
+          </li>
+          <li>
+            <a href="#push-your-changes-regularly"><span>Push your changes regularly</span></a>
+          </li>
+          <li>
+            <a href="#request-a-review"><span>Request a review</span></a>
+          </li>
+          <li>
+            <a href="#review-pull-requests"><span>Review pull requests</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#further-reading"><span>Further Reading</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="using-git">Using Git</h1><h2 id="overview">Overview</h2><p><a href="https://git-scm.com/">git</a> is a <a href="https://en.wikipedia.org/wiki/Distributed_version_control">distributed version-control system</a>. It&rsquo;s distributed,
+in that there&rsquo;s no central source of truth. Each copy of a repository can
+contain the entire history, and be considered an authoritative source. But we
+tend to use it in a centralised fashion, treating the version that is
+<a href="https://github.com/ministryofjustice">hosted on GitHub</a> as the shared central
+version, and basing all work against that copy.</p>
+<p>It has excellent tools for branching and merging. Branching is possible in
+other version control systems, but merging can be very painful. This made
+people tentative about using that workflow.</p>
+<p>In git, that problem goes away.</p>
+<h2 id="tutorials">Tutorials</h2>
+<ul>
+<li><a href="https://try.github.io/">https://try.github.io/</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials">https://www.atlassian.com/git/tutorials</a></li>
+</ul>
+<h2 id="how-to">How-to</h2><h3 id="set-up-to-start-contributing">Set up to start contributing</h3><p>Do not fork – <a href="https://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_git_cloning">clone a repo</a> from
+<a href="https://github.com/ministryofjustice">https://github.com/ministryofjustice</a>
+to your local machine.</p>
+<h3 id="work-locally">Work locally</h3><p><a href="https://www.git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_branching">Create a branch</a> to work in for your changes.</p>
+<p>Before you create a branch, it&rsquo;s worth considering the branch names and how you
+think the branch might become visible to other people.</p>
+<p>A common prefix can be useful for categorising branches, and working with tools
+for continuous integration. Naming branches such as <code>feature/foo</code>,
+<code>feature/bar</code>, and <code>bug/fix-column-migration</code> can help other people in the team
+understand whether it&rsquo;s a feature (new behaviour) or a fixing a bug. Having a
+common prefix can also work well with continuous integration tools such as
+<a href="https://travis-ci.org/">Travis</a>, which might be
+<a href="https://docs.travis-ci.com/user/customizing-the-build/#Using-regular-expressions">instructed to only do certain actions on branches</a>
+named <code>feature/*</code> versus the <code>master</code> branch.</p>
+<p>Other approaches:</p>
+
+<ul>
+<li><code>feature/{JIRA-issue}-{description}</code> – this change is for the Jira issue
+LM-6, and also has a human-readable description to give people more context.
+Also, one or more people might be working on this branch (pairing, or
+separately)</li>
+<li><code>jabley/thing</code> – this branch contains work that developer known as jabley is
+doing. Other people might not want to rely on this branch, since it might be
+force-pushed (but nicely please!)</li>
+</ul>
+<h3 id="commit-locally-regularly">Commit locally regularly</h3><p>This can help to get to the point where you have a working version, and then
+want to try adding a new thing. Try to aim for each <a href="https://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">commit</a>
+to be an atomic unit that delivers a non-broken version of the code-base. As
+you make more changes, consider whether it should be separate commit, or an
+amendment to the last one. You can always
+<a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History">interactively rebase your changes</a>
+to edit the commit history to a logical changeset.</p>
+<h3 id="push-your-changes-regularly">Push your changes regularly</h3><p>This protects you from local hardware failure, and
+<a href="https://www.git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#_pushing_remotes">ensures you don&rsquo;t lose your changes</a>.</p>
+<h3 id="request-a-review">Request a review</h3><p>Once you have got to the point where you consider the change complete, you
+should <a href="https://help.github.com/articles/creating-a-pull-request/">open a pull request on GitHub</a>,
+asking for the changes to be reviewed by someone else on the team.</p>
+<h3 id="review-pull-requests">Review pull requests</h3><p>Before commenting on a pull request, ensure you know how the person would
+prefer to get feedback. This might involve asking them first. Feedback options
+include face-to-face, pairing, via email/Slack, or commenting on a pull request.</p>
+<p>Ideally, continuous integration should be set up to provide some feedback on a
+pull request (the tests pass, coding style has been followed etc). If not,
+you&rsquo;ll probably want to pull the code and try it out for yourself.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://twitter.com/annashipman">Anna Shipman</a>&rsquo;s description of <a href="https://www.annashipman.co.uk/jfdi/good-pull-requests.html">how to create good pull requests</a></li>
+<li><a href="https://twitter.com/alicebartlett">Alice Bartlett</a> wrote
+<a href="http://alicebartlett.co.uk/blog/six-months-at-gds">a very honest account of her experience moving to coding in the open and using GitHub</a>. She also did
+<a href="https://www.youtube.com/watch?v=eWxxfttcMts">a nice talk introducing Git for non-technical folk</a></li>
+<li><a href="https://github.com/alphagov/styleguides/blob/master/git.md#commit-messages">Why we care about commit messages</a>.
+Commit messages live longer than pull requests</li>
+<li><a href="https://github.com/alphagov/styleguides/blob/master/pull-requests.md">The GOV.UK pull request process has some GitHub-specific advice</a></li>
+</ul>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2020-11-05">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 5 August 2020.
+
+        It needs to be reviewed again on 5 November 2020
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 5 November 2020.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/guides/using-git.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'Using%20Git'&amp;body=Problem%20with%20'Using%20Git'%20(https://ministryofjustice.github.io/technical-guidance/documentation/guides/using-git.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

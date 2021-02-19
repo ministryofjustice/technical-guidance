@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>MOJ technical guidance - MoJ Technical Guidance</title>
+
+    <link href="stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="MOJ technical guidance - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="MOJ technical guidance" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#moj-technical-guidance"><span>MOJ technical guidance</span></a>
+    <ul>
+      <li>
+        <a href="#principles"><span>Principles</span></a>
+      </li>
+      <li>
+        <a href="#standards"><span>Standards</span></a>
+        <ul>
+          <li>
+            <a href="#operating-services"><span>Operating services</span></a>
+          </li>
+          <li>
+            <a href="#building-software"><span>Building software</span></a>
+          </li>
+          <li>
+            <a href="#general-standards"><span>General standards</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#guides"><span>Guides</span></a>
+        <ul>
+          <li>
+            <a href="#tools"><span>Tools</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#security-guidance"><span>Security Guidance</span></a>
+      </li>
+      <li>
+        <a href="#adding-new-guidance"><span>Adding new guidance</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="moj-technical-guidance">MOJ technical guidance</h1><p>This site documents some of the technical decisions that the
+<a href="https://www.gov.uk/government/organisations/ministry-of-justice">Ministry of Justice</a>
+ (MOJ) has made for the products we operate.</p>
+<p>It complements the <a href="https://www.gov.uk/service-manual">Service Manual</a>,
+which covers service design more broadly.</p>
+<p><a href="https://ministryofjustice.github.io/security-guidance/">Security guidance</a> is an accompanying source of security-specific guidance.</p>
+<h2 id="principles">Principles</h2>
+<ul>
+<li><a href="documentation/principles/development-principles.html">Development Principles</a></li>
+<li><a href="documentation/principles/frontend-development-principles.html">Frontend Development Principles</a></li>
+</ul>
+<h2 id="standards">Standards</h2><h3 id="operating-services">Operating services</h3>
+<ul>
+<li><a href="documentation/standards/documenting-how-your-service-is-supported.html">Documenting how your service is supported</a></li>
+<li><a href="documentation/standards/documenting-infrastructure-owners.html">Documenting owners of infrastructure</a></li>
+<li><a href="documentation/standards/hosting.html">How to host services</a></li>
+<li><a href="documentation/standards/naming-domains.html">Naming domains</a></li>
+<li><a href="documentation/standards/out-of-hours.html">Supporting services out of hours</a></li>
+<li><a href="documentation/standards/reserving-infrastructure-capacity.html">Reserving infrastructure capacity</a></li>
+</ul>
+<h3 id="building-software">Building software</h3>
+<ul>
+<li><a href="documentation/standards/licencing-software-or-code.html">Licensing software or code</a></li>
+<li><a href="documentation/standards/naming-things.html">Naming things</a></li>
+<li><a href="documentation/standards/storing-source-code.html">Storing source code</a></li>
+</ul>
+<h3 id="general-standards">General standards</h3>
+<ul>
+<li><a href="documentation/standards/using-3rd-party-open-source-products.html">Using 3rd-party open source products</a></li>
+</ul>
+<h2 id="guides">Guides</h2><h3 id="tools">Tools</h3>
+<ul>
+<li><a href="documentation/guides/using-git.html">Using Git</a></li>
+</ul>
+<h2 id="security-guidance">Security Guidance</h2><p>The <a href="https://ministryofjustice.github.io/security-guidance/">security guidance</a> should be read together with this technical guidance.</p>
+<h2 id="adding-new-guidance">Adding new guidance</h2><p>Create a new Markdown file that follows this pattern, add a link to it
+from this page, and make a pull request:</p>
+<div class="highlight"><pre class="highlight markdown"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The Title of Your Page</span>
+<span class="na">last_reviewed_on</span><span class="pi">:</span> <span class="s">2020-08-05</span>
+<span class="na">review_in</span><span class="pi">:</span> <span class="s">3 months</span>
+<span class="nn">---</span>
+
+<span class="gh"># The Title of Your Page</span>
+
+Introduction of a couple of paragraphs to explain why the thing you're
+writing about is important. The <span class="p">[</span><span class="nv">title should probably be a verb, not a
+noun</span><span class="p">][</span><span class="ss">good-services-are-verbs</span><span class="p">]</span> (e.g. “Storing source code”, not “Code
+repositories”).
+
+<span class="p">[</span><span class="ss">good-services-are-verbs</span><span class="p">]:</span> <span class="sx">https://designnotes.blog.gov.uk/2015/06/22/good-services-are-verbs-2/</span>
+
+<span class="gu">## User needs</span>
+
+Why do we do this thing? Who is it helping?
+
+<span class="gu">## Principles</span>
+
+What broad approaches do we follow when we do this thing?
+
+<span class="gu">## Tools</span>
+
+What specific bits of software (commercial or open source) do
+we use to help us do this thing?
+</code></pre></div><p>The service manual has some useful information on <a href="https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs">learning about and writing user needs</a>.</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/index.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'MOJ%20technical%20guidance'&amp;body=Problem%20with%20'MOJ%20technical%20guidance'%20(https://ministryofjustice.github.io/technical-guidance/)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="javascripts/application.js"></script>
+  </body>
+</html>

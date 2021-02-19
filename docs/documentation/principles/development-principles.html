@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Development Principles - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/principles/development-principles.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="Development Principles - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/principles/development-principles.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="Development Principles" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/principles/development-principles.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#development-principles"><span>Development Principles</span></a>
+    <ul>
+      <li>
+        <a href="#general-principles"><span>General Principles</span></a>
+        <ul>
+          <li>
+            <a href="#1-share-the-knowledge"><span>1. Share the knowledge</span></a>
+          </li>
+          <li>
+            <a href="#2-code-should-be-correct-clear-concise-in-that-order"><span>2. Code should be correct, clear, concise - in that order</span></a>
+          </li>
+          <li>
+            <a href="#3-optimize-for-change"><span>3. Optimize for change</span></a>
+          </li>
+          <li>
+            <a href="#4-something-simple-which-exists-is-better-than-a-perfect-solution-which-doesn-39-t-exist-yet"><span>4. Something simple which exists is better than a perfect solution which doesn’t exist yet</span></a>
+          </li>
+          <li>
+            <a href="#5-everything-fails-all-of-the-time"><span>5. Everything fails, all of the time.</span></a>
+          </li>
+          <li>
+            <a href="#6-other-developers-are-users-too-treat-them-with-respect"><span>6. Other developers are users too - treat them with respect</span></a>
+          </li>
+          <li>
+            <a href="#7-think-smaller"><span>7. Think smaller</span></a>
+          </li>
+          <li>
+            <a href="#8-names-have-power-use-them-wisely"><span>8. Names have power. Use them wisely</span></a>
+          </li>
+          <li>
+            <a href="#9-composition-over-inheritance"><span>9. Composition over inheritance</span></a>
+          </li>
+          <li>
+            <a href="#10-any-attempt-to-predict-the-future-is-likely-to-be-wrong"><span>10. Any attempt to predict the future is likely to be wrong</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#ruby-specific-principles"><span>Ruby-specific principles</span></a>
+        <ul>
+          <li>
+            <a href="#1-handle-exceptions-at-the-application-level-not-component-level"><span>1. Handle exceptions at the application level, not component level</span></a>
+          </li>
+          <li>
+            <a href="#2-use-meta-programming-with-extreme-caution"><span>2. Use meta-programming with extreme caution</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#python-specific-principles"><span>Python-specific principles</span></a>
+        <ul>
+          <li>
+            <a href="#python-specific-principles-1-handle-exceptions-at-the-application-level-not-component-level"><span>1. Handle exceptions at the application level, not component level</span></a>
+          </li>
+          <li>
+            <a href="#2-pep-8"><span>2. PEP 8</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="development-principles">Development Principles</h1><p>These principles are stated in no particular order, and are <em>always</em> open to debate.
+All development is a trade-off between competing pressures, these principles are
+meant to help you decide which trade-offs are acceptable.</p>
+<p>They are guidance, not The Law - there will always be edge cases, but you should
+expect to be challenged if you go your own way. The principles are to guide future
+and current development - use your judgement, but in general only rewrite existing
+code if you really have to.</p>
+<h2 id="general-principles">General Principles</h2><h3 id="1-share-the-knowledge">1. Share the knowledge</h3><p>If you have knowledge which is unique to you, it is your responsibility to share it.</p>
+<p>We follow &lsquo;<a href="https://guides.github.com/introduction/flow/">github flow</a>&rsquo;, to keep branches small and short-lived, and ensure knowledge is shared.
+If you produce something reusable, package it (e.g. with <a href="https://pypi.org">PyPI</a> or <a href="https://rubygems.org">rubygems</a>) &amp; share it with others on <a href="https://github.com/ministryofjustice/moj-reusables">MoJ Reuseables</a>.</p>
+<p>All non-throwaway code should be reviewed - no-one is 100% right, 100% of the time&hellip; Be aware that &#39;throwaway&rsquo; code has a nasty habit of sticking around.</p>
+<h3 id="2-code-should-be-correct-clear-concise-in-that-order">2. Code should be correct, clear, concise - in that order</h3><p>Correct means provably correct - with tests. All fixes &amp; new features should include tests to prevent regressions.</p>
+<p>Choose clarity over cleverness - avoid monkey-patching and meta-programming unless you have a very good reason not to.</p>
+<p>Don&rsquo;t Repeat Yourself - The &lsquo;<a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">Rule of Three</a>&rsquo; is a good approach to managing duplication. Less code is usually better - but not at the expense of clarity.</p>
+<h3 id="3-optimize-for-change">3. Optimize for change</h3><p>Don&rsquo;t try to solve every conceivable problem up-front, instead focus on making your code easy to change when needed.</p>
+<p>Don&rsquo;t prematurely optimize - choose clarity over performance, unless there is a serious performance issue that needs to be addressed.</p>
+<h3 id="4-something-simple-which-exists-is-better-than-a-perfect-solution-which-doesn-39-t-exist-yet">4. Something simple which exists is better than a perfect solution which doesn&rsquo;t exist yet</h3><p>We learn best from putting real things in front of real users, not trying to achieve perfection in isolation.
+There is no substitute for a real user clicking through a user journey in a real application. Get it done, get it in front of people, and learn early.</p>
+<p>Don&rsquo;t over-engineer. Follow the principle of Least Surprise. Choose process
+concurrency over threading &amp; let the O/S handle it, unless there is good reason.
+When you do use threading, use language abstractions to help. Don&rsquo;t roll your
+own crypto. Handle exceptions at the app level, no lower, etc.</p>
+<h3 id="5-everything-fails-all-of-the-time">5. Everything fails, all of the time.</h3><p>Accept this and <a href="https://en.wikipedia.org/wiki/Defensive_programming">code defensively</a> when calling other services.</p>
+<p>Every HTTP call could error or hang - handle failures appropriately and fail fast. Don&rsquo;t let long-running external
+calls impact your user experience.</p>
+<h3 id="6-other-developers-are-users-too-treat-them-with-respect">6. Other developers are users too - treat them with respect</h3><p>If you have to explain how your code works, then your code is not clear enough.
+Comments are for explaining <strong>why</strong> something is needed, not how it works.</p>
+<p>Commit messages should follow <a href="https://github.com/alphagov/styleguides/blob/master/git.md">GDS guidance</a>
+No-one cares how clever you are - it&rsquo;s far more important to work well with your team.</p>
+<p>APIs are interfaces too - Like any other interface, APIs need designing and iterating for usability.</p>
+<p>Don&rsquo;t pollute the global namespace.</p>
+<h3 id="7-think-smaller">7. Think smaller</h3><p>Stick to the Single Responsibility Principle - keep view templates, controllers and model classes as simple
+as possible. Keep methods short. Concepts and patterns which may help with this: Null Object pattern,
+Facade pattern, Form Objects, Sandi Metz&rsquo;s &rsquo;<a href="https://robots.thoughtbot.com/sandi-metz-rules-for-developers">Rules for Developers</a>&rsquo;.</p>
+<p>A solution composed of many small simple things is usually better than one big complex thing.</p>
+<h3 id="8-names-have-power-use-them-wisely">8. Names have power. Use them wisely</h3><p>Don&rsquo;t be cute or jokey when naming things. Names convey meaning - well-named functions &amp; variables can
+remove the need for a comment. Avoid meaningless names like <code>obj</code> / <code>result</code> / <code>foo</code>.</p>
+<p>Use single-letter variables only where the letter represents a well-known mathematical property
+(e.g. e = mc^2), or where their meaning is otherwise clear.</p>
+<p>See <a href="../standards/naming-things.html">Naming things</a>.</p>
+<h3 id="9-composition-over-inheritance">9. Composition over inheritance</h3><p>It&rsquo;s tempting to build an inheritance tree of objects extending others and redefining methods where needed -
+but that often just creates tech debt for the future. Choose &lsquo;has-a&rsquo; relationships over &lsquo;is-a&rsquo; - e.g. a
+Car has-a Motor, rather than Car is-a MotorVehicle.</p>
+<h3 id="10-any-attempt-to-predict-the-future-is-likely-to-be-wrong">10. Any attempt to predict the future is likely to be wrong</h3><p>This includes estimates of work - if they are to be used for assigning budget or predicting delivery dates,
+they should always come with a level of confidence, or a best/worst case range (e.g. &ldquo;between x and y days&rdquo;
+or &ldquo;maybe x days, but i&rsquo;m only 50% confident of that&rdquo;).</p>
+<p>The larger the chunk of work you&rsquo;re estimating, the more inaccurate you will be - so if it doesn&rsquo;t fit into
+a single sprint, break it down until it does.</p>
+<h2 id="ruby-specific-principles">Ruby-specific principles</h2><h3 id="1-handle-exceptions-at-the-application-level-not-component-level">1. Handle exceptions at the application level, not component level</h3><p>(<em>This differs slightly from the Python principle in wording and philosophy</em>)</p>
+<p>Don&rsquo;t swallow exceptions in your libraries, let them propagate up to the application.
+It&rsquo;s usually only there that sufficient context exists to decide upon the appropriate action.</p>
+<p>Exceptions are for the unexpected &amp; unhandleable, not flow control.</p>
+<p>Always put specific exception types in rescue statements (unless you have good reason not to).</p>
+<h3 id="2-use-meta-programming-with-extreme-caution">2. Use meta-programming with extreme caution</h3><p>Unless done very carefully, meta-programming makes code harder to read, debug, and understand.
+It also creates performance issues through purging method caches, etc. Just because you can meta-program
+in Ruby, doesn&rsquo;t mean you should  - there&rsquo;s nearly always a better way.</p>
+<h2 id="python-specific-principles">Python-specific principles</h2><h3 id="python-specific-principles-1-handle-exceptions-at-the-application-level-not-component-level">1. Handle exceptions at the application level, not component level</h3><p>(<em>This differs slightly from the related Ruby-specific principle in wording and philosophy</em>)</p>
+<p>Don&rsquo;t swallow unexpected open type or base type exceptions in your libraries, let them propagate up
+to the application. It&rsquo;s usually only there that sufficient context exists to decide upon the
+appropriate action. Always specify an exception type in a try/except unless there is a good reason not to.</p>
+<h3 id="2-pep-8">2. PEP 8</h3><p>Always try to follow <a href="https://www.python.org/dev/peps/pep-0008/">pep8 code style</a> and
+consider the <a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a>.</p>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2020-11-05">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 5 August 2020.
+
+        It needs to be reviewed again on 5 November 2020
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 5 November 2020.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/principles/development-principles.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'Development%20Principles'&amp;body=Problem%20with%20'Development%20Principles'%20(https://ministryofjustice.github.io/technical-guidance/documentation/principles/development-principles.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

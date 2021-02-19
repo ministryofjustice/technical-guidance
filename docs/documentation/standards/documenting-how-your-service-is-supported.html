@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Documenting how your service is supported - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/standards/documenting-how-your-service-is-supported.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="Documenting how your service is supported - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/documenting-how-your-service-is-supported.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="Documenting how your service is supported" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/documenting-how-your-service-is-supported.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#documenting-how-your-service-is-supported"><span>Documenting how your service is supported</span></a>
+    <ul>
+      <li>
+        <a href="#what-you-should-include-in-your-service-39-s-runbook"><span>What you should include in your service’s runbook</span></a>
+        <ul>
+          <li>
+            <a href="#mandatory"><span>Mandatory</span></a>
+          </li>
+          <li>
+            <a href="#optional"><span>Optional</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#where-to-publish-your-service-39-s-runbook"><span>Where to publish your service’s runbook</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="documenting-how-your-service-is-supported">Documenting how your service is supported</h1><p>All services should have a runbook that describes how they are supported, where they are hosted, and how people outside the team can check their health and report an issue.</p>
+<p>Without this, people supporting your service (or just interested in it) may not be able to get in touch with you if there&rsquo;s a problem, and may not be able to understand when to expect support.</p>
+<h2 id="what-you-should-include-in-your-service-39-s-runbook">What you should include in your service&rsquo;s runbook</h2><p>To ensure that people looking at your runbook can get the information they need quickly, your runbook should be short but clear. Throughout, only use acronyms if you&rsquo;re confident that someone who has just been woken up at 3am would understand them.</p>
+<h3 id="mandatory">Mandatory</h3>
+<ul>
+<li><strong>Last review date</strong>: The date your service&rsquo;s runbook was last checked to be accurate.</li>
+<li><strong>Description</strong>: A short (less than 50 word) description of what your service does, and who it&rsquo;s for.</li>
+<li><strong>Service URLs</strong>: The URL(s) of the service&rsquo;s production environment(s)</li>
+<li><strong>Incident response hours</strong>: When your service receives support for urgent issues. This should be written in a clear, unambiguous way. For example: <code>24/7/365</code>, <code>Office hours, usually 9am-6pm on working days</code>, or <code>7am-10pm, 365 days a year</code>.</li>
+<li><strong>Incident contact details</strong>: How people can raise an urgent issue with your service. This <strong>must not</strong> be the email address or phone number of an individual on your team, it should be a shared email address, phone number, or website that allows someone with an urgent issue to raise it quickly.</li>
+<li><strong>Service team contact</strong>: How people with non-urgent issues or questions can get in touch with your team. As with incident contact details, this <strong>must not</strong> be the email address or phone number of an individual on the team, it should be a shared email address or a ticket tracking system.</li>
+<li><strong>Hosting environment</strong>: If your service is hosted on another MOJ team&rsquo;s infrastructure, link to their runbook. If your service has another arrangement or runs its own infrastructure, you should list the supplier of that infrastructure (ideally linking to your account&rsquo;s login page) and describe, simply and briefly, how to raise an issue with them.</li>
+</ul>
+<h3 id="optional">Optional</h3>
+<ul>
+<li><strong>Other URLs</strong>: If you can, provide links to the service&rsquo;s monitoring dashboard(s), health checks, documentation (ideally describing how to run/work with the service), and <a href="storing-source-code.html">main GitHub repository</a>.</li>
+<li><strong>Expected speed and frequency of releases</strong>: How often are you able to release changes to your service, and how long do those changes take?</li>
+<li><strong>Automatic alerts</strong>: List, briefly, problems (or types of problem) that will automatically alert your team when they occur.</li>
+<li><strong>Impact of an outage</strong>: A short description of the risks if your service is down for an extended period of time.</li>
+<li><strong>Out of hours response types</strong>: Describe how incidents that page a person on call are responded to. How long are out-of-hours responders expected to spend trying to resolve issues before they stop working, put the service into maintenance mode, and hand the issue to in-hours support?</li>
+<li><strong>Consumers of this service</strong>: List which other services (with links to their runbooks) rely on this service. If your service is considered a platform, these may be too numerous to reasonably list.</li>
+<li><strong>Services consumed by this</strong>: List which other services (with links to their runbooks) this service relies on.</li>
+<li><strong>Restrictions on access</strong>: Describe any conditions which restrict access to the service, such as if it&rsquo;s IP-restricted or only accessible from a private network.</li>
+<li><strong>How to resolve specific issues</strong>: Describe the steps someone might take to resolve a specific issue or incident, often for use when on call. This may be a large amount of information, so may need to be split out into multiple pages.</li>
+</ul>
+<h2 id="where-to-publish-your-service-39-s-runbook">Where to publish your service&rsquo;s runbook</h2><p>Your service&rsquo;s runbook doesn&rsquo;t need to be hosted in a central repository, but you should make sure that all your stakeholders and peers are aware of how to find it and link to it from <a href="documenting-infrastructure-owners.html#optional">your infrastructure tags</a> so that people supporting your service&rsquo;s infrastructure can find it if they need to.</p>
+<p>You should also make sure that anyone who is likely to need to access your runbook <em>can</em> access it. The easiest way to do this is to <a href="https://www.gov.uk/guidance/government-design-principles#make-things-open-it-makes-things-better">publish it openly</a> on the internet, but your service may have security constraints that mean that isn&rsquo;t possible at the moment.</p>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2020-11-05">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 5 August 2020.
+
+        It needs to be reviewed again on 5 November 2020
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 5 November 2020.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/standards/documenting-how-your-service-is-supported.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'Documenting%20how%20your%20service%20is%20supported'&amp;body=Problem%20with%20'Documenting%20how%20your%20service%20is%20supported'%20(https://ministryofjustice.github.io/technical-guidance/documentation/standards/documenting-how-your-service-is-supported.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

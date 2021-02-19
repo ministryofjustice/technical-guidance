@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Frontend Development Principles - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/principles/frontend-development-principles.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="Frontend Development Principles - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/principles/frontend-development-principles.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="Frontend Development Principles" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/principles/frontend-development-principles.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#frontend-development-principles"><span>Frontend Development Principles</span></a>
+    <ul>
+      <li>
+        <a href="#1-follow-government-service-design-manual"><span>1. Follow Government Service Design Manual</span></a>
+      </li>
+      <li>
+        <a href="#2-make-your-service-accessible"><span>2. Make your service accessible</span></a>
+      </li>
+      <li>
+        <a href="#3-make-it-easy-to-change-your-code-for-copy-and-translation"><span>3. Make it easy to change your code for copy and translation</span></a>
+      </li>
+      <li>
+        <a href="#4-support-as-many-browsers-as-possible"><span>4. Support as many browsers as possible</span></a>
+      </li>
+      <li>
+        <a href="#5-use-responsive-design"><span>5. Use responsive design</span></a>
+      </li>
+      <li>
+        <a href="#6-use-progressive-enhancement"><span>6. Use progressive enhancement</span></a>
+      </li>
+      <li>
+        <a href="#7-don-t-optimise-prematurely"><span>7. Don’t optimise prematurely</span></a>
+      </li>
+      <li>
+        <a href="#8-work-with-your-team"><span>8. Work with your team</span></a>
+      </li>
+      <li>
+        <a href="#9-don-t-make-too-many-assumptions-on-user-behaviour"><span>9. Don’t make too many assumptions on user behaviour</span></a>
+      </li>
+      <li>
+        <a href="#10-be-conservative-in-your-choice-of-technology"><span>10. Be conservative in your choice of technology</span></a>
+      </li>
+      <li>
+        <a href="#11-beware-of-single-page-apps"><span>11. Beware of single-page apps</span></a>
+      </li>
+      <li>
+        <a href="#12-write-unit-tests"><span>12. Write unit tests</span></a>
+      </li>
+      <li>
+        <a href="#13-write-functional-tests"><span>13. Write functional tests</span></a>
+      </li>
+      <li>
+        <a href="#14-use-the-right-tools"><span>14. Use the right tools</span></a>
+      </li>
+      <li>
+        <a href="#15-implement-seo-and-semantic-markup"><span>15. Implement SEO and semantic markup</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="frontend-development-principles">Frontend Development Principles</h1><p>This document lists some principles that developers at MOJ are strongly
+encouraged to follow when implementing a service’s frontend. These principles
+aren’t mandatory, but you should be able to provide a good argument if you
+choose to depart from them.</p>
+<p>These principles are in addition to <a href="development-principles.html">MoJ Development Principles</a></p>
+<h2 id="1-follow-government-service-design-manual">1. Follow Government Service Design Manual</h2><p>The most important set of recommendations you really should follow is from the <a href="https://www.gov.uk/service-manual">Government Service Design Manual</a>, not only because the service
+you’re designing will be assessed against it 3 times before going Live, but also
+because it covers the broad principles and is generally right. What follows are
+MOJ-specific recommendations.</p>
+<h2 id="2-make-your-service-accessible">2. Make your service accessible</h2><p>Your site must be compliant with level AA of the <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines 2.0</a>. You should also try assistive
+technology tools as much as you can. However that’ll be far from giving you a
+complete view of the issues your service might have. With a bit of luck to will
+be assessed by proper accessibility experts (like the <a href="http://www.digitalaccessibilitycentre.org/">Digital Accessibility Centre</a>). But don’t wait for it to
+happen to implement accessibility principles. Another helpful thing to do is
+automatic accessibility testing as part of your continuous integration.</p>
+
+<ul>
+<li><a href="https://github.com/springernature/pa11y">pa11y</a></li>
+<li><a href="https://content.pivotal.io/blog/automated-accessibility-testing-in-rails-with-capybara-accessible">Automated Accessibility Testing in Rails with capybara-accessible</a></li>
+</ul>
+<h2 id="3-make-it-easy-to-change-your-code-for-copy-and-translation">3. Make it easy to change your code for copy and translation</h2><p>All the user-facing text in your application should be in the same place in the
+code, typically in templates. This includes conditional content and error
+messages. It makes this easier for a content designer to check and modify the
+application’s copy. Also make sure your service is easy to translate in another
+language.</p>
+<h2 id="4-support-as-many-browsers-as-possible">4. Support as many browsers as possible</h2><p>Your site is expected to work on all the browsers listed in the <a href="https://www.gov.uk/service-manual/user-centred-design/browsers-and-devices.html#verified-browsers">Verified Browsers</a> page in the service manual, but try to include as many browsers as
+possible on top of that list. A browser with 0.1% market share accounts for
+50,000 visitors a month on GOV.UK. Avoid <a href="http://www.sitepoint.com/why-browser-sniffing-stinks/">browser sniffing</a>. Instead, use
+feature detection. That will also result in your site being forwards compatible.</p>
+<h2 id="5-use-responsive-design">5. Use responsive design</h2><p>Make the content of your pages flow nicely with any screen size: use media
+queries, prefer relative units and use fluid grid layouts. Get some help from
+your team’s visual designer if you’re not sure what a page should look like at
+a specific resolution.</p>
+<h2 id="6-use-progressive-enhancement">6. Use progressive enhancement</h2><p>Design pages with the lowest common denominator of browser functionality in mind
+ (ie, HTML4, no JavaScript, no CSS), then build styling and behaviour on top.
+ Make sure that any scripting or styling you add isn’t essential to the use of
+ the service.</p>
+<h2 id="7-don-t-optimise-prematurely">7. Don’t optimise prematurely</h2><p>Optimising web pages for speed can lead to very complex code that breaks
+fundamental principles like separation of style and content. Only optimise if
+you have evidence that current front-end performance is detrimental to the use
+of the service</p>
+<h2 id="8-work-with-your-team">8. Work with your team</h2><p>You should establish a close relationship with your team’s visual designer and
+content designer. Things can get waterfally when you expect things to happen in
+order: designer designs designs, content designer provides copy, you implement.
+That doesn’t work. Constant feedback and interactions work much more efficiently.</p>
+<p>You should make sure your designer provides multiple designs, or at least checks
+the various layouts you will implement for small screens, no JS, etc.</p>
+<h2 id="9-don-t-make-too-many-assumptions-on-user-behaviour">9. Don’t make too many assumptions on user behaviour</h2><p>You are not the user. You can only make assumptions on how your site will be used by its intended audience. Often they’ll be wrong. If you’re not convinced, go to a user-testing session and you’ll understand. Listen to the user researcher in your team, they know more than you. Analytics also provides insight on site usage, but they don’t replace watching people use your service.</p>
+<h2 id="10-be-conservative-in-your-choice-of-technology">10. Be conservative in your choice of technology</h2><p>(<i>frameworks, build tools, languages</i>)</p>
+<p>There are many many possible technologies, tools or libraries you may be familiar
+with, or interested in trying out. Eg, SASS, Grunt, CoffeeScript, TypeScript,
+EcmaScript 6, Polymer, etc. Keep in mind that your code should still be
+maintainable long after you’ve left. You have to be confident that the
+technology you want to use is likely to still be around a few years into the
+future: whether devs will be familiar with it or will have heard of it, whether
+documentation will still exist, and new versions are backwards compatible, etc.
+If in doubt, ask the community. jQuery, Grunt and SASS are currently widely used
+across departments and are considered OK.</p>
+<h2 id="11-beware-of-single-page-apps">11. Beware of single-page apps</h2><p>It’s very difficult to design single-page apps (SPAs) that are accessible,
+browser-independent, offer the benefit of progressive enhancement, and are
+search-engine friendly. That’s why they’re rare in Government. Before deciding
+to implement one you need to be absolutely sure that all your users will be able
+to use the service whatever their device. Most often SPAs will be implemented
+for internal services for which the lowest-common technology is somehow high
+enough to allow them.</p>
+<h2 id="12-write-unit-tests">12. Write unit tests</h2><p>For fine-grained inputs-results tests of your JS functions, especially ones that
+don’t have side-effects like modifying the DOM (<a href="https://github.com/ministryofjustice/money-to-prisoners-send-money/blob/master/mtp_send_money/apps/send_money/tests/test_functional.py#L121">example from Send money to a
+prisoner</a>). In general there won’t be much
+“pure” JS code in your app, so there won’t be many of these.</p>
+<h2 id="13-write-functional-tests">13. Write functional tests</h2><p>ie, tests that replicate user journeys. Cover all possible journeys, not just
+the happy path.
+- There should be many of them and they should be run every code change.
+- They should be expressed in an easy-to-read form (Eg. <a href="https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/master/mtp_cashbook/apps/cashbook/tests/test_functional.py#L260">Money to prisoners</a>, <a href="https://github.com/ministryofjustice/prison-visits/blob/master/spec/features/unexpected_journey_spec.rb#L56">Prison visits</a>)
+- You should preferably use your back-end test harness (eg, rspec, unittest) so
+that all the application’s tests are in the same place. Most support browser-based
+tests using webdriver.
+- Don’t just check the text contents of a page, but also check the computed CSS
+(eg. <a href="https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/master/mtp_cashbook/apps/cashbook/tests/test_functional.py#L108">Money to prisoners</a>).</p>
+<p>BDD (using <a href="https://cucumber.io/">cucumber</a> or any other human-readable way to
+write tests) will only work if your team has the right workflow for it. Unless
+you have someone else (ideally your product manager) committed to writing the
+tests and checking that they pass, you’ll waste time writing code to translate
+your tests into code, instead of writing it directly.</p>
+<p><strong>Visual tests</strong>: automatically generating screenshots from a user journey script, and comparing with reference images. Ideal, but hard. You’ll have to regenerate your reference images every time the design changes, ideally from images supplied from your designer and not from your own implementation.</p>
+<h2 id="14-use-the-right-tools">14. Use the right tools</h2><p>When writing your code, you’ll be checking your results and debugging them in
+your favourite browser. Make sure you also check on the most common browsers.
+You may find that Firefox is best for debugging, but don’t forget to check
+Chrome and IE as often as possible. Use <a href="https://www.browsersync.io/">browsersync</a>
+to try multiple browsers at once and use virtual machines for old browsers (eg. <a href="https://dev.windows.com/en-us/microsoft-edge/tools/vms/">modern.ie</a>)</p>
+<h2 id="15-implement-seo-and-semantic-markup">15. Implement SEO and semantic markup</h2><p>Apart from internal sites and ones that are on service.gov.uk (which should block
+web spiders), you should make your pages easy for robots to understand. Following
+the service standards gives you the basics of SEO, but sometimes is makes sense to
+do more, like using semantic markup so that search engines are able to find things like a court’s opening time, an address. <a href="https://schema.org/">Schema.org</a> is currently gaining in popularity and is worth looking into.</p>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2020-11-05">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 5 August 2020.
+
+        It needs to be reviewed again on 5 November 2020
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 5 November 2020.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/principles/frontend-development-principles.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'Frontend%20Development%20Principles'&amp;body=Problem%20with%20'Frontend%20Development%20Principles'%20(https://ministryofjustice.github.io/technical-guidance/documentation/principles/frontend-development-principles.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

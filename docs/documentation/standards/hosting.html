@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to host services - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/standards/hosting.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="How to host services - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/hosting.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="How to host services" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/hosting.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-host-services"><span>How to host services</span></a>
+    <ul>
+      <li>
+        <a href="#cloud-platform"><span>Cloud Platform</span></a>
+      </li>
+      <li>
+        <a href="#modernisation-platform"><span>Modernisation Platform</span></a>
+      </li>
+      <li>
+        <a href="#other-hosting-infrastructure"><span>Other hosting infrastructure</span></a>
+      </li>
+      <li>
+        <a href="#we-use-public-cloud-hosting-by-default"><span>We use public cloud hosting by default</span></a>
+      </li>
+      <li>
+        <a href="#we-pay-for-hosting-centrally-by-default"><span>We pay for hosting centrally by default</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="how-to-host-services">How to host services</h1><p>At MOJ you must use the <a href="https://user-guide.cloud-platform.service.justice.gov.uk/">Cloud
+Platform</a>
+to host your service by default, unless you&rsquo;re advised otherwise by a
+member of the <a href="https://peoplefinder.service.gov.uk/teams/hosting">hosting
+team</a>. This includes
+applications that would otherwise sit in your own infrastructure if
+you have it.</p>
+<p>If your team needs to host legacy services, you should plan to use the
+<a href="https://ministryofjustice.github.io/modernisation-platform/user-guide">Modernisation
+Platform</a>.</p>
+<h2 id="cloud-platform">Cloud Platform</h2><p>The Cloud Platform is a modern hosting platform for digital services:</p>
+
+<ul>
+<li>It makes it quick and easy to &lsquo;just deploy an app&rsquo;</li>
+<li>Teams get the features they need to operate their service, such as
+easy scalability, zero downtime deploys, security scanning, monitoring,
+logging, and more, all set up for you by default</li>
+<li>When you need the full power of AWS or Kubernetes, it&rsquo;s all available</li>
+<li>Configuration is all self-service, using Infrastructure as Code with
+managed CI/CD and GitOps processes</li>
+<li>The Cloud Platform team manage the hosting and provide support for
+the platform</li>
+<li>You can host <a href="https://user-guide.cloud-platform.service.justice.gov.uk/documentation/getting-started/prototype-kit.html#create-a-gov-uk-prototype-kit-site">GOV.UK Prototype Kit sites</a>
+quickly and easily</li>
+</ul>
+<p>Your team can get started on the Cloud Platform without letting anyone
+know; just follow the <a href="https://user-guide.cloud-platform.service.justice.gov.uk/#cloud-platform-user-guide">Cloud Platform
+documentation</a>
+and get in touch with the Cloud Platform team if you need help.</p>
+<h2 id="modernisation-platform">Modernisation Platform</h2><p>The Modernisation Platform is a cloud-first hosting platform for
+legacy applications. It&rsquo;s currently in development, and you can become
+an early adopter by following the <a href="https://ministryofjustice.github.io/modernisation-platform/user-guide">Modernisation Platform user
+guide</a>.</p>
+
+<ul>
+<li>It will make it easy to create non-Kubernetes environments for applications</li>
+<li>It will align with the MOJ <a href="https://ministryofjustice.github.io/security-guidance/baseline-aws-accounts/#baseline-for-amazon-web-services-accounts">Security Guidance</a></li>
+<li>It will standardise commonalities across applications, such as: application networking, certificate management, CI/CD processes; with infrastructure as code</li>
+<li>It will support you modernising your applications</li>
+</ul>
+<h2 id="other-hosting-infrastructure">Other hosting infrastructure</h2><p>If you think your service might require other hosting, <a href="mailto:hosting-leads@digital.justice.gov.uk">get in touch
+with the hosting team</a>
+and we&rsquo;ll help identify which of our other hosting options is best for
+your service, or set up extra accounts if we&rsquo;ve already identified the
+right setup for you. This includes:</p>
+
+<ul>
+<li>LAA AWS and 6Degrees infrastructure</li>
+<li>HMPPS Azure infrastructure</li>
+<li>Self-managed AWS infrastructure</li>
+<li>Retirement infrastructure</li>
+</ul>
+<p>If you self-manage your own AWS infrastructure, you should consider
+moving it to the <a href="#cloud-platform">Cloud Platform</a> or the
+<a href="#modernisation-platform">Modernisation Platform</a>.</p>
+<h2 id="we-use-public-cloud-hosting-by-default">We use public cloud hosting by default</h2><p>We follow the <a href="https://www.gov.uk/guidance/government-cloud-first-policy">Government Cloud First
+policy</a> and
+use public cloud &ldquo;Platform as a Service&rdquo; (PaaS) and &ldquo;Infrastructure as
+a Service&rdquo; (IaaS) infrastructure to host our services.</p>
+<p>Our choice of platforms:</p>
+
+<ul>
+<li>are highly scalable and available to meet the needs of service users</li>
+<li>have automated tools for MOJ administrators to manage their environments</li>
+<li>standardise infrastructure across MOJ</li>
+<li>help reduce cost across MOJ</li>
+<li>support building capability across the department rather than in silos</li>
+</ul>
+<p>We currently use <a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a>
+by default for scalable computing, storage and deployment services,
+but we may recommend some services are hosted in <a href="https://azure.microsoft.com/">Microsoft
+Azure</a>, based on the needs of the
+service and its relationship to other services already in Azure.</p>
+<p>If your service is currently hosted outside of AWS or Azure, get in
+touch with the Application Modernisation team (TODO - add a link here) to plan for its
+future hosting.</p>
+<h2 id="we-pay-for-hosting-centrally-by-default">We pay for hosting centrally by default</h2><p>By default, we pay for all use of AWS and Azure services across MOJ
+(excluding HMCTS) centrally.</p>
+<p>As part of this, the hosting team will routinely review your use of
+hosting to ensure you&rsquo;re using infrastructure appropriately, keeping
+it secure and up to date, and making the best use of the money you&rsquo;re
+spending.</p>
+<p>If your service or services cost more than £30,000 per year to host,
+we may need to cross-charge you for your use. Cross-charging typically
+only applies to very large services or teams, and we currently only
+cross-charge two groups.</p>
+<p>If we do need to cross-charge you, we will still work with you to
+ensure you&rsquo;re using infrastructure appropriately and safely.</p>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2021-05-17">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 17 February 2021.
+
+        It needs to be reviewed again on 17 May 2021
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 17 May 2021.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/standards/hosting.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'How%20to%20host%20services'&amp;body=Problem%20with%20'How%20to%20host%20services'%20(https://ministryofjustice.github.io/technical-guidance/documentation/standards/hosting.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

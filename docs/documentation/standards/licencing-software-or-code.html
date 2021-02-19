@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Licensing software or code - MoJ Technical Guidance</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://ministryofjustice.github.io/technical-guidance/documentation/standards/licencing-software-or-code.html">
+
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="ministryofjustice.github.io" />
+      <meta name="twitter:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta name="twitter:title" content="Licensing software or code - MoJ Technical Guidance" />
+      <meta name="twitter:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/licencing-software-or-code.html" />
+
+      <meta property="og:image" content="https://ministryofjustice.github.io/technical-guidance/images/govuk-large.png" />
+      <meta property="og:site_name" content="MoJ Technical Guidance" />
+      <meta property="og:title" content="Licensing software or code" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://ministryofjustice.github.io/technical-guidance/documentation/standards/licencing-software-or-code.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/technical-guidance" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          MoJ Technical Guidance
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://github.com/ministryofjustice/technical-guidance">GitHub</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://ministryofjustice.github.io/technical-guidance"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#licensing-software-or-code"><span>Licensing software or code</span></a>
+    <ul>
+      <li>
+        <a href="#applying-the-mit-license-to-our-work"><span>Applying the MIT License to our work</span></a>
+        <ul>
+          <li>
+            <a href="#each-repository-should-include-a-licence-file"><span>Each repository should include a licence file</span></a>
+          </li>
+          <li>
+            <a href="#use-the-correct-copyright-notice"><span>Use the correct copyright notice</span></a>
+          </li>
+          <li>
+            <a href="#example"><span>Example</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#reusing-or-incorporating-others-39-work"><span>Reusing or incorporating others’ work</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="licensing-software-or-code">Licensing software or code</h1><p>Everything we produce or use, whether open or closed, should have an
+appropriate licence applied (as <a href="https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable#licensing-your-code">indicated by the service
+manual</a>). Without a licence, others (even
+within the MOJ) have no way of knowing for sure if they can use it, or
+how.</p>
+<p>At the MOJ, we use the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+<h2 id="applying-the-mit-license-to-our-work">Applying the MIT License to our work</h2><h3 id="each-repository-should-include-a-licence-file">Each repository should include a licence file</h3><p>This should be called <code>LICENCE</code> or <code>LICENCE.md</code>. &ldquo;License&rdquo; is the U.S.
+English spelling.</p>
+<p>GitHub will still show licence details for the British English spelling.</p>
+<p>Make sure the licence content is included in full, including the title
+&ldquo;The MIT License&rdquo;, so that readers are quickly able to see what licence
+is being used.</p>
+<h3 id="use-the-correct-copyright-notice">Use the correct copyright notice</h3><p>The Copyright is Crown Copyright; you can put &ldquo;Ministry of Justice&rdquo; in
+brackets. For example:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>Copyright (c) 2017 Crown Copyright (Ministry of Justice)
+</code></pre></div><p>The year should be the year the code was first published. Where the
+code is continually updated with significant changes, the year can be
+shown as a period from first to most recent update (e.g. 2015-2017).</p>
+<h3 id="example">Example</h3><p><code>repo-audit</code> has a good <a href="https://github.com/ministryofjustice/repo-audit/blob/master/LICENSE">example of our licence</a>.</p>
+<h2 id="reusing-or-incorporating-others-39-work">Reusing or incorporating others&rsquo; work</h2><p>If a repository or package you want to reuse or build on doesn&rsquo;t have a
+licence, we can&rsquo;t be sure we legally have the right to use it in the
+way we want.</p>
+<p>When adapting an existing project, or incorporating code from one, you
+should provide proper attribution to the source in your licence.
+There&rsquo;s a good <a href="https://make.wordpress.org/themes/2014/07/08/proper-copyrightlicense-attribution-for-themes/">guide to proper copyright and licence
+attribution</a>
+from the WordPress Theme Review Team.</p>
+<p><a href="https://github.com/ministryofjustice/technical-guidance/blob/master/LICENCE">This repository&rsquo;s licence file</a>
+is a good example of how to attribute incorporated works&rsquo; licences.</p>
+
+              <div data-module='page-expiry' data-last-reviewed-on="2020-11-05">
+    <div class='page-expiry--not-expired'>
+      This page was last reviewed on 5 August 2020.
+
+        It needs to be reviewed again on 5 November 2020
+.
+    </div>
+
+    <div class='page-expiry--expired'>
+      This page was set to be reviewed before 5 November 2020.
+      This might mean the content is out of date.
+    </div>
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/blob/main/source/documentation/standards/licencing-software-or-code.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance/issues/new?labels=bug&amp;title=Re:%20'Licensing%20software%20or%20code'&amp;body=Problem%20with%20'Licensing%20software%20or%20code'%20(https://ministryofjustice.github.io/technical-guidance/documentation/standards/licencing-software-or-code.html)">Report problem</a></li>
+                <li><a href="https://github.com/ministryofjustice/technical-guidance">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>
