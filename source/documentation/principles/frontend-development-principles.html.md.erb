@@ -1,6 +1,6 @@
 ---
 title: Frontend Development Principles
-last_reviewed_on: 2020-08-05
+last_reviewed_on: 2021-04-12
 review_in: 3 months
 ---
 
@@ -76,8 +76,7 @@ the various layouts you will implement for small screens, no JS, etc.
 You are not the user. You can only make assumptions on how your site will be used by its intended audience. Often they’ll be wrong. If you’re not convinced, go to a user-testing session and you’ll understand. Listen to the user researcher in your team, they know more than you. Analytics also provides insight on site usage, but they don’t replace watching people use your service.
 
 ## 10. Be conservative in your choice of technology
-(<i>frameworks, build tools, languages</i>)
-
+(_frameworks, build tools, languages_)
 
 There are many many possible technologies, tools or libraries you may be familiar
 with, or interested in trying out. Eg, SASS, Grunt, CoffeeScript, TypeScript,
@@ -115,15 +114,13 @@ tests using webdriver.
 - Don’t just check the text contents of a page, but also check the computed CSS
 (eg. [Money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/master/mtp_cashbook/apps/cashbook/tests/test_functional.py#L108)).
 
-
 BDD (using [cucumber](https://cucumber.io/) or any other human-readable way to
 write tests) will only work if your team has the right workflow for it. Unless
 you have someone else (ideally your product manager) committed to writing the
 tests and checking that they pass, you’ll waste time writing code to translate
 your tests into code, instead of writing it directly.
 
-
-<strong>Visual tests</strong>: automatically generating screenshots from a user journey script, and comparing with reference images. Ideal, but hard. You’ll have to regenerate your reference images every time the design changes, ideally from images supplied from your designer and not from your own implementation.
+**Visual tests**: automatically generating screenshots from a user journey script, and comparing with reference images. Ideal, but hard. You’ll have to regenerate your reference images every time the design changes, ideally from images supplied from your designer and not from your own implementation.
 
 ## 14. Use the right tools
 When writing your code, you’ll be checking your results and debugging them in
