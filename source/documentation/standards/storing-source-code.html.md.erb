@@ -1,6 +1,6 @@
 ---
 title: Storing source code
-last_reviewed_on: 2021-04-12
+last_reviewed_on: 2021-08-19
 review_in: 3 months
 ---
 
@@ -48,7 +48,11 @@ delivery team's GitHub repositories in one place, by setting up a GitHub team
 for the people on a delivery team, and giving that GitHub team read/write
 privileges for the repos.
 
-### GitHub user accounts
+### GitHub access
+
+#### Member of the MoJ organisation
+
+This relates to permanent employees and contractors working directly with the MoJ.
 
 If you already have a GitHub account from before you joined MOJ, you can choose to use it at MOJ or create a new one. Some people prefer to have continuity with previous work; others value the separation.
 
@@ -75,5 +79,16 @@ Then make a request on ServiceNow:
 [GitHub for D&T staff - Add/Remove](https://mojprod.service-now.com/moj_sp?id=sc_cat_item&sys_id=5beac6f7dbdc609050fbbfce3b96191f)
 (or ask a member of the webops team).
 
+#### External collaborator
+
+This relates to 3rd party suppliers who are maintaining code on behalf of the MoJ. 
+
+External collaborators can only access specific repositories and are limited in what they can do within the MoJ organisation. They are not able to access private repositories outside of the ones they've been assigned to. They do not have access to the Cloud Platform cluster. 
+
+Users do not require an MoJ email address to be added as external collaborators.
+
+You can add external collaborators using the [github-collaborators] tool.
+
 [template repository]: https://github.com/ministryofjustice/template-repository
 [github actions]: https://github.com/ministryofjustice/github-actions
+[github-collaborators]: https://github.com/ministryofjustice/github-collaborators
