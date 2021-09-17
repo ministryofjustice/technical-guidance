@@ -1,78 +1,83 @@
 ---
 title: Naming domains
-last_reviewed_on: 2021-02-10
+last_reviewed_on: 2021-10-05
 review_in: 3 months
 ---
 
 # <%= current_page.data.title %>
 
+>Note: "Requesting domain changes" has moved to [How to get, register or manage
+ a domain name](how-to-get-a-domain-name.html).
+
 All MOJ services should be served from `*.service.gov.uk` or
 `*.service.justice.gov.uk` domains. MOJ infrastructure or justice-wide services
 may be eligible for a `*.justice.gov.uk` domain.
 
-## Requesting domain changes
+## Getting a domain
 
-If you need to request a new domain or changes to an existing domain,
-email the [MOJ Domains team](mailto:domains@digital.justice.gov.uk),
-who will help ensure that your domain meets this standard and our
-[wider standards for naming](naming-things.html). The Domains team can also help identify which of the
-domains below your service is eligible to be hosted in.
+Please refer to[How to get, register or manage a domain name]
+(how-to-get-a-domain-name.html).
 
-## Domain your service can have a subdomain of
+## Which domain do I need?
 
 ### `service.gov.uk`
 
-The [service standard](https://www.gov.uk/service-manual/technology/get-a-domain-name)
-already sets out when and how to get a `*.service.gov.uk` subdomain:
-public-facing services which have passed their beta assessment should
-be able to get one.
+The [GOV.UK service manual]
+(https://www.gov.uk/service-manual/technology/get-a-domain-name) sets out when
+and how to get a `*.service.gov.uk` subdomain.
+
+In short, `*.service.gov.uk` subdomains are for public-facing services which
+have passed their beta assessment.
 
 ### `service.justice.gov.uk`
 
-All other MOJ services should be served from a
-`*.service.justice.gov.uk` subdomain, including:
+All other MOJ services should use a `*.service.justice.gov.uk` subdomain.
 
-- public-facing services which haven’t yet passed a beta assessment
-  (but may be in private beta with a restricted set of users)
+This includes:
+
+- public-facing services which haven't yet passed a beta assessment (but may be
+  in private beta)
 - internal-facing services
 
-Cloud-hosted software-as-a-service used by MOJ staff (like Gmail or
-Office365), or on which MOJ has a corporate presence
-(like [GitHub](https://github.com/ministryofjustice/) or
-[Trello](https://trello.com/mojds/home)) are not required to be served
-from a `*.service.justice.gov.uk` subdomain
+However, cloud-hosted software-as-a-service used by MOJ staff (like Google
+Workspace or Microsoft365), or on which MOJ has a corporate presence (like
+[GitHub](https://github.com/ministryofjustice) or [Trello]
+(https://trello.com/mojds/home)) are not required to be served from a
+`*.service.justice.gov.uk` subdomain.
 
-#### Cloud and Modernisation Platform subdomains
+#### Cloud Platform and Modernisation Platform
 
-If you're using the Cloud or Modernisation Platform to host your service, you will get a subdomain
-that uses the service name of the platform.
+If you're using the Cloud Platform or Modernisation Platform to host your
+service, you will get a subdomain that uses the service name of the platform.
+These domains aren't for production use, but will be a variation of:
 
-- `*.live-1.cloud-platform.service.justice.gov.uk`
+- `*.cloud-platform.service.justice.gov.uk`, or
 - `*.modernisation-platform.service.justice.gov.uk`
 
-These domains are not for production use, and we will work with you when your service is
-ready to go live to get a production `<application>.service(.justice).gov.uk` domain.
+When your service is ready to go live, we will work with you to get a
+production-ready `<application>.service(.justice).gov.uk` domain.
 
 ### `justice.gov.uk`
 
 Only services which are core, MOJ-wide infrastructure, like email or
-videoconferencing, or otherwise applicable to users across the entire
-justice system (like the intranet) may use a `*.justice.gov.uk`
-subdomain. Contact the [MOJ Domains team](mailto:domains@digital.justice.gov.uk)
-to find out if your service is eligible.
+videoconferencing, or are otherwise applicable to users across the entire
+justice system (like the intranet) can use a `*.justice.gov.uk` subdomain.
+
+Contact the [Operations Engineering team]
+(mailto:domains@digital.justice.gov.uk) to find out if your service is
+eligible.
 
 ## Staff-facing sites
 
-Any staff-facing sites which exist as part of public-facing services
-should also be on a `*.service(.justice).gov.uk` domain.
+Any staff-facing sites should also use `*.service(.justice).gov.uk` domain.
 
-For example `staff.prisonvisits.service.gov.uk` is the staff-facing
-side of `www.prisonvisits.service.gov.uk`.
+For example `staff.prisonvisits.service.gov.uk` is the staff-facing side of
+`www.prisonvisits.service.gov.uk`.
 
-## Pre-production environments
+## Non-production environments
 
-This standard includes pre-production environments. For those, use this
-domain naming pattern:
+This standard includes non-production environments. For those, use this domain
+naming pattern:
 
 `<application>.<environment>.<service-name>.service(.justice).gov.uk`
 
@@ -81,39 +86,76 @@ For example: `staff.staging.prisonvisits.service.gov.uk`.
 This pattern makes the relationships between domains clear, grouping
 environments by service and applications by shared environment.
 
-Pre-production environments and [hosted prototypes](https://www.gov.uk/service-manual/design/making-prototypes#sharing-code-prototypes)
-should also use authentication (such as HTTP basic auth) to prevent
-public users who come across them thinking they’re real.
+Non-production environments and [hosted prototypes]
+(https://www.gov.uk/service-manual/design/making-prototypes#sharing-code-prototypes)
+should also use authentication (such as HTTP basic auth) to prevent public
+users who come across them thinking they’re real.
 
-Pre-production environments can also use different styling as a way of
-making it clear to users which environment they’re in - but that’s more
-useful for people working on the service to not modify data in
-production than to keep users out. GOV.UK publishing apps do this,
-for example compare GOV.UK Signon in their [Staging](https://signon.staging.publishing.service.gov.uk)
-and [Production](https://signon.publishing.service.gov.uk) environments.
+Non-production environments can also use different styling as a way of making it
+clear to users which environment they’re in - but that’s more useful for people
+working on the service to not modify data in production than to keep users out.
+GOV.UK publishing apps do this, for example compare GOV.UK Signon in their
+[Staging](https://signon.staging.publishing.service.gov.uk) and [Production]
+(https://signon.publishing.service.gov.uk) environments.
 
-## Pitfalls of non `.gov.uk` domains
+## Non `.gov.uk` domains
 
-You should follow the above advice for these sorts of reasons:
+Domains that don't end in `.gov.uk` should not be used for MOJ services.
+
+If you use one, please refer to[How to get, register or manage a domain name]
+(how-to-get-a-domain-name.html). The Operations Engineering team will provide
+you with a `.gov.uk` domain as set out above, and will help you deprecate your
+old domain.
+
+You should use a `.gov.uk` subdomain, as above, for these reasons:
 
 - Public government things should on principle be on government domains
-- The ownership of a gov domain can be tracked to a government body by a member of the public
-- By using .gov.uk we never have the problem that a domain's control is lost to a previous supplier or staff member who set it up and moved on. Domain renewals are easier to keep on top of when centralized. When the domain is not renewed, it can be snapped up by a squatter.
-- The Service Manual says [not to use the crown, New Transport font etc](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk))
-- Unfamiliar domains look untrustworthy, putting off users including internal staff from using the service
+- The ownership of a gov domain can be tracked to a government body by a member
+  of the public
+- By using .gov.uk we never have the problem that a domain's control is lost to
+  a previous supplier or staff member who set it up and moved on
+- Domain renewals are easier to keep on top of when centralized. When the domain
+  is not renewed, it can be bought by a squatter and used for phishing and
+  scams
+- The Service Manual says [not to use the crown, New Transport font etc]
+  (https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk)
+  if your service isn't on a `gov.uk` domain
+- Unfamiliar domains look untrustworthy, putting off users including internal
+  staff from using the service
 - Normalizing the use of unfamiliar domains increases the risk of phishing
-- Google's anti-phishing protection could at any time flag a site as 'deceptive' if it looks like a GOV.UK site but is served on a non .gov.uk domain. We've experienced several occasions when this happens, likely because of the use of the crown, New Transport font or "GOV.UK" text at the top left. Chrome users cannot use the site - instead they see this error:
+- NCSC's [Takedown Service]
+  (https://www.ncsc.gov.uk/information/takedown-service) will likely take down
+  the site if you're using GOV.UK Design System, the crown, New Transport font
+  etc; and it's not on a .gov.uk domain
+- Google's anti-phishing protection could at any time flag a site as 'deceptive'
+  if it looks like a GOV.UK site but is served on a non .gov.uk domain. We've
+  experienced several occasions when this happens, likely because of the use of
+  the crown, New Transport font or "GOV.UK" text at the top left. Chrome users
+  cannot use the site - instead they see this error:
 
 ![deceptive-site-alert](images/deceptive-site-alert.png)
 
-Whilst we can get Google to remove the flag, it will keep happening.
+### Exemptions (where you can use a non-`gov.uk` domain)
 
-## Deprecating domains within the MOJ
+The [GOV.UK Proposition]
+(https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition)
+sets out an exemption criteria to use a non-`gov.uk` domain.
 
-To reduce our reliance on non `.gov.uk` domains, the following are no longer acceptable to use for new services:
+If your service falls into [What does not go on GOV.UK]
+(https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition#what-does-not-go-on-govuk):
 
-- `dsd.io`, which was historically used for staff services, non-production environments, and internal tools; but suffered the issues
-listed within [Pitfalls of non `.gov.uk` domains](#pitfalls-of-non-gov-uk-domains).
+- follow the [GOV.UK exemptions]
+  (https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition#govuk-exemptions)
+  guidance
+- [request an exemption]
+  (https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition#how-to-request-an-exemption)
+  from GOV.UK
+- once approved, forward the approval to the [Operations Engineering team]
+  (mailto:domains@digital.justice.gov.uk)
 
-We would also advise moving existing services off of these domains as soon as you are able as we are planning to
-decommission these domains in the near future.
+The Operations Engineering team will then:
+
+- work with you to register your domain
+- manage renewals for the domain
+- set up the domain to adhere to the [MOJ's Security Guidance]
+  (https://security-guidance.service.justice.gov.uk/#cyber-and-technical-security-guidance)
