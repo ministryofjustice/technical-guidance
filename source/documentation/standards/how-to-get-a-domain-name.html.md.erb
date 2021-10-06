@@ -1,0 +1,128 @@
+---
+title: How to get, register or manage a domain name
+last_reviewed_on: 2021-10-05
+review_in: 3 months
+---
+
+# <%= current_page.data.title %>
+
+The MOJ centrally registers and maintains domains for use across the department.
+Domains used within the MOJ must follow the [naming domains]
+(naming-domains.html) standards and must be registered by the MOJ's
+[Operations Engineering team]
+(https://ministryofjustice.github.io/operations-engineering/documentation/services/domain-management.html#domain-management).
+
+As per the [Naming domains guidance]
+(naming-domains.html#non-gov-uk-domains), the use of non-`gov.uk` domain names
+is strongly discouraged.
+
+## Requesting a new domain or changes to an existing domain
+
+If you need to request a new domain or changes to an existing domain name,
+[email the Operations Engineering team]
+(mailto:domains@digital.justice.gov.uk).
+
+The Operations Engineering team will help ensure that your domain meets the
+[naming domains standard](naming-domains.html) and our [wider standards for
+naming things](naming-things.html). The Operations Engineering team will also
+help identify which subdomain is most appropriate for your service.
+
+You **must not** register a domain outside of the Operations Engineering team.
+
+## Moving your domain to the central register
+
+If you currently use or have registered a non-`gov.uk` domain, you **must**
+transfer the domain to the Operations Engineering team. The Operations
+Engineering team will:
+
+- provide you with a new domain that meets [naming domains]
+  (naming-domains.html) standards
+- redirect your old domain to your new domain
+- help you decommission and deprecate your old domain
+
+## Defensive domain registrations
+
+Defensive domains must be requested through the [Operations Engineering team]
+(mailto:domains@digital.justice.gov.uk).
+
+The MOJ's [Security Guidance]
+(https://security-guidance.service.justice.gov.uk/defensive-domain-registration/#defensive-domain-registrations)
+covers why we defensively register domain names.
+
+## Deprecating domains
+
+If you need to deprecate a domain (both `gov.uk` and non-`gov.uk`), please
+contact the [Operations Engineering team]
+(mailto:domains@digital.justice.gov.uk).
+
+The Operations Engineering team will ensure it:
+
+- redirects to your new domain, if applicable
+- has the correct DNS records set for a domain that has been deprecated
+
+### List of deprecated domains
+
+The MOJ no longer supports:
+
+- *.dsd.io, which was previously used for non-production services
+
+## Mandatory DNS records for domains
+
+If you have DNS delegation for a subdomain, you must set the following DNS
+records yourselves. If you do not have DNS delegation, the Operations
+Engineering team will set these to the appropriate value for you.
+
+### Functional nameservers
+
+Your domain must always have functional nameservers.
+
+### Sender Policy Framework (SPF)
+
+Your domain must always have a `TXT` record for SPF set.
+
+For example, if your domain does not send emails, you would set a `TXT` record
+to:
+
+`v=spf1 -all`
+
+Additional guidance is available on [GOV.UK's SPF implementation guidance]
+(https://www.gov.uk/government/publications/email-security-standards/sender-policy-framework-spf).
+
+### Domain-based Message Authentication, Reporting and Conformance (DMARC)
+
+Your domain must always have a DMARC record configured in line with the
+[GOV.UK's DMARC guidance]
+(https://www.gov.uk/government/publications/email-security-standards/domain-based-message-authentication-reporting-and-conformance-dmarc).
+
+For example, to set a reject policy, you would set a `TXT` record on
+`_dmarc.mydomain.gov.uk` to:
+
+`v=DMARC1;p=reject;rua=mailto:dmarc-rua@dmarc.service.gov.uk;`
+
+### Mail Exchanger (MX)
+
+You must set MX records on your domain. If you're using your domain for email,
+use the correct DKIM records supplied by your email provider (AWS SES,
+SendGrid, etc).
+
+If your domain does not accept email, you must set a [NULL MX Resource Record]
+(https://tools.ietf.org/id/draft-delany-nullmx-02.html#rfc.section.4), such
+as:
+
+| Name/host/alias | Time to live | Record type | Priority | Value |
+|-|-|-|-|-|
+| `.` (full stop) | 3600 | MX | 0 | ` `&nbsp;(empty) |
+
+### DomainKeys Identified Mail (DKIM)
+
+You must set a DKIM record on your domain. If you're using your domain for
+email, use the correct DKIM records supplied by your email provider (AWS SES,
+SendGrid, etc).
+
+If your domain does not accept email, you must set a nullified wildcard DKIM
+record. This will ensure any cached keys will be explicitly removed.
+
+For example, on the domain: `*._domainkey.mydomain.gov.uk`, you'd set a TXT
+record to:
+
+`v=DKIM1; p=`
