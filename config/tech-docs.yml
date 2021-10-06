@@ -1,10 +1,10 @@
 # Host to use for canonical URL generation (without trailing slash)
-host: https://ministryofjustice.github.io/technical-guidance
+host: https://technical-guidance.service.justice.gov.uk/
 
 # Header-related options
 show_govuk_logo: false
 service_name: MoJ Technical Guidance
-service_link: /technical-guidance
+service_link: /
 
 # Links to show on right-hand-side of header
 header_links:
