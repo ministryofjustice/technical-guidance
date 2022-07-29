@@ -1,4 +1,4 @@
-name: Publish
+name: Publish gh-pages
 
 on:
   workflow_dispatch:
@@ -8,23 +8,44 @@ on:
     paths-ignore:
       - "docs/**"
 
+# GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
     container:
-      image: ministryofjustice/tech-docs-github-pages-publisher:1.5
+      image: ministryofjustice/tech-docs-github-pages-publisher:v2
     steps:
-    - uses: actions/checkout@v3
-    - name: Publish to gh-pages
-      run: |
-        git config --global --add safe.directory ${GITHUB_WORKSPACE}
-        /publishing-scripts/publish.sh
-    - name: Report failure to Slack
-      if: always()
-      uses: ravsamhq/notify-slack-action@v1
-      with:
-        status: ${{ job.status }}
-        notify_when: 'failure'
-        notification_title: 'Failed GitHub Action Run'
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Compile Markdown to HTML and create artifact
+        run: |
+          /scripts/compile-and-create-artifact.sh
+      - name: Upload artifact to be published
+        uses: actions/upload-artifact@main
+        with:
+          name: github-pages
+          path: artifact.tar
+          retention-days: 1
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
