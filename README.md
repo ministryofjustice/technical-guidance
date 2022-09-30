@@ -9,7 +9,7 @@ site.
 It's built using the gov.uk [tech-docs-template], and hosted using [GitHub Pages].
 
 [gds-way]: https://github.com/alphagov/gds-way
-[GitHub Pages]: https://pages.github.com
+[github pages]: https://pages.github.com
 [tech-docs-template]: https://github.com/alphagov/tech-docs-template
 
 ## Getting started
