@@ -10,8 +10,8 @@ jobs:
   check_links:
     runs-on: ubuntu-latest
     container:
-      image: ministryofjustice/tech-docs-github-pages-publisher:1.5
+      image: ministryofjustice/tech-docs-github-pages-publisher:v3
     steps:
-    - uses: actions/checkout@v3
-    - name: htmlproofer
-      run: /publishing-scripts/publish.sh no-repository-changes
+      - uses: actions/checkout@v3
+      - name: htmlproofer
+        run: /scripts/compile-and-create-artifact.sh
