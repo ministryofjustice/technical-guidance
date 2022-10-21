@@ -23,6 +23,12 @@ make preview
 This will create a local web server, at `http://localhost:4567` This is only
 accessible on our own computer, and won't be accessible to anyone else.
 
+To test the URLs:
+
+```
+make check
+```
+
 ## Making changes
 
 To make changes, edit the appropriate Markdown files in/below the
