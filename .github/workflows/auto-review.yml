@@ -10,6 +10,8 @@ env:
 jobs:
   check-diff:
     runs-on: ${{ matrix.os }}
+    permissions:
+      pull-requests: write
 
     strategy:
       matrix:
@@ -34,11 +36,11 @@ jobs:
         id: approve_pr_check
         uses: ministryofjustice/cloud-platform-doc-checker@main
         env:
-          GITHUB_TOKEN: ${{ secrets.OPS_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Approving PR
         uses: hmarr/auto-approve-action@v3
 
         if: steps.approve_pr_check.outputs.review_pr == 'true'
         with:
-          github-token: "${{ secrets.OPS_BOT_TOKEN }}"
+          github-token: ${{ secrets.OPS_BOT_TOKEN }}
