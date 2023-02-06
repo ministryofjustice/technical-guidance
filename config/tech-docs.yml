@@ -33,3 +33,7 @@ prevent_indexing: true
 show_contribution_banner: true
 github_repo: ministryofjustice/technical-guidance
 github_branch: main
+
+# Slack options
+owner_slack_workspace: mojdt
+default_owner_slack: '#operations-engineering-alerts'
