@@ -36,4 +36,4 @@ github_branch: main
 
 # Slack options
 owner_slack_workspace: mojdt
-default_owner_slack: '#operations-engineering-alerts'
+default_owner_slack: "#operations-engineering-alerts"
