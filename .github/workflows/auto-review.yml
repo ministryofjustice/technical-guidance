@@ -43,4 +43,4 @@ jobs:
 
         if: steps.approve_pr_check.outputs.review_pr == 'true'
         with:
-          github-token: ${{ secrets.OPS_BOT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
