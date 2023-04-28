@@ -1,17 +1,18 @@
 name: Auto-approve date change only PR
 
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - "source/**"
 
 env:
   PR_OWNER: ${{ github.event.pull_request.user.login }}
-  GITHUB_OAUTH_TOKEN: ${{ secrets.OPERATIONS_ENGINEERING }}
+  GITHUB_OAUTH_TOKEN: ${{ secrets.GH_BOT_PAT_TOKEN }}
   TEAM_NAME: "operations-engineering"
 
 jobs:
   check-diff:
     runs-on: ${{ matrix.os }}
-    permissions:
-      pull-requests: write
 
     strategy:
       matrix:
@@ -36,11 +37,11 @@ jobs:
         id: approve_pr_check
         uses: ministryofjustice/cloud-platform-doc-checker@main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.OPS_BOT_TOKEN }}
 
       - name: Approving PR
         uses: hmarr/auto-approve-action@v3
 
         if: steps.approve_pr_check.outputs.review_pr == 'true'
         with:
-          github-token: ${{ secrets.OPS_BOT_TOKEN }}
+          github-token: "${{ secrets.OPS_BOT_TOKEN }}"
