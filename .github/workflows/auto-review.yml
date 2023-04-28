@@ -1,6 +1,9 @@
 name: Auto-approve date change only PR
 
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - "source/**"
 
 env:
   PR_OWNER: ${{ github.event.pull_request.user.login }}
@@ -10,8 +13,6 @@ env:
 jobs:
   check-diff:
     runs-on: ${{ matrix.os }}
-    permissions:
-      pull-requests: write
 
     strategy:
       matrix:
@@ -43,4 +44,4 @@ jobs:
 
         if: steps.approve_pr_check.outputs.review_pr == 'true'
         with:
-          github-token: ${{ secrets.OPS_BOT_TOKEN }}
+          github-token: "${{ secrets.OPS_BOT_TOKEN }}"
