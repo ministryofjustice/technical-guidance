@@ -65,3 +65,4 @@ jobs:
           npm install linkinator
           npx linkinator . --recurse --markdown \
             --skip https://technical-guidance.service.justice.gov.uk/images/govuk-large.png \
+            --skip https://twitter.com/* \
