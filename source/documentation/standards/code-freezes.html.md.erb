@@ -106,3 +106,28 @@ that entails), or risk violating the supplier's contract.
 
 ## Code freezes can be appropriate in limited circumstances
 
+A code freeze may, despite all the risks outlined above, still be
+appropriate for your system if all these conditions are true:
+
+- The code freeze only applies to one system, or a small, closely
+  related cluster of systems, all maintained by a group working on one
+  problem.
+- The code freeze is time-limited to a very short window of at most a
+  few days, preferably outside working hours.
+- No other work is planned on the system under code freeze during the
+  specified window.
+- Confidence in the team's ability to change the system predictably and
+  regularly is low, and the effort to raise this confidence is
+  significantly higher than the risk of the code freeze, or the work
+  the code freeze permits would enable such changes.
+- Work is planned, after the code freeze, to remove or reduce the need
+  for future code freezes.
+- The process to request exceptions to the code freeze is well
+  documented and understood by all those who may be impacted by it
+  (including teams whose systems interact with the system under code
+  freeze).
+
+If you cannot meet all those conditions, a code freeze will likely
+introduce more risk to your system. In that case, you should work to
+either meet these conditions or, preferably, iterate the system such
+that a code freeze is not required to make changes.
