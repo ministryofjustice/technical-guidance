@@ -1,0 +1,133 @@
+---
+owner_slack: "#hosting"
+title: Avoid code freezes
+last_reviewed_on: 2023-06-28
+review_in: 3 months
+---
+
+# <%= current_page.data.title %>
+
+Teams building systems for the MOJ should avoid code freezes whenever
+possible as they generally increase the risks to your service and those
+services around it.
+
+While code freezes are intended to reduce uncertainty and change when
+making changes to a system, they are typically a symptom of low trust
+in existing change processes around a given system, or of a previous
+traumatic event in the system's past.
+
+In most cases, it is better to make the system safer to change through
+[smaller, more regular changes](https://www.gov.uk/service-manual/technology/deploying-software-regularly)
+because [regular releases reduce risk](https://gds.blog.gov.uk/2012/11/02/regular-releases-reduce-risk/).
+
+## Code freezes introduce many risks
+
+There are various types of risk that code freezes introduce, both to
+the team's ability to resolve incidents and to the risk and impact
+profile of changes before, during, and after the code freeze.
+
+### Exceptional processes create uncertainty, and risk extending incidents
+
+In a team's day-to-day work, they will use a standard process for
+releasing changes to their systems. If they make changes regularly ([as
+they should](https://www.gov.uk/service-manual/technology/deploying-software-regularly)),
+they will be practiced experts in their normal processes. These
+processes will likely be well documented, well tested, automated, and
+easily reverted.
+
+Even during a code freeze, however, incidents can happen that are out of
+everyone's control, and that cannot be resolved without making changes.
+
+Code freezes can introduce a new process with which the team may not be
+familiar. Using an unfamiliar process, even a well-documented one, is
+likely to result in the team making mistakes. If this process needs to
+be enacted during an incident—an already high-pressure situation, often
+outside business hours—the likelihood of a mistake is significantly
+increased.
+
+If the code freeze exceptions process also involves sign-off from a
+named person or small group, those people may also not be available
+when needed, potentially extending the incident until they can be
+reached.
+
+### Changes can be rushed to ship before the freeze
+
+If a code freeze is well publicised, teams may want to make sure their
+work is shipped before the code freeze to avoid being blocked by it.
+This can often mean that the team rushes to include changes that aren't
+ready yet, and which may not have been fully tested. These rushed
+changes may risk the stability and predictability of the system such
+that it suffers an outage during the code freeze, requiring further
+changes (or rolling back of changes) to resolve it.
+
+### Changes made during the code freeze are waste until they can be released
+
+From the perspective of a system's user, any work to change that system
+whose results aren't released to them are a form of waste. This means
+that any changes made during a code freeze that are unable to be
+released to users (or progress toward users) are a form of wasted
+effort.
+
+This creates the risk that, by the time the change can be released, it
+will not meet the user's need and, thus, will have to be removed or
+replaced. The longer the change is held back by the code freeze, the
+greater the risk of any change being waste becomes.
+
+### Batches of changes shipped immediately after the code freeze are high risk
+
+If changes are made to the system but not released during a code
+freeze, those changes will need to be released after the code freeze is
+lifted. When that happens, there may be a large batch of changes
+waiting to be released.
+
+If these changes are all released at once or in quick succession and an
+issue occurs, their interactions may not be clearly understood,
+increasing the risk they present to the system compared to being
+released independently. Further, releasing them as a batch makes
+remediation of any issues that occur more complicated.
+
+### Change freezes are typically ill-defined, creating ambiguity
+
+When change freezes are instigated, they often have an unclear or
+extended time-frame, or are applied to any systems that interact with a
+system undergoing significant change. This can have unexpected impacts,
+and extends those risks described above to every affected system and all
+their connections, creating a growing sphere of increased risk around
+the system undergoing a change freeze.
+
+Change freezes often cannot be applied to certain systems, however: for
+example, many suppliers' practices and contracts are such that they do
+not follow requested change freezes. Typically, this is because they
+cannot accept the risks described above impacting other users of their
+systems, especially in cloud-hosted or other multi-tenant environments.
+If these suppliers require changes during a code freeze, the changes
+may have to be made through an exceptional process (with all the risks
+that entails), or risk violating the supplier's contract.
+
+## Code freezes can be appropriate in limited circumstances
+
+A code freeze may, despite all the risks outlined above, still be
+appropriate for your system if all these conditions are true:
+
+- The code freeze only applies to one system, or a small, closely
+  related cluster of systems, all maintained by a group working on one
+  problem.
+- The code freeze is time-limited to a very short window of at most a
+  few days, preferably outside working hours.
+- No other work is planned on the system under code freeze during the
+  specified window.
+- Confidence in the team's ability to change the system predictably and
+  regularly is low, and the effort to raise this confidence is
+  significantly higher than the risk of the code freeze, or the work
+  the code freeze permits would enable such changes.
+- Work is planned, after the code freeze, to remove or reduce the need
+  for future code freezes.
+- The process to request exceptions to the code freeze is well
+  documented and understood by all those who may be impacted by it
+  (including teams whose systems interact with the system under code
+  freeze).
+
+If you cannot meet all those conditions, a code freeze will likely
+introduce more risk to your system. In that case, you should work to
+either meet these conditions or, preferably, iterate the system such
+that a code freeze is not required to make changes.
