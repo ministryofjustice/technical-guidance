@@ -1,7 +1,7 @@
 ---
 owner_slack: "#operations-engineering-alerts"
 title: Frontend Development Principles
-last_reviewed_on: 2023-12-12
+last_reviewed_on: 2024-01-23
 review_in: 1 months
 ---
 
@@ -22,15 +22,50 @@ because it covers the broad principles and is generally right. What follows are
 MOJ-specific recommendations.
 
 ## 2. Make your service accessible
-Your site must be compliant with level AA of the [Web Content Accessibility Guidelines 2.0](https://www.w3.org/WAI/intro/wcag). You should also try assistive
-technology tools as much as you can. However that’ll be far from giving you a
-complete view of the issues your service might have. With a bit of luck to will
-be assessed by proper accessibility experts (like the [Digital Accessibility Centre](https://www.digitalaccessibilitycentre.org/)). But don’t wait for it to
-happen to implement accessibility principles. Another helpful thing to do is
-automatic accessibility testing as part of your continuous integration.
 
-- [pa11y](https://github.com/springernature/pa11y)
-- Automated Accessibility Testing in Rails with capybara-accessible: `https://blogs.vmware.com/vsphere/2012/03/creating-custom-metadata-using-the-vcloud-api.html`
+In the UK, the [Public Sector Bodies Accessibility Regulations](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) mean we are legally required to make sure our digital services meet level AA of the latest version of the [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG22/).
+
+You should make efforts to ensure what you are designing and developing is accessible as you go, rather than waiting until the end to think about and test for accessibility.
+
+Some things you can do as a designer or developer include:
+- Using the [GOV.UK design system components](https://design-system.service.gov.uk/) as much as possible. These have all been carefully built and tested to be as accessible as possible.
+- Using automated accessibility testing tools. These tools can help you catch 20-30% of accessibility issues early. The rest require manual testing by people. Links to popular options are provided in the further resources section.
+- Ensuring all of your colours provide good colour contrast.
+- Providing a descriptive page title on each page.
+- Using logical heading structures.
+- Writing meaningful link texts.
+- Ensuring images have appropriate alt text.
+- Making sure you can access all parts of your service just using the keyboard alone.
+- Making sure the site accommodates browser zooming up to 400% without any loss of content or functionality.
+
+Further details on these points can be found in this guide to [content accessibility](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/content-accessibility.aspx?csf=1&web=1&e=xcZDJE).
+
+If you feel comfortable, you should try testing your service using some of the assistive technologies built-into your computer. Testing with a screen reader is a good way to check for issues that might affect other assistive technologies as well.
+
+These resources will help you get started with screen reader testing:
+- [Desktop Screen Readers Survival Guide - Basic Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/survival-guide)
+- [Desktop Screen Readers Forms Guide](https://dequeuniversity.com/screenreaders/forms-guide)
+
+### MoJ Digital Accessibility Team
+
+The MoJ has an in-house digital accessibility team that can support you with your accessibility needs. They provide consultancy, training and run an accessibility champions network. These services can be used at no cost to your team. They can also help you arrange a full accessibility audit using our approved external supplier. There is normally a cost for that service.
+
+- [Digital Accessibility Team - what we do](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/digital-accessibility-team-what-we-do.aspx?csf=1&web=1&e=gBFvQA)
+- [Accessibility consultancy service](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/accessibility-consultancy-service.aspx?csf=1&web=1&e=ddI9hd)
+- [Accessibility training courses](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/accessibility-training-courses.aspx?csf=1&web=1&e=NUjm99)
+- [Accessibility training recordings](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/accessibility-training-webinar-recordings.aspx?csf=1&web=1&e=IbZtVr)
+- [Accessibility Champions Network at MoJ](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-champions-network.aspx)
+- [Get an accessibility audit](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/Get-an-accessibility-audit.aspx)
+
+### Further resources
+- [What you need to know about the new version of the Web Content Accessibility Guidelines (WCAG)](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/what-you-need-to-know-about-the-new-version-of-the-web-content-accessibility-guidelines.aspx?csf=1&web=1&e=78BjiZ)
+- [What projects and service teams need to do about accessibility](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/what-projects-service-teams-do-about-accessibility.aspx?csf=1&web=1&e=fYSxdN)
+- [How to test for accessibility](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/how-to-test-for-accessibilty.aspx?csf=1&web=1&e=Jvscyw)
+- [Write an accessibility statement](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/write-accessibility-statement.aspx?csf=1&web=1&e=CVSpHD)
+- [Axe accessibility testing tool](https://www.deque.com/axe/)
+- [Pa11y accessibility testing tool](https://pa11y.org/)
+- [Accessibility Insights accessibility testing tool](https://accessibilityinsights.io/)
+- [WAVE accessibility testing tool](https://wave.webaim.org/)
 
 ## 3. Make it easy to change your code for copy and translation
 All the user-facing text in your application should be in the same place in the
