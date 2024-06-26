@@ -7,7 +7,7 @@ on:
 
 env:
   PR_OWNER: ${{ github.event.pull_request.user.login }}
-  GITHUB_OAUTH_TOKEN: ${{ secrets.GH_BOT_PAT_TOKEN }}
+  GITHUB_OAUTH_TOKEN: ${{ secrets.MOJ_AUTO_APPROVE_WRITE_BOT_PAT }}
   TEAM_NAME: "operations-engineering"
 
 jobs:
@@ -37,11 +37,11 @@ jobs:
         id: approve_pr_check
         uses: ministryofjustice/cloud-platform-doc-checker@main
         env:
-          GITHUB_TOKEN: ${{ secrets.OPS_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MOJ_AUTO_APPROVE_WRITE_BOT_PAT }}
 
       - name: Approving PR
         uses: hmarr/auto-approve-action@v3
 
         if: steps.approve_pr_check.outputs.review_pr == 'true'
         with:
-          github-token: "${{ secrets.OPS_BOT_TOKEN }}"
+          github-token: "${{ secrets.MOJ_AUTO_APPROVE_WRITE_BOT_PAT }}"
