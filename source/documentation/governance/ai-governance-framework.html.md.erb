@@ -1,0 +1,205 @@
+---
+owner_slack: "#tda-and-solution-surgery"
+title: Engineering AI Governance Framework
+last_reviewed_on: 2025-12-12
+review_in: 3 months
+---
+
+# <%= current_page.data.title %>
+
+## Introduction
+
+The Ministry of Justice (MOJ) is committed to using Artificial Intelligence (AI) in an ethical, trustworthy and transparent way that supports our public service mission. To provide clear guidance for the practical implementation of AI and AI tooling across MOJ engineering projects, we have created this ramework, which builds on the existing [AI and Data Strategy Framework](https://mojdigital.blog.gov.uk/2025/06/05/principles-to-practice-launching-the-ministry-of-justice-ai-and-data-science-ethics-framework/) and [AI Action Plan for Justice](https://www.gov.uk/government/publications/ai-action-plan-for-justice ). It provides practical principles to guide our use of AI and, mechanisms for governance and oversight within engineering. It does not replace legal compliance as the MOJ remains accountable for the reliability, quality, and safety of its services (regardless of AI involvement).
+
+This framework must be used to guide all AI initiatives, including AI systems, models and tooling.
+
+In this framework, the term AI tools refer to an AI enabled engineering tool, such as GitHub Copilot. AI systems is used as a catch term to cover any bespoke solution built in-house that integrates a form of AI. An AI model refers specific models like large language models or machine learning models.
+
+When developing or utilising AI models directly, the [MOJ Data Science and AI ethics framework](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub/SitePages/Home.aspx?csf=1&web=1&e=anTPYF&CID=097adc46-d51f-4140-90a9-9792b4a83d15) should be consulted. Further information including learning resources can be found on the [AI Data Science Ethics Hub sharepoint site](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub/SitePages/Home.aspx?csf=1&web=1&e=anTPYF&CID=097adc46-d51f-4140-90a9-9792b4a83d15) (non-public facing). Testing requirements are specified on the government [AI Testing and Assurance Framework](https://testing-ai-standards.github.io/cross-gov-ai-testing-framework/) site.
+
+## Principles of responsible AI
+
+**Lawfulness and public benefit**: Use of AI must be within the law and regulations (data protection, equality, human rights) and align with the MOJ’s public service mission.
+
+**Human in the loop**: Clear responsibility should be assigned for the outcomes of AI systems and tooling throughout the development, deployment and use. A named person must be identified as accountable for an AI model’s performance, decisions and compliance.
+
+**Fairness and non-discrimination**: AI-based decisions must not disadvantage individuals or groups on the basis of protected characteristics. Build in human checks of datasets and algorithms to detect and mitigate bias.
+
+**Transparency**: Internal documentation about each AI system, tool and model (including its design, purpose and limitations) should be maintained and readily available for review.
+
+**Privacy and security**: There must be no ingestion of personal data or sensitive security data by AI unless the AI system has been reviewed and approved by the Technical Design Authority.
+
+**Reliability and safety**: Ensure AI systems and models are well-developed, thoroughly tested, and resilient before deployment and throughout use. This includes verification that outputs are accurate and error rates are within acceptable bounds. AI systems should fail safely, defaulting to human control when encountering conditions outside their scope. Please see the [AI ethics framework](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub/SitePages/Home.aspx?csf=1&web=1&e=anTPYF&CID=097adc46-d51f-4140-90a9-9792b4a83d15) and [AI testing guide](https://testing-ai-standards.github.io/cross-gov-ai-testing-framework/) for further details in this.
+
+**Continuous monitoring**: Perform regular audits and performance reviews to verify that all AI systems, models and tooling maintain compliance with these principles throughout their operational life.
+
+## Governance and accountability mechanisms
+
+This framework sets out clear roles and responsibilities for AI governance and accountability, which must be followed.
+
+### Leadership oversight
+Ultimate responsibility for AI use (both systems within engineering applications and AI tooling) lies with senior leadership, sitting within the office of the CTO.
+
+### AI Governance champions
+Designated senior technical professionals (Technical Architect, DevOps or Engineer) will serve as an AI Governance Leads, championing responsible AI use and ensuring adherence to the framework. They will work closely with the Justice AI unit to eliminate duplication of effort across departments in the application of AI within future and existing software engineering projects.
+
+### Technical Design Authority
+All new AI-enabled systems, models or tooling must be presented in the Solution Surgery, followed by a formal presentation at the Technical Design Authority (TDA). The TDA *must* sign off the project before it can be launched.
+
+### Project-level accountability
+Each project involving an AI system or model must include:
+
+### Project responsible owner
+Typically, the product or service manager. Accountable for the system's proper development, compliance, and performance and manage stakeholder communication and feedback.
+
+### Technical lead
+Must have appropriate AI expertise and training. Responsible for AI development (model selection, training and validation) and AI tooling. The lead is responsible for procurement, evaluation, integration, configuration, and ongoing technical oversight.
+
+### Risk and compliance officer
+Responsible for risk and impact assessments and determining the right levels of human oversight. Ensures adherence to the framework for both AI developed in-house and procured externally.
+
+These roles can be held by multiple people if the project requires it.
+
+### Training and resources
+All staff involved in AI development, deployment or use must be properly trained and resourced to fulfil their governance duties, including understanding AI bias, interpretability, vendor assessment, and MOJ accountability standards.
+
+
+## Use of AI tooling in engineering
+
+The MOJ encourages safe experimentation with AI-powered tools within engineering teams, provided they use only approved AI services and comply with governance standards. This applies to coding agents, automated test generators, developer assistants, data analysis tools, documentation generators, and other AI-enabled productivity solutions.
+
+### Approved tools
+As of December 2025, only MOJ-approved AI tools are permitted on MOJ devices:
+
+- Copilot Chat (secure version): available to all colleagues
+
+- Microsoft Copilot 365: Available to all colleagues
+
+- ChatGPT Enterprise: Available through a waiting list based on role, availability, and approval.
+
+- GitHub Copilot: Available to civil servants within the Engineering profession.
+
+**Procurement**: Consumer versions of AI tools carry risks (including IP infringement and data leakage) and should not be used on MOJ devices. This includes free versions of Microsoft Copilot and ChatGPT accessed via web or mobile apps. Teams who need additional AI capabilities should register interest for enterprise licenses through the procurement process outlined in Governance and Accountability Mechanisms mentioned above.
+
+**Cost and value**: Teams should assess cost-effectiveness of approved AI tooling based on productivity gains, risk mitigation, and alignment with approved services. License allocation is managed centrally based on demonstrated need and available budget.
+
+**Risk appetite**: Use of AI tooling must align with MOJ's risk tolerance and security requirements. Teams must not use unauthorised AI services regardless of perceived benefits. Pre-approved tools must undergo compliance, security, and ethical review through the TDA before being used.
+
+**Governance**: AI tooling must follow established governance processes including appropriate review, documentation and monitoring through the TDA. Teams should consult MOJ AI usage guidelines and use the AI for All hub (internal page) for support, training and best practice.
+
+**Output responsibility**: Users must carefully review AI-generated outputs for accuracy and apply them in line with organisational guidance and professional standards.
+
+Engineering teams are encouraged to maximise value from approved AI tooling and provide feedback through official channels to inform future policy and procurement decisions.
+
+
+
+## Development, testing deployment and monitoring practices
+
+MOJ Guidance on responsible use of AI throughout the lifecycle must be followed.
+
+MOJ AI reference and guidance documentation can be found at the [AI and Data Science ethics framework](https://www.gov.uk/government/publications/ministry-of-justice-ai-and-data-science-ethics-framework). Testing requirements are specified in the UK government [AI Testing and Assurance Framework](https://testing-ai-standards.github.io/cross-gov-ai-testing-framework/).
+
+### Data quality and bias mitigation
+
+AI systems must be trained on accurate, relevant, and minimally biased datasets. Teams should assess and mitigate bias through pre-processing or model techniques and document all data preparation steps. Use of personal data must follow strict privacy and legal standards and minimal-use principles should apply. All data preparation steps (for example, cleaning, augmentation) should be documented for transparency and potential reuse.
+
+### Model selection and development
+
+When choosing and constructing an AI model, simpler or more interpretable models (for example, decision trees or rule-based systems) should be used for high-stake decisions, as they can be more easily explained and audited. There must be compelling benefits for using complex models (deep learning or large generative models), where additional techniques should be employed to present the logic and reasoning for the model in a way that is easily understood.
+
+The model training process must be managed carefully and subject to oversight: tracking how the model is trained and the data and validation methods used. Choices in model architecture or parameters should consider fairness and robustness (for example avoiding overfitting to biased patterns).
+
+If the MOJ uses third-party AI services or pre-trained models, the project responsible owner must perform due diligence: understanding the model’s origin, known limitations, and ensuring it meets our standards. AI vendor contracts must include requirements to uphold MOJ’s governance principles (vendors should provide model factsheets or allow for audits).
+
+Examples:
+
+Decision tree for document classification - only move to a neural network if accuracy gains justify the added complexity.
+
+Integrating an AI-powered test generator - validate that the tool supports your codebase’s language and structure before adoption.
+
+### Testing and validation
+
+An AI system must undergo rigorous testing before any live deployment, and follow the guidelines set out in the AI Testing and Assurance Framework. Testing protocols include standard technical validation (accuracy, predictive performance on a test dataset), evaluation against ethical and risk criteria: fairness, explainability, and robustness.
+
+Performance: Measuring the model’s accuracy or error rates on hold-out data, ensuring they are acceptable for the use case (with a margin of safety). An example would be comparing coverage against manual test suites when creating AI-generated unit tests.
+
+Fairness: Checking outcomes for different groups or case types to detect disparate impacts. If an AI system is found to perform worse for a certain group, this must be addressed before deployment (retraining with more data, adjusting thresholds, or other bias mitigation).
+
+Stress and scenario: Evaluating the model on edge cases or worst-case scenarios. Potential situations the AI might face are simulated (including unusual inputs or conditions) to see how it responds. The goal is to ensure the AI is robust and resilient, minor input variations or noise should not cause catastrophic failures.
+
+Adversarial tests: Conducted for systems at risk of manipulation (for example, a generative AI chatbot that could be prompted to produce inappropriate content) to see if the system can be provoked into undesired behaviour. This helps to resolve any vulnerabilities (through model tuning or adding rules/filters).
+
+Human review of results: A human expert should review a sample of AI outputs during testing of critical applications to ensure they make sense and align with policy and MOJ values. If anomalies are found, the cause should be rectified before being deployed.
+
+Testing results must be documented and reviewed by the project’s Responsible Owner and, for higher-risk systems, by the AI governance champions within the office of the CTO or the TDA.
+
+Important: No AI system will be cleared for deployment until it has passed all required tests and any identified issues have been remedied. This is to uphold reliability and safety prior to exposure to real users.
+
+### Documentation and transparency
+
+All documentation (technical details, validation results, risk mitigation measures, and user guidelines) should be captured and updated whenever systems change to ensure an audit trail for investigations. Documentation should be stored in GitHub and easily accessible to all teams and the public (if appropriate). This will support internal governance and public transparency through AI Fact Sheets or decision records, explaining system capabilities, settings and any limitations in plain language.
+
+### Monitoring and audits
+
+The Project Responsible Officer should ensure AI systems undergo continuous monitoring using key performance indicators (KPI) and automated alerts when these KPIs are not met. Regular audits (quarterly or annual based on risk level) evaluate fairness, accuracy, security, and compliance.
+
+Audits are an opportunity to catch issues missed by day-to-day monitoring, and incorporate any new ethical or legal considerations. If new legislation or guidelines on AI emerge, the audit would check the system and recommend any necessary changes. Where possible, audits will involve parties independent of the system’s direct developers (e.g. an internal audit team or external auditor) to ensure objectivity. The audit process will include reviewing the AI’s decision logs and any notable incidents. Auditability is a design requirement - systems should be built to ensure their operations can be traced and understood retrospectively. The MOJ will securely retain detailed logs of AI system activities (inputs, outputs, and key intermediate states or confidence scores) to support any audits and investigations. Access will be restricted to authorized personnel, but they will be available to verify AI behaviour in specific instances (e.g. if a decision is challenged).
+
+
+### Stakeholder communication
+
+In deploying AI, the MOJ acknowledges a duty to communicate openly with those affected (members of the public, legal professionals, MOJ staff). The framework calls for reviewing communication channels and interactions with stakeholders to provide disclosure and effective feedback mechanisms.
+
+When an AI system interacts directly with the public or influencing outcomes for individuals, the MOJ will disclose the use of AI in that process.
+
+The MOJ will provide avenues for individuals to make inquiries or appeal decisions involving AI. If someone is uncomfortable or disagrees with an AI-influenced decision, they must have the ability to request human review. The appeals process will be confirmed in MOJ communications. A “human-in-the-loop" must always make the final decision based on presented evidence.
+
+The MOJ welcomes feedback from users and stakeholders on the performance of AI systems.
+
+In public-facing applications like informational chatbots or document generators, the MOJ will ensure AI-generated content is appropriately labelled or disclosed. If generative AI is used to create public content, measures like digital watermarks or disclaimers to identify AI-generated content will be considered. AI-generated content will also be validated for accuracy and clarity before it’s released, to maintain information integrity.
+
+
+
+### Incident response and continuous improvement
+
+If issues with AI systems arise, the MOJ is prepared to handle incidents swiftly and learn from them. An “incident” could be any scenario where an AI system malfunctions, produces a significantly harmful or incorrect output, is suspected of bias, or is involved in a complaint or legal challenge.
+
+Incident reporting: AI incidents (like cybersecurity incidents) will have severity levels and corresponding response requirements (e.g. critical incidents might require immediate suspension of the AI system and notification of senior officials).
+
+Remediation and investigation: When an incident is reported, the MOJ will take prompt action to contain any harm and investigate the root cause.
+
+Notification and transparency: Depending on the nature of the incident, the MOJ will notify affected parties and relevant authorities in a timely manner. Internally, incidents and their resolutions will be reported up the management chain to the AI governance committee for oversight. We will also assess whether an incident triggers any legal reporting obligations (e.g. data breach laws if personal data was involved, Information Commissioner’s Office if it concerns individuals’ rights). Transparency about incidents is part of maintaining trust – we will not cover up serious AI issues, and also communicate how we are addressing them.
+
+Learning and iteration: Every incident (or near-miss) is an opportunity to improve systems and processes. After immediate remediation, the AI governance committee will review the incident report to identify lessons learned. These could include
+
+improving the model (e.g. retraining with more data, fixing a bug).
+
+adding new control measures (e.g. an additional validation step or a stricter threshold for human review).
+
+reconsidering whether that AI application should continue in its current form.
+
+We will then implement these improvements as soon as possible. Systemic insights (e.g. “we need more training for staff on interpreting AI output” or “our incident response plan needs tweaking”) will be used to update the governance framework and related policies.
+
+
+
+### Framework Review
+
+Apart from reacting to incidents, the MOJ will proactively review and update the AI Governance Framework. AI technology and best practices evolve rapidly - we plan to regularly review and adjust our frameworks to address risks and developments on an annual basis. We will align with new governmental guidelines, international standards, and operational experience.
+
+This framework will be reviewed every three months.
+
+## Conclusion
+
+The MOJ AI Governance Framework sets out clear, actionable standards for responsible use of AI systems and AI-powered tools in engineering. By applying principles such as accountability, human oversight, rigorous testing, and transparency, we aim to improve public services while safeguarding fairness and trust. The framework will be shared with Government Technology & Data leaders as a model for wider public sector adoption. The MOJ will work with partners to refine these guidelines and ensure AI (both developed in-house or adopted as tooling) is used safely, effectively, and ethically across government.
+
+## References
+
+AI Action Plan for Justice -  [https://www.gov.uk/government/publications/ai-action-plan-for-justice](https://www.gov.uk/government/publications/ai-action-plan-for-justice)
+
+MoJ AI and Data Science Ethics Framework - [https://www.gov.uk/government/publications/ministry-of-justice-ai-and-data-science-ethics-framework](https://www.gov.uk/government/publications/ministry-of-justice-ai-and-data-science-ethics-framework)
+
+MoJ AI and Data Science Ethics Hub (Internal ) -   [https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub)
+
+Government AI and Testing Assurance Framework -
+
+[https://testing-ai-standards.github.io/cross-gov-ai-testing-framework/](https://testing-ai-standards.github.io/cross-gov-ai-testing-framework/)
