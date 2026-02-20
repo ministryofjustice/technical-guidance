@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download a Build Artifact from build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: github-pages
           path: github-pages
