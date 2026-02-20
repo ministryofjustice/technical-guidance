@@ -64,6 +64,7 @@ jobs:
           tar -xvf artifact.tar
           npm install linkinator
           npx linkinator . --recurse --markdown \
+            --skip https://justiceuk.sharepoint.com/* \
             --skip https://technical-guidance.service.justice.gov.uk/images/govuk-large.png \
             --skip https://twitter.com/* \
-            --skip https://justiceuk.sharepoint.com/* \
+            --skip https://www.sitepoint.com/why-browser-sniffing-stinks/* \
