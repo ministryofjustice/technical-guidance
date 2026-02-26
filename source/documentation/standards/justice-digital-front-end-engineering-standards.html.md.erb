@@ -9,66 +9,45 @@ review_in: 6 months
 ## Introduction 
 
 ### Purpose: 
-	This document defines the standards and best practices for front end software 	engineering within justice Digital. It is a framework that provides teams with 		methods, processes and approaches to software engineering that aims to 		facilitate consistency, quality and maintainability across projects. 
 
- 
+This document defines the standards and best practices for front end software engineering within Justice Digital. The framework aims to provide teams with methods, processes and approaches to software engineering and facilitate consistency, quality and maintainability across projects.  
 
 ### Scope: 
-	 
 
 All front-end projects (web apps, SPAs, mobile web). 
 
 ### Benefits: 
 
-Improved code quality and readability 
-
-Easier maintenance and scalability 
-
-Enhanced security and compliance 
-
-Streamlined collaboration across teams 
-
-Reduced technical debt 
-
-Facilitates onboarding new developers 
-
- 
+- Improved code quality and readability 
+- Easier maintenance and scalability 
+- Enhanced security and compliance 
+- Streamlined collaboration across teams 
+- Reduced technical debt 
+- Facilitates onboarding new developers 
 
 ## Technology Stack  
 
-Approved frameworks/libraries: React, Angular, Vue. 
-
-CSS methodologies: BEM, CSS Modules, Tailwind. 
-
-State management: Redux, Zustand. 
-
-Build tools: Webpack, Vite. 
-
-Recommended IDE extensions. 
-
-Code formatting tools. 
-
-Performance monitoring tools (Lighthouse). 
-
- 
+- Approved frameworks/libraries: React, Angular, Vue. 
+- CSS methodologies: BEM, CSS Modules, Tailwind. 
+- State management: Redux, Zustand. 
+- Build tools: Webpack, Vite. 
+- Recommended IDE extensions. 
+- Code formatting tools. 
+- Performance monitoring tools (Lighthouse). 
 
 ## Coding Standards (HTML, CSS) 
 
-Proper HTML and CSS practices ensure maintainable and accessible interfaces. 	Key guidelines include: 
+Proper HTML and CSS practices ensure maintainable and accessible interfaces. Key guidelines include: 
 
-Use semantic HTML tags for better SEO and accessibility. 
+- Use semantic HTML tags for better SEO and accessibility. 
+- Keep CSS modular and organised using methodologies like BEM. 
+- Avoid inline styles; use external stylesheets or CSS-in-JS. 
+- Minimise use of important and maintain specificity hierarchy.
 
-Keep CSS modular and organised using methodologies like BEM. 
+### HTML 
 
-Avoid inline styles; use external stylesheets or CSS-in-JS. 
-
-Minimise use of important and maintain specificity hierarchy. 
-
-HTML 
-
-Use semantic tags for structure 
-
-Include accessibility attributes (ARIA roles) 
+- Use semantic tags for structure 
+- Include accessibility attributes (ARIA roles) 
 
 Example: 
 
@@ -80,7 +59,7 @@ Example:
    </nav> 
 </header> 
 
-CSS/SCSS 
+### CSS/SCSS 
 
 Follow BEM naming convention 
 
@@ -93,21 +72,16 @@ Example:
    color: #fff; 
 } 
 
-JavaScript/TypeScript 
+### JavaScript/TypeScript 
 
 JavaScript is critical for interactivity. Best practices include: 
 
-Follow ES6+ syntax and features for cleaner code. 
-
-Use linters like ESLint to enforce coding standards. 
-
-Avoid global variables; use modules or closures. 
-
-Implement error handling and avoid silent failures. 
-
-Use ES6+ features 
-
-Enforce strict typing with TypeScript 
+- Follow ES6+ syntax and features for cleaner code. 
+- Use linters like ESLint to enforce coding standards. 
+- Avoid global variables; use modules or closures. 
+- Implement error handling and avoid silent failures. 
+- Use ES6+ features. 
+- Enforce strict typing with TypeScript. 
 
 Example: 
 
@@ -115,25 +89,20 @@ const greet = (name: string): string => {
    return `Hello, ${name}`; 
 }; 
 
-## Follow Government Service Design Manuel 
+## Follow Government Service Design Manual 
 
-An important set of recommendations to follow is the Government Service Design Manual, not only because the service you’re designing will be assessed against it 3 times before going Live, but also because it covers the broad principles and is generally right. 
+An important set of recommendations to follow is the [Government Service Design Manual], not only because the service you’re designing will be assessed against it 3 times before going Live, but also because it covers the broad principles and is generally right. 
 
-## Accessibility Guidelines 
+## Accessibility Guidelines  
 
 Accessibility ensures inclusivity for all users. Key practices include: 
 
-Follow latest WCAG (2.2) standards for colour contrast and text size. 
-
-Provide alt text for images and ARIA roles for dynamic elements. 
-
-Ensure keyboard navigation and focus management. 
-
-Test with screen readers and accessibility tools. 
-
-In the UK, the Public Sector Bodies Accessibility Regulations mean we are legally required to make sure our digital services meet level AA of the latest version of the Web Content Accessibility Guidelines. 
-
-Designing and developing is accessible as you go is preferable to waiting until the end to think about and test for accessibility. 
+- Follow latest WCAG (2.2) standards for colour contrast and text size. 
+- Provide alt text for images and ARIA roles for dynamic elements. 
+- Ensure keyboard navigation and focus management. 
+- Test with screen readers and accessibility tools. 
+- In the UK, the Public Sector Bodies Accessibility Regulations mean we are legally required to make sure our digital services meet level AA of the latest version of the Web Content Accessibility Guidelines. 
+- Designing and developing is accessible as you go is preferable to waiting until the end to think about and test for accessibility. 
 
 Items to consider: 
 
