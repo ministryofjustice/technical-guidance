@@ -5,6 +5,8 @@ on:
     paths:
       - "source/**"
 
+permissions: {}
+
 env:
   PR_OWNER: ${{ github.event.pull_request.user.login }}
   GITHUB_OAUTH_TOKEN: ${{ secrets.MOJ_AUTO_APPROVE_WRITE_BOT_PAT }}
@@ -13,6 +15,8 @@ env:
 jobs:
   check-diff:
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
 
     strategy:
       matrix:
@@ -21,7 +25,7 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: Checkout PR code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
 
@@ -35,7 +39,7 @@ jobs:
 
       - name: Auto-approval check
         id: approve_pr_check
-        uses: ministryofjustice/cloud-platform-doc-checker@main
+        uses: ministryofjustice/cloud-platform-doc-checker@80007295381af4f89ceb18991cd8bcfc5babd9ef # v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.MOJ_AUTO_APPROVE_WRITE_BOT_PAT }}
 
