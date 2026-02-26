@@ -30,7 +30,7 @@ jobs:
       - name: Compile Markdown to HTML and create artifact
         run: /scripts/deploy.sh
       - name: Upload artifact to be published
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: github-pages
           path: artifact.tar
