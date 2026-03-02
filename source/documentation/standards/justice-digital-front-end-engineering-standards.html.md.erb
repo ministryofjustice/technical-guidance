@@ -1,0 +1,326 @@
+---
+title: Justice Digital Front End Engineering Standards
+last_reviewed_on: 2026-03-02
+review_in: 6 months
+---
+
+# <%= current_page.data.title %>
+
+## Introduction
+
+### Purpose
+
+This document defines the standards and best practices for front end software engineering within Justice Digital.
+
+The framework aims to provide teams with methods, processes and approaches to software engineering and facilitate consistency, quality and maintainability across projects.
+
+### Scope
+
+All front-end projects (web apps, SPAs, mobile web).
+
+### Benefits
+
+- improved code quality and readability
+- easier maintenance and scalability
+- enhanced security and compliance
+- streamlined collaboration across teams
+- reduced technical debt
+- facilitates onboarding new developers
+
+## Technology stack
+
+- approved frameworks/libraries: React, Angular, Vue
+- CSS methodologies: BEM, CSS Modules, Tailwind
+- state management: Redux, Zustand
+- build tools: Webpack, Vite
+- recommended IDE extensions
+- ccode formatting tools
+- performance monitoring tools (Lighthouse)
+
+## Coding standards (HTML, CSS)
+
+Proper HTML and CSS practices ensure maintainable and accessible interfaces.
+
+Key guidelines
+
+- use semantic HTML tags for better SEO and accessibility
+- keep CSS modular and organised using methodologies like BEM
+- avoid inline styles; use external stylesheets or CSS-in-JS
+- minimise use of important and maintain specificity hierarchy
+
+### HTML
+
+- use semantic tags for structure
+- include accessibility attributes (ARIA roles)
+
+```html
+<header>
+<nav aria-label='Main Navigation'> 
+<ul>
+<li><a href='/home'>Home</a></li> 
+</ul>
+</nav>
+</header>
+```
+
+### CSS/SCSS
+
+- follow BEM naming convention
+- avoid inline styles
+
+```css
+.button--primary {
+   background-color: #007bff;
+   color: #fff;
+}
+```
+
+### JavaScript/TypeScript
+
+JavaScript is critical for interactivity.
+
+Best practices
+
+- follow ES6+ syntax and features for cleaner code
+- use linters like ESLint to enforce coding standards
+- avoid global variables; use modules or closures
+- implement error handling and avoid silent failures
+- use ES6+ features
+- enforce strict typing with TypeScript
+
+```javascript
+const greet = (name: string): string => {
+   return `Hello, ${name}`;
+};
+```
+
+## Government service manual
+
+An important set of recommendations to follow is the [Government Service Manual](https://www.gov.uk/service-manual). The service you’re designing will be assessed against it three times before going live. It also covers the broad principles and is generally right.
+
+## Accessibility guidelines
+
+Accessibility ensures inclusivity for all users.
+
+[Public Sector Bodies Accessibility Regulations](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) make it a legal requirement to ensure our digital services meet level AA of the
+[Web Content Accessibility Guidelines (**WCAG**)](https://www.w3.org/TR/WCAG22/).
+
+Designing and developing as you go is preferable to waiting until the end of development to think about and test for accessibility.
+
+Key practices
+
+- follow the latest WCAG (2.2) standards for colour contrast and text size
+- provide alt text for images and ARIA roles for dynamic elements
+- ensure keyboard navigation and focus management
+- test with screen readers and accessibility tools
+
+Use the [GOV.UK Design System](https://design-system.service.gov.uk/) components as much as possible. These have all been carefully built and tested to maximise accessibility requirements.
+
+Use automated accessibility testing tools. These tools can help you catch 20-30% of accessibility issues early. The rest will require manual testing. Links to popular options are provided in *Further resources* at the end of this section.
+
+Other items to consider
+
+- ensure all your colours provide good contrast
+- provide a descriptive page title on each page
+- use logical heading structures
+- write meaningful link texts
+- ensure images have appropriate alt text
+- ensure access all parts of your service just using the keyboard alone
+- ensure the site accommodates browser zooming up to 400% (without any loss of content or functionality)
+
+Further details on these points can be found in the [digital accessibility guidance](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/Digital-Accessibility.aspx) page.
+
+During the test phase, consider the following points
+
+- test the service using assistive technologies built into your computer
+- test with a screen reader to check for issues that might affect other assistive technologies
+
+When you start screen reader testing, use these desktop screen reader pages for reference.
+
+[Desktop Screen Readers Survival Guide - Basic Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/survival-guide)
+[Desktop Screen Readers Forms Guide](https://dequeuniversity.com/screenreaders/forms-guide)
+
+### MOJ digital accessibility team
+
+The MoJ has an in-house [Digital Accessibility team](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/digital-accessibility-team-what-we-do.aspx?csf=1&web=1&e=gBFvQA) that can support you with your accessibility requirements in these areas
+
+- [consultancy](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/accessibility-consultancy-service.aspx?csf=1&web=1&e=ddI9hd)
+- [training courses](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-training-courses.aspx?csf=1&web=1&e=NUjm99&CID=47af2268-1bf0-4f2b-8d63-85790c5fa4a1)
+- [training recordings](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-training-webinar-recordings.aspx?csf=1&web=1&e=IbZtVr&CID=d545d24c-b836-44de-baa6-b5d73ab70694)
+- [accessibility champions network](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-champions-network.aspx)
+
+They can also help you arrange a full [accessibility audit](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/Get-an-accessibility-audit.aspx) using our approved external supplier. You will normally need to pay for an external audit.
+
+### Further resources
+
+[WCAG - What you need to know](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/what-you-need-to-know-about-the-web-content-accessibility-guidelines.aspx)
+
+[What projects and service teams need to do about accessibility](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/what-projects-service-teams-do-about-accessibility.aspx?csf=1&web=1&e=fYSxdN&CID=b286ca85-63a3-4322-8357-6bbe13171593)
+
+[How to test for accessibility](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/how-to-test-for-accessibilty.aspx?csf=1&web=1&e=Jvscyw&CID=b1c2ab92-e90f-4943-bf91-d781a7a961d2)
+
+[Write an accessibility statement](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/write-accessibility-statement.aspx?csf=1&web=1&e=CVSpHD&CID=8892da3f-9cbb-45b5-a26f-3ad82ff3a562)
+
+[Axe accessibility testing tool](https://www.deque.com/axe/)
+
+[Pa11y accessibility testing tool](https://pa11y.org/)
+
+[Accessibility Insights accessibility testing tool](https://accessibilityinsights.io/)
+
+[WAVE accessibility testing tool](https://wave.webaim.org/)
+
+## Performance Optimisation
+
+Optimising performance improves user experience.
+
+Best practices
+
+- minimise and bundle CSS and JavaScript files
+- use lazy loading for images and components
+- implement caching strategies and use CDNs
+- optimise images and use modern formats such as WebP
+- minimise DOM reflows
+- implement lazy loading for images and components
+- use code splitting and tree shaking
+
+## Responsive Design
+
+Responsive design ensures compatibility across devices.
+
+Guidelines
+
+- use fluid grids and flexible layouts
+- apply media queries for different screen sizes
+- test on multiple devices and browsers
+- consider mobile first design approach
+
+## Testing
+
+Testing ensures reliability and quality.
+
+Best practices
+
+- write unit tests for components using frameworks like Jest
+- perform end-to-end tests with tools like Cypress
+- use automated testing in CI/CD pipelines
+- conduct usability testing for real-world scenario
+
+## Security considerations
+
+Security is crucial for front-end applications.
+
+- validate and sanitise user inputs to prevent XSS and CSRF attacks
+- void exposing sensitive data in client-side code
+- implement HTTPS and secure cookies
+- regularly update dependencies to patch vulnerabilities
+- validate user input
+- secure API calls with HTTPS and tokens
+
+## Make it easy to change code for copy and translation
+
+All the user-facing text in your application (including conditional content and error messages) should be in the same place in the code, typically in templates. This makes it easier for a content designer to check and modify the application’s copy.
+
+Make sure your service is easy to translate into another language.
+
+## Support as many browsers as possible
+
+Your site is expected to work on all the browsers listed in the service manual [verified browsers](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices) page. Try to include as many browsers as possible on top of that list.
+
+A browser with 0.1% market share accounts for 50,000 visitors a month on GOV.UK. Avoid [browser sniffing](https://www.sitepoint.com/why-browser-sniffing-stinks/) and use feature detection instead. That will also result in your site being forwards compatible.
+
+## Use responsive design
+
+Make the content of your pages flow with any screen size: use media queries, fluid grid layouts and (preferably) relative units.
+
+Get help from your team’s visual designer if you’re not sure what a page should look like at a specific resolution.
+
+## Use progressive enhancement
+
+Design pages with the lowest acceptable level of browser functionality in mind (for example HTML4, no JavaScript, no CSS), then build styling and behaviour on top.
+
+Make sure any scripting or styling you add isn’t essential to the use of the service.
+
+## Don’t optimise prematurely
+
+Optimising web pages for speed can lead to very complex code and break fundamental principles like separation of style and content.
+
+Only optimise if you have evidence that current front-end performance is detrimental to the use of the service.
+
+## Work with your team
+
+Establish a close relationship with your designers. Activities can become similar to waterfall when you expect things to happen in order; for example, content designers provide copy and you implement. Regular feedback and interactions work more effectively.
+
+Make sure your designer provides multiple designs, or at least checks the various layouts you will implement.
+
+## Don’t make too many assumptions about user behaviour
+
+You are not the user. You can only make assumptions on how your site will be used by its intended audience.  Consider attending a user-testing session and you’ll understand.
+
+Listen to the user researcher in your team, they know more than you. Analytics also provides insight on site usage but doesn't replace watching people use your service.
+
+## Be conservative in your choice of technology
+
+There are many possible technologies, tools or libraries you may be familiar with, or interested in trying out. Examples include SASS, Grunt, CoffeeScript, TypeScript, EcmaScript 6, and Polymer. Keep in mind that your code should still be maintainable long after you’ve left.
+
+You have to be confident the technology you want to use is likely to still be around a few years into the future. Consider if it will be familiar to developers, if documentation will still be available and if new versions are backwards compatible.
+
+If in doubt, ask the community. SASS, jQuery and Grunt are currently widely used across departments and are considered OK.
+
+## Be aware of single page apps
+
+It’s very difficult to design accessible, browser-independent single-page apps (**SPA**) that are search-engine friendly and offer the benefit of progressive enhancement. That’s why they’re rare in Government.
+
+Before deciding to implement one you need to be sure all your users will be able to use the service whatever their device.
+
+Most often SPAs will be implemented for internal services for which the lowest-common technology is somehow high enough to allow them.
+
+## Write unit tests
+
+Fine-grained inputs-results tests of your JS functions should be subject to unit tests, especially if they don’t have side-effects like modifying the DOM.
+
+[Send money to a prisoner](https://github.com/ministryofjustice/money-to-prisoners-send-money/blob/main/mtp_send_money/apps/send_money/tests/test_functional.py) is a good example to follow. If there isn't a lot of “pure” JS code in your app, there won't be many tests required.
+
+Examples of test products include
+
+- unit tests for components using Jest
+- end-to-end tests using Cypress
+
+## Write functional tests
+
+Tests should replicate user journeys. Cover all possible journeys (not just the happy path) and run the tests every code change. They should be expressed in an easy-to-read form.
+
+Good examples to follow would be [money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/main/mtp_cashbook/apps/cashbook/tests/test_functional.py#L260) and [prison visits](https://github.com/ministryofjustice/prison-visits/blob/master/spec/features/unexpected_journey_spec.rb#L56).
+
+You should preferably use your back-end test harness (rspec, unittest) to ensure all the application’s tests are in the same place. Most support browser-based tests will run using webdriver.
+
+Check the text contents and the computed CSS of a page. [Money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/main/mtp_cashbook/apps/cashbook/tests/test_functional.py#L108_) is a good example to follow.
+
+Using **BDD** (Behaviour Driven Development) principles to write tests (using [cucumber](https://cucumber.io/) or any other human-readable method) will only work if your team has the right workflow.
+
+Unless you have someone else (ideally your product manager) committed to writing tests and checking they pass, you’ll waste time writing code to translate your tests into code, instead of writing it directly.
+
+Visual tests (like automatically generating screenshots from a user journey script and comparing with reference images) are ideal, but hard. You’ll have to regenerate the reference images every time the design changes, ideally with images supplied by your designer and not your own implementation.
+
+## Use the right tools
+
+When writing your code, you’ll be checking your results and debugging them in a browser. Make sure you check on the most common browsers. You may find Firefox best for debugging, but don’t forget to check Chrome as often as possible.
+
+Use [browsersync](https://browsersync.io/) to try multiple browsers at once and use [virtual machines for old browsers](https://learn.microsoft.com/en-us/microsoft-edge/devtools/device-mode/testing-other-browsers).
+
+## Implement SEO and semantic markup
+
+Apart from internal sites and those listed on [service.gov.uk](https://www.gov.uk/) (which should block web spiders), you should make your pages easy for robots to understand.
+
+Following the service standards gives you the basics of SEO, but sometimes it makes sense to do more. Using semantic markup will enable search engines to find things like a court’s opening time, an address. [Schema.org](https://schema.org/) is currently gaining in popularity and is worth investigating.
+
+## Version control and CI/CD
+
+- use a Git branching strategy (like GitFlow)
+- enforce pull request reviews
+- include linting and testing in CI pipeline
+
+## Documentation
+
+- component-level documentation
+- use Storybook for UI components
+- provide API integration guides
