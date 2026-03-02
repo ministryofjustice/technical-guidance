@@ -37,7 +37,9 @@ All front-end projects (web apps, SPAs, mobile web).
 
 ## Coding Standards (HTML, CSS) 
 
-Proper HTML and CSS practices ensure maintainable and accessible interfaces. Key guidelines include: 
+Proper HTML and CSS practices ensure maintainable and accessible interfaces. 
+
+Key guidelines 
 
 - use semantic HTML tags for better SEO and accessibility
 - keep CSS modular and organised using methodologies like BEM
@@ -73,7 +75,9 @@ Proper HTML and CSS practices ensure maintainable and accessible interfaces. Key
 
 ### JavaScript/TypeScript 
 
-JavaScript is critical for interactivity. Best practices include
+JavaScript is critical for interactivity.
+
+Best practices
 
 - follow ES6+ syntax and features for cleaner code
 - use linters like ESLint to enforce coding standards 
@@ -96,14 +100,14 @@ An important set of recommendations to follow is the [Government Service Manual]
 
 Accessibility ensures inclusivity for all users. [Public Sector Bodies Accessibility Regulations](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) make it a legal requirement to ensure our digital services meet level AA of the latest version of the [Web Content Accessibility Guidelines (**WCAG**)](https://www.w3.org/TR/WCAG22/). Designing and developing as you go is preferable to waiting until the end of development to think about and test for accessibility. 
 
-Key practices include 
+Key practices 
 
 - follow the latest WCAG (2.2) standards for colour contrast and text size
 - provide alt text for images and ARIA roles for dynamic elements
 - ensure keyboard navigation and focus management
 - test with screen readers and accessibility tools 
 
-Use the [GOV.UK Design System](https://design-system.service.gov.uk/) components as much as possible. These have all been carefully built and tested to be as accessible as possible. 
+Use the [GOV.UK Design System](https://design-system.service.gov.uk/) components as much as possible. These have all been carefully built and tested to maximise accessibility requirements. 
 
 Use automated accessibility testing tools. These tools can help you catch 20-30% of accessibility issues early. The rest will require manual testing. Links to popular options are provided in *Further resources* at the end of this section. 
 
@@ -122,15 +126,15 @@ Further details on these points can be found in the [digital accessibility guida
 During the test phase, consider the following points
 
 - test the service using assistive technologies built into your computer 
-- test with a screen reader is a good way to check for issues that might affect other assistive technologies as well
+- test with a screen reader to check for issues that might affect other assistive technologies
 
 When you start screen reader testing, use the [Desktop Screen Readers Survival Guide - Basic Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/survival-guide) and [Desktop Screen Readers Forms Guide](https://dequeuniversity.com/screenreaders/forms-guide) as resources.
 
 ### MOJ digital accessibility team 
 
-The MoJ has an in-house [digital accessibility team](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/digital-accessibility-team-what-we-do.aspx?csf=1&web=1&e=gBFvQA) that can support you with your accessibility needs. 
+The MoJ has an in-house [Digital Accessibility team](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/digital-accessibility-team-what-we-do.aspx?csf=1&web=1&e=gBFvQA) that can support you with your accessibility needs. 
 
-At no cost to your team, they provide [consultancy](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/accessibility-consultancy-service.aspx?csf=1&web=1&e=ddI9hd), [training courses](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-training-courses.aspx?csf=1&web=1&e=NUjm99&CID=47af2268-1bf0-4f2b-8d63-85790c5fa4a1), [training recordings](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-training-webinar-recordings.aspx?csf=1&web=1&e=IbZtVr&CID=d545d24c-b836-44de-baa6-b5d73ab70694) and run an [accessibility champions network](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-champions-network.aspx). 
+At no cost, they provide [consultancy](https://justiceuk.sharepoint.com/:u:/r/sites/knowthething/SitePages/accessibility-consultancy-service.aspx?csf=1&web=1&e=ddI9hd), [training courses](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-training-courses.aspx?csf=1&web=1&e=NUjm99&CID=47af2268-1bf0-4f2b-8d63-85790c5fa4a1), [training recordings](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-training-webinar-recordings.aspx?csf=1&web=1&e=IbZtVr&CID=d545d24c-b836-44de-baa6-b5d73ab70694) and run an [accessibility champions network](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/accessibility-champions-network.aspx). 
 
 They can also help you arrange a full [accessibility audit](https://justiceuk.sharepoint.com/sites/knowthething/SitePages/Get-an-accessibility-audit.aspx) using our approved external supplier. You will normally need to pay for an external audit. 
 
@@ -154,7 +158,9 @@ They can also help you arrange a full [accessibility audit](https://justiceuk.sh
 
 ## Performance Optimisation 
 
-Optimising performance improves user experience. Best practices include 
+Optimising performance improves user experience. 
+
+Best practices 
 
 - minimise and bundle CSS and JavaScript files 
 - use lazy loading for images and components
@@ -166,7 +172,9 @@ Optimising performance improves user experience. Best practices include
 
 ## Responsive Design 
 
-Responsive design ensures compatibility across devices. Guidelines include 
+Responsive design ensures compatibility across devices. 
+
+Guidelines 
 
 - use fluid grids and flexible layouts 
 - apply media queries for different screen sizes
@@ -175,7 +183,9 @@ Responsive design ensures compatibility across devices. Guidelines include
 
 ## Testing 
 
-Testing ensures reliability and quality. Best practices include
+Testing ensures reliability and quality. 
+
+Best practices
 
 - write unit tests for components using frameworks like Jest 
 - perform end-to-end tests with tools like Cypress
@@ -260,7 +270,7 @@ Examples of test products include
 
 ## Write functional tests 
 
-Tests should replicate user journeys. Cover all possible journeys (not just the happy path) and run the tests every code change. They should be expressed in an easy-to-read form (examples are [money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/main/mtp_cashbook/apps/cashbook/tests/test_functional.py#L260) and [prison visits](https://github.com/ministryofjustice/prison-visits/blob/master/spec/features/unexpected_journey_spec.rb#L56). 
+Tests should replicate user journeys. Cover all possible journeys (not just the happy path) and run the tests every code change. They should be expressed in an easy-to-read form. Good examples to follow would be [money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/main/mtp_cashbook/apps/cashbook/tests/test_functional.py#L260) and [prison visits](https://github.com/ministryofjustice/prison-visits/blob/master/spec/features/unexpected_journey_spec.rb#L56). 
 
 You should preferably use your back-end test harness (rspec, unittest) to ensure all the application’s tests are in the same place. Most support browser-based tests will run using webdriver. Check the text contents and the computed CSS of a page. [Money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/main/mtp_cashbook/apps/cashbook/tests/test_functional.py#L108_) is a good example to follow. 
 
@@ -274,7 +284,7 @@ When writing your code, you’ll be checking your results and debugging them in 
 
 ## Implement SEO and semantic markup 
 
-Apart from internal sites and those listed on service.gov.uk (which should block web spiders), you should make your pages easy for robots to understand.  
+Apart from internal sites and those listed on [service.gov.uk](https://www.gov.uk/) (which should block web spiders), you should make your pages easy for robots to understand.  
 
 Following the service standards gives you the basics of SEO, but sometimes it makes sense to do more. Using semantic markup will enable search engines to find things like a court’s opening time, an address. [Schema.org](https://schema.org/) is currently gaining in popularity and is worth investigating. 
 
