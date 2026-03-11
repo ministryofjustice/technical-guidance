@@ -1,6 +1,6 @@
 ---
 title: Justice Digital software engineering standards
-last_reviewed_on: 2026-03-09
+last_reviewed_on: 2026-03-11
 review_in: 6 months
 ---
 
@@ -12,7 +12,7 @@ review_in: 6 months
 
 This document defines standards and best practices for software engineering in Justice Digital. It provides teams with methods, processes and approaches to software engineering.
 
-The objective of the document is to facilitate consistency, quality and maintainability across projects.
+The objective of the document is to facilitate consistency, quality and sustainability across projects.
 
 ### Scope
 
@@ -33,13 +33,13 @@ Applies to all development teams, covering coding, design, testing, security and
 
 **Readability** - code should be self-explanatory
 
-**Maintainability** - design for future changes
+**Sustainability** - design for future changes
 
 **Security** - protect data systems from vulnerabilities and apply secure coding from the start
 
 **Performance** - optimize for efficiency without sacrificing clarity
 
-## Coding Standards
+## Coding standards
 
 ### General
 
@@ -50,9 +50,9 @@ Applies to all development teams, covering coding, design, testing, security and
 - use camelCase for variables and PascalCase for classes
 - comment only where necessary (preference for self explanatory code)
 
-### Version Control
+### Version control
 
-Git should be used for all projects
+GitHub should be used for all projects
 
 #### Branching
 
@@ -76,9 +76,9 @@ Git should be used for all projects
 - test coverage
 - security considerations
 
-## Design Standards
+## Design standards
 
-Apply **SOLID principles** for object-oriented design
+Apply **SOLID principles** for object-oriented design.
 
 - single responsibility
 - open/closed
@@ -90,47 +90,48 @@ Use **design patterns** where appropriate, such as Factory, Observer.
 
 - document architecture using UML diagrams for complex systems
 
-APIs to include clear specifications and versioning
+APIs to include clear specifications and versioning.
 
 - RESTful design
 - use OpenAPI/Swagger for documentation
 - version APIs (e.g., /v1/users)
 - document architecture using UML diagrams for complex systems
 
-## Testing Standards
+## Testing standards
 
-- minimum ? % unit test coverage for critical modules
+- confirm unit test coverage requirements for critical modules with technical lead
 - use automated testing frameworks (e.g., JUnit, PyTest)
 - integration tests for all major workflows, validate interactions between components
 - code reviews for tests, ensure meaningful test cases and assertions
 - code reviews mandatory before merging to main
 
-## Security Standards
+## Security standards
 
- - validate all relevant inputs (server side and client side) to prevent injection attacks
- - arameterised queries to prevent SQL injections
- - encrypt sensitive data at rest and in transit (AES 256 for storage, TLS for transmission)- implement secure authentication, such as OAuth 2.0, JWT
- - regularly update dependencies to patch vulnerabilities
- - regular vulnerability scans using tools like OWASP or SonarQube
+- validate all relevant inputs (server side and client side) to prevent injection attacks
+- arameterised queries to prevent SQL injections
+- encrypt sensitive data at rest and in transit (AES 256 for storage, TLS for transmission)
+- implement secure authentication, such as OAuth 2.0, JWT
+- regularly update dependencies to patch vulnerabilities
+- regular vulnerability scans using tools like OWASP or SonarQube
 
 ## Deployment & CI/CD
 
 - use automated builds and tests on every commit
-- Continuous Integration (**CI**)/Continuous Deployment (**CD**) pipelines – Azure DevOps, GitHub actions
+- CI/CD pipelines – Azure DevOps, GitHub actions
 - CI with automated tests on every commit
 - CD for staging environments
 - maintain environment-specific configuration files securely
 - deploy to staging before production
 - maintain environment specific configuration securely (Azure Key Vault)
 
-## Compliance & Governance
+## Compliance and governance
 
 - apply GDPR for data privacy
 - follow ISO/IEC 27001 for information security
 - maintain audit logs for critical operations
 - regular internal audits and code quality checks
 
-## Tools and Resources
+## Tools and resources
 
 **IDE**: Visual Studio Code, IntelliJ IDEA
 
@@ -142,9 +143,9 @@ APIs to include clear specifications and versioning
 
 **Project management**: JIRA
 
-## Change Management
+## Change management
 
-- proposed changes reviewed by ?
+- proposed changes reviewed by project manager (in the first instance)
 - document versioning using semantic versioning - begin with v1.0.0
 - publish updates in internal knowledge base
 
