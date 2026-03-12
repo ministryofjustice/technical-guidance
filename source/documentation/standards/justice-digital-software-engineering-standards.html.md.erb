@@ -1,0 +1,152 @@
+---
+title: Justice Digital software engineering standards
+last_reviewed_on: 2026-03-11
+review_in: 6 months
+---
+
+# <%= current_page.data.title %>
+
+## Introduction
+
+### Purpose
+
+This document defines standards and best practices for software engineering in Justice Digital. It provides teams with methods, processes and approaches to software engineering.
+
+The objective of the document is to facilitate consistency, quality and sustainability across projects.
+
+### Scope
+
+Applies to all development teams, covering coding, design, testing, security and deployment practices.
+
+### Benefits
+
+- improved code quality and readability
+- easier maintenance and scalability
+- enhanced security and compliance
+- streamlined collaboration across teams
+- reduced technical debt
+- facilitates onboarding new developers
+
+## Guiding principles
+
+**Consistency** - uniform practices across projects using standardised frameworks, libraries and coding styles
+
+**Readability** - code should be self-explanatory
+
+**Sustainability** - design for future changes
+
+**Security** - protect data systems from vulnerabilities and apply secure coding from the start
+
+**Performance** - optimize for efficiency without sacrificing clarity
+
+## Coding standards
+
+### General
+
+- follow language-specific style guides (e.g., PEP8 for Python, Google Java style guide)
+- use meaningful names for variables, classes and methods
+- maximum line length 120 characters
+- avoid hard-coded values; use configuration files or constants
+- use camelCase for variables and PascalCase for classes
+- comment only where necessary (preference for self explanatory code)
+
+### Version control
+
+GitHub should be used for all projects
+
+#### Branching
+
+- *main* for production-ready code
+- develop for integration
+- create feature branches with the syntax feature/<name>
+
+#### Commit messages
+
+- use imperative mood (example - *Add logging for API calls*)
+- include issue/ticket reference (if applicable)
+- format: type(scope): description (example - *feat(auth): add JWT authentication*)
+- include ticket/issue reference (if applicable)
+
+#### Commit reviews
+
+**Mandatory** before merging to main. Use tools like GitHub Pull Requests or Azure DevOps.
+
+**Checklist**:
+- code readability
+- test coverage
+- security considerations
+
+## Design standards
+
+Apply **SOLID principles** for object-oriented design.
+
+- single responsibility
+- open/closed
+- Liskov Substitution Principle (**LSP**)
+- interface segregation
+- dependency inversion
+
+Use **design patterns** where appropriate, such as Factory, Observer.
+
+- document architecture using UML diagrams for complex systems
+
+APIs to include clear specifications and versioning.
+
+- RESTful design
+- use OpenAPI/Swagger for documentation
+- version APIs (e.g., /v1/users)
+- document architecture using UML diagrams for complex systems
+
+## Testing standards
+
+- confirm unit test coverage requirements for critical modules with technical lead
+- use automated testing frameworks (e.g., JUnit, PyTest)
+- integration tests for all major workflows, validate interactions between components
+- code reviews for tests, ensure meaningful test cases and assertions
+- code reviews mandatory before merging to main
+
+## Security standards
+
+- validate all relevant inputs (server side and client side) to prevent injection attacks
+- arameterised queries to prevent SQL injections
+- encrypt sensitive data at rest and in transit (AES 256 for storage, TLS for transmission)
+- implement secure authentication, such as OAuth 2.0, JWT
+- regularly update dependencies to patch vulnerabilities
+- regular vulnerability scans using tools like OWASP or SonarQube
+
+## Deployment & CI/CD
+
+- use automated builds and tests on every commit
+- CI/CD pipelines – Azure DevOps, GitHub actions
+- CI with automated tests on every commit
+- CD for staging environments
+- maintain environment-specific configuration files securely
+- deploy to staging before production
+- maintain environment specific configuration securely (Azure Key Vault)
+
+## Compliance and governance
+
+- apply GDPR for data privacy
+- follow ISO/IEC 27001 for information security
+- maintain audit logs for critical operations
+- regular internal audits and code quality checks
+
+## Tools and resources
+
+**IDE**: Visual Studio Code, IntelliJ IDEA
+
+**Linters**: ESLint, Pylint
+
+**Static Analysis**: SonarQube
+
+**Documentation**: Confluence, Markdown in repositories
+
+**Project management**: JIRA
+
+## Change management
+
+- proposed changes reviewed by project manager (in the first instance)
+- document versioning using semantic versioning - begin with v1.0.0
+- publish updates in internal knowledge base
+
+
