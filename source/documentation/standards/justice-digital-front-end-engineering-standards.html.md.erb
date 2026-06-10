@@ -84,7 +84,6 @@ Best practices
 - follow ES6+ syntax and features for cleaner code
 - use linters like ESLint to enforce coding standards
 - avoid global variables; use modules or closures
-- implement error handling and avoid silent failures
 - use ES6+ features
 - enforce strict typing with TypeScript
 
@@ -93,6 +92,14 @@ const greet = (name: string): string => {
    return `Hello, ${name}`;
 };
 ```
+
+## Error handling and user feedback
+
+Accessibility expectations for error handling and user feedback should be defined using the latest [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/) (**WCAG**).
+
+The [GOV.UK Design System](https://design-system.service.gov.uk/) gives detailed examples of error states which can be applied to all coding languages. 
+
+MOJ services must meet these expectations across all technology stacks. 
 
 ## Government service manual
 
