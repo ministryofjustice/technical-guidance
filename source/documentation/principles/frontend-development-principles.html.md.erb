@@ -14,14 +14,14 @@ choose to depart from them.
 
 These principles are in addition to [MoJ Development Principles](development-principles.html)
 
-## 1. Follow Government Service Design Manual
+## Follow Government Service Design Manual
 
 The most important set of recommendations you really should follow is from the [Government Service Design Manual](https://www.gov.uk/service-manual), not only because the service
 you’re designing will be assessed against it 3 times before going Live, but also
 because it covers the broad principles and is generally right. What follows are
 MOJ-specific recommendations.
 
-## 2. Make your service accessible
+## Make your service accessible
 
 In the UK, the [Public Sector Bodies Accessibility Regulations](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) mean we are legally required to make sure our digital services meet level AA of the latest version of the [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG22/).
 
@@ -67,38 +67,38 @@ The MoJ has an in-house digital accessibility team that can support you with you
 - [Accessibility Insights accessibility testing tool](https://accessibilityinsights.io/)
 - [WAVE accessibility testing tool](https://wave.webaim.org/)
 
-## 3. Make it easy to change your code for copy and translation
+## Make it easy to change your code for copy and translation
 All the user-facing text in your application should be in the same place in the
 code, typically in templates. This includes conditional content and error
 messages. It makes this easier for a content designer to check and modify the
 application’s copy. Also make sure your service is easy to translate in another
 language.
 
-## 4. Support as many browsers as possible
+## Support as many browsers as possible
 Your site is expected to work on all the browsers listed in the [Verified Browsers](https://www.gov.uk/service-manual/user-centred-design/browsers-and-devices.html) page in the service manual, but try to include as many browsers as
 possible on top of that list. A browser with 0.1% market share accounts for
 50,000 visitors a month on GOV.UK. Avoid [browser sniffing](https://www.sitepoint.com/why-browser-sniffing-stinks/). Instead, use
 feature detection. That will also result in your site being forwards compatible.
 
-## 5. Use responsive design
+## Use responsive design
 Make the content of your pages flow nicely with any screen size: use media
 queries, prefer relative units and use fluid grid layouts. Get some help from
 your team’s visual designer if you’re not sure what a page should look like at
 a specific resolution.
 
-## 6. Use progressive enhancement
+## Use progressive enhancement
 Design pages with the lowest common denominator of browser functionality in mind
  (ie, HTML4, no JavaScript, no CSS), then build styling and behaviour on top.
  Make sure that any scripting or styling you add isn’t essential to the use of
  the service.
 
-## 7. Don’t optimise prematurely
+## Don’t optimise prematurely
 Optimising web pages for speed can lead to very complex code that breaks
 fundamental principles like separation of style and content. Only optimise if
 you have evidence that current front-end performance is detrimental to the use
 of the service
 
-## 8. Work with your team
+## Work with your team
 You should establish a close relationship with your team’s visual designer and
 content designer. Things can get waterfally when you expect things to happen in
 order: designer designs designs, content designer provides copy, you implement.
@@ -107,11 +107,12 @@ That doesn’t work. Constant feedback and interactions work much more efficient
 You should make sure your designer provides multiple designs, or at least checks
 the various layouts you will implement for small screens, no JS, etc.
 
-## 9. Don’t make too many assumptions on user behaviour
-You are not the user. You can only make assumptions on how your site will be used by its intended audience. Often they’ll be wrong. If you’re not convinced, go to a user-testing session and you’ll understand. Listen to the user researcher in your team, they know more than you. Analytics also provides insight on site usage, but they don’t replace watching people use your service.
+## Don’t make too many assumptions on user behaviour
+You are not the user. You can only make assumptions on how your site will be used by its intended audience. Often they’ll be wrong. If you’re not convinced, go to a user-testing session and you’ll understand. 
 
-## 10. Be conservative in your choice of technology
-(_frameworks, build tools, languages_)
+Listen to the user researcher in your team, they know more than you. Analytics also provides insight on site usage, but they don’t replace watching people use your service.
+
+## Be conservative in your choice of technology (frameworks, build tools, languages)
 
 There are many many possible technologies, tools or libraries you may be familiar
 with, or interested in trying out. Eg, SASS, Grunt, CoffeeScript, TypeScript,
@@ -123,8 +124,8 @@ documentation will still exist, and new versions are backwards compatible, etc.
 If in doubt, ask the community. jQuery, Grunt and SASS are currently widely used
 across departments and are considered OK.
 
-## 11. Beware of single-page apps
-It’s very difficult to design single-page apps (SPAs) that are accessible,
+## Beware of single-page apps
+It’s very difficult to design single-page apps (**SPA**) that are accessible,
 browser-independent, offer the benefit of progressive enhancement, and are
 search-engine friendly. That’s why they’re rare in Government. Before deciding
 to implement one you need to be absolutely sure that all your users will be able
@@ -132,14 +133,14 @@ to use the service whatever their device. Most often SPAs will be implemented
 for internal services for which the lowest-common technology is somehow high
 enough to allow them.
 
-## 12. Write unit tests
+## Write unit tests
 For fine-grained inputs-results tests of your JS functions, especially ones that
 don’t have side-effects like modifying the DOM ([example from Send money to a
 prisoner](https://github.com/ministryofjustice/money-to-prisoners-send-money/blob/master/mtp_send_money/apps/send_money/tests/test_functional.py#L121)). In general there won’t be much
 “pure” JS code in your app, so there won’t be many of these.
 
-## 13. Write functional tests
-ie, tests that replicate user journeys. Cover all possible journeys, not just
+## Write functional tests
+Functional tests replicate user journeys. Cover all possible journeys, not just
 the happy path.
 - There should be many of them and they should be run every code change.
 - They should be expressed in an easy-to-read form (Eg. [Money to prisoners](https://github.com/ministryofjustice/money-to-prisoners-cashbook/blob/master/mtp_cashbook/apps/cashbook/tests/test_functional.py#L260), [Prison visits](https://github.com/ministryofjustice/prison-visits/blob/master/spec/features/unexpected_journey_spec.rb#L56))
@@ -157,13 +158,13 @@ your tests into code, instead of writing it directly.
 
 **Visual tests**: automatically generating screenshots from a user journey script, and comparing with reference images. Ideal, but hard. You’ll have to regenerate your reference images every time the design changes, ideally from images supplied from your designer and not from your own implementation.
 
-## 14. Use the right tools
+## Use the right tools
 When writing your code, you’ll be checking your results and debugging them in
 your favourite browser. Make sure you also check on the most common browsers.
 You may find that one type of browser is best for debugging, but don’t forget to check
 Chrome, Edge, Safari or Firefox as often as possible. Tools like [BrowserStack](https://www.browserstack.com/) let you test across multiple environments, and [virtual machines](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/device-mode/testing-other-browsers) can help you verify behaviour in older browser versions.
 
-## 15. Implement SEO and semantic markup
+## Implement SEO and semantic markup
 Apart from internal sites and ones that are on service.gov.uk (which should block
 web spiders), you should make your pages easy for robots to understand. Following
 the service standards gives you the basics of SEO, but sometimes is makes sense to
