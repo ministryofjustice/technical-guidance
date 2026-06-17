@@ -26,7 +26,9 @@ The kinds of issues that might suggest out of hours support is necessary include
 
 These and similar issues should be considered alongside your service's robustness.
 
-For example, if your service can recover from most classes of issue itself, and downtime affects only a small group of people whose task is not time-sensitive, out of hours support may not be necessary. If, however, a problem with your service (whether outages, security breaches, or something else) out of hours presents a genuine risk to someone's life, it may be appropriate to provide out of hours support around the clock, depending on the robustness of the system.
+For example, if your service can recover from most classes of issue itself, and downtime affects only a small group of people whose task is not time-sensitive, out of hours support may not be necessary.
+
+If, however, a problem with your service (whether outages, security breaches, or something else) out of hours presents a genuine risk to someone's life, it may be appropriate to provide out of hours support around the clock, depending on the robustness of the system.
 
 ## Assessing your team's ability to provide out of hours support
 
@@ -61,8 +63,12 @@ To avoid that, a few core criteria must be met:
 
 ### Contacting people on call about an issue
 
-To allow people to manage how they are contacted when on call, the MOJ uses <a href="https://www.pagerduty.com" data-proofer-ignore>PagerDuty</a>. PagerDuty (and systems like it) allows people on call to specify how they prefer to be contacted (in-app notifications, phone calls, text messages) and when, relative to an incident being raised. It also ensures that the people on call are paged according to pre-defined escalation policies (primary first, then secondary, then repeat). To get access to PagerDuty or a similar tool contact the operations-engineering team on their slack channel #ask-operations-engineering.
+To allow people to manage how they are contacted when on call, the MOJ uses <a href="https://www.pagerduty.com" data-proofer-ignore>PagerDuty</a>. PagerDuty (and systems like it) allows people on call to specify how they prefer to be contacted (in-app notifications, phone calls, text messages) and when, relative to an incident being raised.
 
-People on call should **never** be contacted directly to report issues, especially not through their personal phone number. Contacting individuals directly creates a dependency on them, making them implicitly on call 100% of the time. This is not good for individuals' mental health, and can result in them withdrawing entirely from support or even leaving the organisation, meaning we entirely lose their knowledge and skill at supporting the system, rather than allowing others to learn from it and them to work at a sustainable level.
+It also ensures that the people on call are paged according to pre-defined escalation policies (primary first, then secondary, then repeat). To get access to PagerDuty or a similar tool contact the operations-engineering team on their slack channel #ask-operations-engineering.
+
+People on call should **never** be contacted directly to report issues, especially not through their personal phone number. Contacting individuals directly creates a dependency on them, making them implicitly on call 100% of the time. 
+
+This is not good for individuals' mental health, and can result in them withdrawing entirely from support or even leaving the organisation, meaning we entirely lose their knowledge and skill at supporting the system, rather than allowing others to learn from it and them to work at a sustainable level.
 
 This also applies to email and chat (eg Slack or Skype) messages. Do not assume that someone will respond when you message them, as they may not have notifications turned on for that service. Further, you should not share others' personal contact details without their permission to allow people to get in touch with them out of hours.
