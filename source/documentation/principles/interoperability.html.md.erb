@@ -1,0 +1,280 @@
+---
+owner_slack: "#developer-experience-alerts"
+title: Interoperability - the sovereignty of shared language
+last_reviewed_on: 2026-08-24
+review_in: 6 months
+---
+
+# <%= current_page.data.title %>
+
+## Legacy architecture – the “Tower of Babel”
+
+In the biblical story of the Tower of Babel, a deity (alarmed by humanity’s sheer ambition and capability for unified purpose) decides to sabotage their means of communication by making different groups speak different languages.
+
+It’s a parable that any senior engineer attempting to reconcile the output of a bespoke SOAP endpoint with a JSON-native microservice will recognise.
+
+**Interoperability** is software engineering's answer to the post-Babel situation. It takes systems designed in different times, by different organisations, for different purposes, and under different assumptions, and initiates collaboration between them.
+
+Open standards are the grammar of that collaboration - not imposed, but a negotiated consensus which facilitates mutual understanding.
+
+>Interoperability is not a technical nicety. It is the infrastructure upon which trust (between institutions, citizens and the state, the present and the future) is  built.
+
+This document is neither a style guide nor a glossary. It is an attempt to think seriously about what interoperability means now, given the proliferation of AI agents and the increasing overlap of digital and physical spaces.
+
+How do you build systems that do not become islands, fiefdoms, or completely dependent on a single supplier?
+
+## The meaning of 'open'
+
+### Open source and open standards – a real distinction
+
+**Open source** and **open standards** are not synonyms, although they are related in certain contexts.
+
+Open source is a **practice** - the release of source code under terms permitting modification and redistribution.
+
+Open standards are **specifications** - formal, publicly available documents that define how systems should behave at their interfaces, independently of how any implementation chooses to realise that behaviour internally.
+
+An open standard may be implemented in proprietary software, but a piece of open-source software may implement no standards of any interoperability value whatsoever.
+
+The European Commission's [European Interoperability Framework (**EIF**)](https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework-detail) specifies that open standards should be available freely or for minimal cost to enable usage, copying and distribution while minimising discrimination.
+
+The UK government's [Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles) define the following criteria
+
+- collaboration among interested parties rather than individual suppliers
+- transparent decision-making reviewed by subject matter experts
+- royalty-free licensing irrevocable under normal conditions
+- compatibility with both open source and proprietary licensed solutions
+
+These are not isolated instances. When the state of Massachusetts drafted its open standards policy, it described specifications readily accessible to the public, developed through an open community process and ratified by a standards organisation.
+
+The words 'open community process' are particularly important as standards developed within a restricted environment (like Slack workspaces) cannot be considered open in any meaningful sense.
+
+### The governance imperative
+
+The political economy of standardisation is more complicated than it might first appear. Open standards may employ licence terms designed to protect against the “embrace and extend gambit”, where an organisation adopts a standard and then extends it with proprietary features.
+
+This can lead to a situation where full implementation is dependent on a specific product.
+
+Standards-developing organisations such as the [Organization for the Advancement of Structured Information Standards (**OASIS**)](https://www.oasis-open.org/), the [Internet Engineer Task Force (**IETF**)](https://www.ietf.org/) and the [International Organization for Standardization (**ISO**)](https://www.iso.org/home.html) exist partly to police this tendency.
+
+Request for Comments (**RFC**) documents and formal processes represent the engineering profession's collective attempt to guard against enclosure.
+
+>The "embrace-and-extend gambit" is the digital enclosure movement. The conversion of shared infrastructure into private rent.
+
+## Open standards - the current landscape
+
+### API standards
+
+RESTful APIs (documented via [OpenAPI](https://swagger.io/)) remain the foundation for many web-facing system integrations, in large part due to the dominance of English as a global business language.
+
+The UK government's Technology Code of Practice [(**TCoP**)](https://www.gov.uk/guidance/the-technology-code-of-practice) mandates that RESTful APIs follow Open API standards, use clear HTTP methods and provide pagination, filtering and rate limiting.
+
+[GDS API standards](https://www.gov.uk/guidance/gds-api-technical-and-data-standards) have also been used by public sector bodies to create their own guidance and specify HTTPS/TLS 1.3 as a minimum, (with TLS 1.2 only permitted in exceptional circumstances).
+
+REST's dominance, however, has become contested by emerging architectural patterns that reflect the genuine complexity of modern distributed systems.
+
+Google's [Remote Procedure Call framework (**gRPC**)](https://grpc.io/) uses HTTP/2 as transport and protocol buffers as its message format. It provides low-latency, high-performance communication for microservices architectures and can lower cumulative costs/effects over using JSON-over-HTTP.
+
+[AsyncAPI](https://www.asyncapi.com/en) has a similar architecture to OpenAPI and gives event-driven architectures, the Kafka topics, MQTT brokers and WebSocket connections that constitute the nervous system of real-time platforms.
+
+### GraphQL
+
+[GraphQL](https://graphql.org/) offers client-defined bespoke queries of a precision and expressivity that REST's resource model cannot easily replicate.
+
+However, adopting GraphQL generates its own interoperability challenges, as a schema is inherently specific to its implementation (while a REST API's alignment with HTTP semantics is not).
+
+Schema federation (stitching multiple GraphQL services into a coherent whole) must then be used to maintain coherence across a distributed graph (which can easily fragment).
+
+### Model context protocol
+
+The widespread adoption of [Model Context Protocol (**MCP**)](https://modelcontextprotocol.io) has possibly been the most consequential recent development in open standards.
+
+MCP supports a standardised method for AI agents and large language models (**LLM**) to discover and connect to external data sources and tools.
+
+AI capabilities act as MCP clients and request data and functionality from MCP servers that describe their capabilities in machine-readable form.
+
+The UK government's guidance on AI-ready datasets cites MCP and agentic workflows as a modern approach to data interoperability.
+
+The significance of MCP is more than just technical. It represents a bid to prevent the fragmentation of the AI tooling landscape along proprietary lines - to establish a common language for human-AI-system interaction before the ecosystem divides into incompatible dialects.
+
+Whether it succeeds will depend less on the quality of the specification, than on the political economy of adoption.
+
+## Layers of the interoperability stack
+
+### Technical interoperability
+
+Technical interoperability concerns the transport protocols, the data formats, the message structures that enable systems to exchange bits successfully at the most basic level.
+
+- HTTPS with proper TLS configuration
+- JSON or XML with agreed schemas
+- OAuth 2.0 and OpenID Connect for authentication and authorisation*
+
+*This combination can create genuinely portable, pluggable application ecosystems. A good example from the healthcare sector is the [SMART on FHIR specification](https://docs.smarthealthit.org/).
+
+The principle of statelessness in RESTful design requires that every request contains all information necessary for its processing, with no further context required.
+
+Statelessness is both a technical constraint and an academic discipline. Systems communicating across organisational and temporal boundaries cannot assume shared state, shared memory, or shared understanding. Each request is its own complete proposition.
+
+### Semantic interoperability
+
+Achieving technical interoperability is, in a sense, easy. Two systems can exchange JSON messages if they are correctly formatted.
+
+Semantic interoperability requires agreement not just on format but on meaning, on what the data denotes, how it should be interpreted and what inferences may legitimately be drawn from it.
+
+The strongest interoperability workflows should aim to preserve not merely geometry or raw data but assemblies, material definitions, metadata tags and behavioural rules (the full semantic content of the artefact, not merely its surface representation).
+
+In the healthcare domain, the [Fast Healthcare Interoperability Resources standard **HL7 FHIR**](https://fhir.hl7.org/fhir/index.html) is being adopted widely because it is open-access, well-documented and built upon well-established technologies (including RESTful APIs, XML, and JSON). This makes it accessible to developers without being healthcare IT specialists.
+
+FHIR profiles and implementation guides add a further layer of semantic precision by marrying the base standard with established terminologies such as [SNOMED CT](https://standards.nhs.uk/published-standards/snomed-ct) (an international standard for clinical terminology) and [LOINC](https://loinc.org/) (the international standard for identifying health observations, measurements, and documents).
+
+### Organisational interoperability
+
+No standard survives contact with organisational reality without modification.
+
+Interoperability between systems is, in the end, interoperability between the organisations that build and maintain those systems. 
+
+The UK government's experience with cross-departmental data integration offers instructive examples: a DSIT team attempting to align privacy notices across multiple departments found that the process consumed more than a year before AI-based analysis of consultation data could even begin.
+
+This was not due to technical complexity but to the difficulty of cross-organisational coordination.
+
+>A standard without governance is a map without roads. An API without organisational alignment is a telephone with no one on the other end.
+
+## Interoperability best practice in 2026
+
+### Design for the interface, not the implementation
+
+An API is a **contract**), not an implementation detail. It should be designed as if the implementation behind it were entirely opaque and entirely replaceable, because eventually it will be.
+
+This principle’s ethical dimension is to commit to future maintainers, integrators, and systems that the interface will remain stable even as the internals evolve. Implementation involves complying with the points listed below.
+
+Version your APIs explicitly and maintain backwards compatibility within a major version. When breaking changes are unavoidable, provide transition periods that dependent systems can adapt without crisis.
+
+Document using OpenAPI 3.x specifications maintained in version control alongside the code. Documentation should be treated as a first-class deliverable rather than an afterthought generated post-hoc by automated tooling.
+
+Design error responses with the same rigour applied to success cases. [RFC 9457 (Problem Details for HTTP APIs)](https://www.rfc-editor.org/info/rfc9457/) provides a standard format that reduces the interpretive burden on consuming systems.
+
+Avoid exposing internal implementation details through the API surface. These include database primary keys, internal service names, or implementation-specific status codes that couple consumers to accidental rather than essential characteristics.
+
+### Embrace hypermedia
+
+When applying the **HATEOAS** (Hypermedia as the Engine of Application State) constraint within REST, API responses should include links to related resources and available actions.
+
+This helps clients to navigate the API dynamically rather than hard-coding URL structures.
+
+Implementation should be actioned where the complexity is warranted.
+
+### Security as a standard
+
+The [NCSC's Securing HTTP-based APIs](https://www.ncsc.gov.uk/collection/securing-http-based-apis) collection, updated in April 2025, provides detailed guidance on authentication, threat modelling, testing and API lifecycle security that should be mandatory reading for teams building public-facing services.
+
+- [OAuth 2.0](https://auth0.com/intro-to-iam/what-is-oauth-2) with Proof Key for Code Exchange(**PKCE**) for public clients
+- mutual TLS for service-to-service communication (where the sensitivity of the data warrants it)
+- rate limiting and abuse detection as standard rather than optional hardening
+
+The [PCI DSS v4.0.1](https://www.pcisecuritystandards.org/document_library/?category=pcidss) (January 2025) mandates encryption, access control, network segmentation for any system handling payment card data.
+
+### Event-driven architecture and asynchronous standards
+
+Modern distributed systems are event-driven to an extent that synchronous request-response patterns cannot adequately capture.
+
+The [AsyncAPI](https://www.asyncapi.com/en) specification language for event-driven interfaces supports Kafka, MQTT, WebSockets and other asynchronous transports. It recognises the limits of REST for systems where the producer of an event should not wait for its consumers to acknowledge receipt.
+
+- document your event schemas
+- version your message formats
+- Kafka topics are asynchronous APIs and should be given the same attention as a public REST API
+
+### UK government interoperability standard
+
+The UK government's [Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles) mandate the specification of open standards in IT requirements unless there is a clear reason which requires government APIs be made available.
+
+IT projects should be flexible and avoid vendor lock-in. Smaller, component-based projects achieve this by using open standards. Larger, higher-risk projects achieve this by using mature open standards with broad market support.
+
+The [TCoP]((https://www.gov.uk/guidance/the-technology-code-of-practice) embeds this as a requirement, not a recommendation. The practical implementation of this principle requires genuine enforcement.
+
+Procurement language, evaluation criteria and contract structures should test for interoperability rather than accepting partial implementations, proprietary extensions, or tightly coupled integrations that create hidden ‘lock-in'.
+
+Supplier due diligence must include architecture review - a claim of REST compliance that conceals non-compliant bespoke authentication schemes and non-standard pagination.
+
+### Infrastructure as code – reproducing the environment
+
+Interoperability should be easily reproduced where it is applied. A system that behaves differently across environments, development, staging, production, is not interoperable with itself, let alone with others.
+
+Infrastructure as code (**IaC**) defines and manages infrastructure through version-controlled configuration rather than manual provisioning. As a discipline, it makes consistent, auditable, reproducible environments possible.
+
+[UK Export Finance](https://www.ukexportfinance.gov.uk/) recently modernised its API management infrastructure using IaC principles, demonstrating the concrete benefits.
+
+- reduced operating costs
+- faster deployment times
+- improved governance through standardised request bodies and responses
+- enhanced security through automated configuration management
+
+## The political economy of interoperability - why good standards fail
+
+Most interoperability failures are not technical, but political, economic and organisational in origin.
+
+A technically impeccable standard requires vendors with the incentive to implement it fully.
+
+A government digital transformation programme that mandates open standards but lacks the technical capacity to assess compliance will produce documents rather than outcomes.
+
+The incentive structures of the technology industry are not, in their natural state, aligned with interoperability. Lock-in is profitable; compatibility is often not.
+
+96% of codebases now contain open-source components and 77% originate from open source (a genuine structural shift) but it does not automatically produce interoperability.
+
+Open-source components may implement proprietary protocols, yet open standards may be implemented incompletely or idiosyncratically.
+
+>Every act of genuine interoperability is a small political victory: a refusal to allow the private to subsume the commons.
+
+The engineer's role in this landscape is not merely technical. It is political in the most constructive sense, and includes
+
+- advocacy for architectures that resist enclosure
+- an insistence on documenting interfaces as public contracts
+- the willingness to invest in the unglamorous work of standards compliance
+- accruing dividends slowly and diffusely rather than immediately and visibly
+
+## Conclusion - the "interoperable utopia"
+
+The "interoperable utopia" could be described as the idea of a seamless, frictionless, vendor-neutral digital common space. Every system speaks fluently to every other, data moves naturally across organisational boundaries, citizens only provide their information once and it flows to wherever it is legitimately required.
+
+It may be an idea that hasn’t been fully realised, but it can still be useful.
+
+An engineer builds an API to the [OpenAPI specification](https://swagger.io), documents it with genuine care, versions it with contractual rigour, implements [OAuth 2.0](https://auth0.com/intro-to-iam/what-is-oauth-2) correctly rather than inventively, exposes events via [AsyncAPI](https://www.asyncapi.com/en) and registers tools for AI agents via [MCP](https://modelcontextprotocol.io).
+
+This engineer is moving the system, incrementally but materially, to realise it’s full potential.
+
+An engineer who does the opposite (hard-codes URLs, exposes database internals through the API surface, deploys without documentation, couples consumers to implementation details without any thought to the ongoing maintenance of the system) is moving in the other direction.
+
+The decision to adopt open standards is a decision about who owns the future of a system: a single vendor, or the community of its users.
+
+The decision to document interfaces publicly is a decision about transparency and accountability.
+
+The decision to build for interoperability is a decision about whether the work one is doing is genuinely in service of the people who will ultimately depend upon it.
+
+These are not small decisions. They compound over time and their consequences are felt not just by the engineers but by citizens, patients, civil servants, and future developers who will live with what we have already built.
+
+
+## Key standards and reference documents
+
+[OpenAPI Specification 3.x, foundation for RESTful API documentation and tooling](https://swagger.io)
+
+[AsyncAPI 3.0, specification language for event-driven and asynchronous interfaces](https://www.asyncapi.com/en)
+
+[Model Context Protocol (**MCP**), open standard for AI agent and LLM tool integration](https://modelcontextprotocol.io)
+
+[gRPC / Protocol Buffers, high-performance RPC for microservices inter-communication](https://grpc.io/)
+
+[RFC 9457 Problem Details for HTTP APIs](https://www.rfc-editor.org/info/rfc9457/)
+
+[OAuth 2.0 / OpenID Connect, authentication and authorisation for API security](https://auth0.com/intro-to-iam/what-is-oauth-2)
+
+[HL7 FHIR UK Core v4.0.0, semantic interoperability standard for health data exchange](https://fhir.hl7.org/fhir/index.html)
+
+[UK Government Open Standards principles (Cabinet Office), mandatory procurement policy](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles)
+
+[NCSC Securing HTTP-based APIs Collection (April 2025), security baseline for UK public sector](https://www.ncsc.gov.uk/collection/securing-http-based-apis)
+
+[GDS Technology Code of Practice, overarching framework for government digital services](https://www.gov.uk/guidance/the-technology-code-of-practice)
+
+[PCI DSS v4.0.1 (January 2025), security requirements for payment-handling APIs](https://www.pcisecuritystandards.org/document_library/?category=pcidss)
+
+[European Interoperability Framework (EIF)](https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework-detail)
+
+[Organization for the Advancement of Structured Information Standards (**OASIS**)](https://www.oasis-open.org/)
