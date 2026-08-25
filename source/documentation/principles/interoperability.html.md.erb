@@ -122,7 +122,7 @@ Semantic interoperability requires agreement not just on format but on meaning, 
 
 The strongest interoperability workflows should aim to preserve not merely geometry or raw data but assemblies, material definitions, metadata tags and behavioural rules (the full semantic content of the artefact, not merely its surface representation).
 
-In the healthcare domain, the [Fast Healthcare Interoperability Resources standard **HL7 FHIR**](https://fhir.hl7.org/fhir/index.html) is being adopted widely because it is open-access, well-documented and built upon well-established technologies (including RESTful APIs, XML, and JSON). This makes it accessible to developers without being healthcare IT specialists.
+In the healthcare domain, the Fast Healthcare Interoperability Resources standard [**HL7 FHIR**](https://fhir.hl7.org/fhir/index.html) is being adopted widely because it is open-access, well-documented and built upon well-established technologies (including RESTful APIs, XML, and JSON). This makes it accessible to developers without being healthcare IT specialists.
 
 FHIR profiles and implementation guides add a further layer of semantic precision by marrying the base standard with established terminologies such as [SNOMED CT](https://standards.nhs.uk/published-standards/snomed-ct) (an international standard for clinical terminology) and [LOINC](https://loinc.org/) (the international standard for identifying health observations, measurements, and documents).
 
@@ -130,7 +130,7 @@ FHIR profiles and implementation guides add a further layer of semantic precisio
 
 No standard survives contact with organisational reality without modification.
 
-Interoperability between systems is, in the end, interoperability between the organisations that build and maintain those systems. 
+Interoperability between systems is, in the end, interoperability between the organisations that build and maintain those systems.
 
 The UK government's experience with cross-departmental data integration offers instructive examples: a DSIT team attempting to align privacy notices across multiple departments found that the process consumed more than a year before AI-based analysis of consultation data could even begin.
 
@@ -142,7 +142,7 @@ This was not due to technical complexity but to the difficulty of cross-organisa
 
 ### Design for the interface, not the implementation
 
-An API is a **contract**), not an implementation detail. It should be designed as if the implementation behind it were entirely opaque and entirely replaceable, because eventually it will be.
+An API is a **contract**, not an implementation detail. It should be designed as if the implementation behind it were entirely opaque and entirely replaceable, because eventually it will be.
 
 This principle’s ethical dimension is to commit to future maintainers, integrators, and systems that the interface will remain stable even as the internals evolve. Implementation involves complying with the points listed below.
 
@@ -166,7 +166,7 @@ Implementation should be actioned where the complexity is warranted.
 
 The [NCSC's Securing HTTP-based APIs](https://www.ncsc.gov.uk/collection/securing-http-based-apis) collection, updated in April 2025, provides detailed guidance on authentication, threat modelling, testing and API lifecycle security that should be mandatory reading for teams building public-facing services.
 
-- [OAuth 2.0](https://auth0.com/intro-to-iam/what-is-oauth-2) with Proof Key for Code Exchange(**PKCE**) for public clients
+- [OAuth 2.0](https://auth0.com/intro-to-iam/what-is-oauth-2) with Proof Key for Code Exchange (**PKCE**) for public clients
 - mutual TLS for service-to-service communication (where the sensitivity of the data warrants it)
 - rate limiting and abuse detection as standard rather than optional hardening
 
@@ -188,7 +188,7 @@ The UK government's [Open Standards principles](https://www.gov.uk/government/pu
 
 IT projects should be flexible and avoid vendor lock-in. Smaller, component-based projects achieve this by using open standards. Larger, higher-risk projects achieve this by using mature open standards with broad market support.
 
-The [TCoP]((https://www.gov.uk/guidance/the-technology-code-of-practice) embeds this as a requirement, not a recommendation. The practical implementation of this principle requires genuine enforcement.
+The [TCoP](https://www.gov.uk/guidance/the-technology-code-of-practice) embeds this as a requirement, not a recommendation. The practical implementation of this principle requires genuine enforcement.
 
 Procurement language, evaluation criteria and contract structures should test for interoperability rather than accepting partial implementations, proprietary extensions, or tightly coupled integrations that create hidden ‘lock-in'.
 
