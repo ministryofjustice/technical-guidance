@@ -1,3 +1,4 @@
+---
 title: Versioning, ownership, updates
 last_reviewed_on: 2026-10-29
 review_in: 6 months
@@ -5,7 +6,7 @@ review_in: 6 months
 
 # <%= current_page.data.title %>
 
-# Versioning, ownership, updates
+## Introduction
 
 This document has been created as a guide to versioning, ownership and updates for software development teams within the Ministry of Justice (**MOJ**) and includes guidance and best practice.
 
@@ -25,8 +26,7 @@ Development at MOJ uses a semantic versioning system with a string in three part
 
 **major**.**minor**.**patch**
 
-Major updates introduce a significant change in software architecture, functionality or both.
-These new features often break backward compatibility, where previous code versions no longer function without the change being deployed.
+Major updates introduce a significant change in software architecture, functionality or both. These new features often break backward compatibility, where previous code versions no longer function without the change being deployed.
 
 **1.0.0	> 2.0.0**
 
@@ -47,9 +47,19 @@ Patches are minor changes which fix bugs, security vulnerabilities or other issu
 
 To create a point of reference for each version, you can add **tags**. Tags should include annotations with information to verify the change.
 
-GitHub documentation contains more details on [working with releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases), [viewing releases and tags in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags) and [signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags).
+GitHub documentation contains more details on
 
-Keep a full summary of each version’s changes in a **changelog**. GitHub doesn’t have a specific changelog format, although [release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) functions can capture version history and a [commit history](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-commit-history) is also available.
+- [working with releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+- [viewing releases and tags in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags)
+- [signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags)
+
+Keep a full summary of each version’s changes in a **changelog**.
+
+GitHub doesn’t have a specific changelog format but there are some fuctions which can help to support one.
+
+[Release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) functions can capture version history.
+
+A [commit history](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-commit-history) is also available.
 
 **Changelog best practice**
 
@@ -62,7 +72,12 @@ GitHub has a hierarchy of roles to help define repository access for users withi
 
 Full information on [managing repository roles](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization) is available in GitHub’s online documentation.
 
-An owner is an [individual user](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-an-individuals-access-to-an-organization-repository) (or [team](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-team-access-to-an-organization-repository)) responsible for managing the code in a repository.
+An owner is
+
+- an [individual user](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-an-individuals-access-to-an-organization-repository)
+- or [team](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-team-access-to-an-organization-repository))
+
+responsible for managing the code in a repository.
 
 **Ownership best practice**
 
@@ -91,4 +106,6 @@ To help manage code updates in GitHub, [Dependabot](https://docs.github.com/en/e
 
 **GitHub Actions best practice**
 
-When full Secure Hash Algorithm (**SHA**) commits are pinned to the version of each action, updates are defined according to the expected version. This secures against supply chain attacks by preventing malware from entering the system.
+When full Secure Hash Algorithm (**SHA**) commits are pinned to the version of each action, updates are defined according to the expected version.
+
+This secures against supply chain attacks by preventing malware from entering the system.
