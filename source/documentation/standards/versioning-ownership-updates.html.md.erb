@@ -1,0 +1,111 @@
+---
+title: Versioning, ownership, updates
+last_reviewed_on: 2026-10-29
+review_in: 6 months
+---
+
+# <%= current_page.data.title %>
+
+## Introduction
+
+This document has been created as a guide to versioning, ownership and updates for software development teams within the Ministry of Justice (**MOJ**) and includes guidance and best practice.
+
+Software development can best be described as a “journey” rather than a “destination”. The team needs to be able to update code to ensure it continues to function correctly.
+
+GitHub has resources to help you manage updates, and links are included in the document.
+
+## Versioning
+
+**Versioning** is a process used by software development teams to keep track of any changes made to software.
+
+The unique state of the software at a specific point in time is called a **version**.
+
+The **version** number is the unique identifier for each version. Version numbers record when specific changes were made, which helps when performing a rollback to a previous version if the software doesn’t function as it should.
+
+Development at MOJ uses a semantic versioning system with a string in three parts - major, minor and patch. When an update is completed the relevant part of the string is incremented by 1.
+
+**major**.**minor**.**patch**
+
+Major updates introduce a significant change in software architecture, functionality or both. These new features often break backward compatibility, where previous code versions no longer function without the change being deployed.
+
+**1.0.0	> 2.0.0**
+
+Minor updates add new features or improve existing features without breaking backward compatibility or changing the software architecture.
+
+**2.0.0 > 2.1.0**
+
+Patches are minor changes which fix bugs, security vulnerabilities or other issues. There are no changes to software features or functionality.
+
+**2.1.0 > 2.1.1**
+
+**Versioning best practice**
+
+- avoid unnecessary breaking changes in minor/patch releases
+- reserve major version deployments for breaking changes
+- deprecate versions gradually, and inform consumers when necessary
+- provide migration guides to help consumers understand changes (when necessary) and update their code
+
+To create a point of reference for each version, you can add **tags**. Tags should include annotations with information to verify the change.
+
+GitHub documentation contains more details on
+
+- [working with releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+- [viewing releases and tags in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags)
+- [signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags)
+
+Keep a full summary of each version’s changes in a **changelog**.
+
+GitHub doesn’t have a specific changelog format but there are some fuctions which can help to support one.
+
+[Release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) functions can capture version history.
+
+A [commit history](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-commit-history) is also available.
+
+**Changelog best practice**
+
+- maintain a CHANGELOG.md file in the repository
+- use GitHub releases to help populate the information for each version
+
+## Ownership
+
+GitHub has a hierarchy of roles to help define repository access for users within an organisation. If a user does not need to write code for a repository, for example, they can be granted read-only access.
+
+Full information on [managing repository roles](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization) is available in GitHub’s online documentation.
+
+An owner is
+
+- an [individual user](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-an-individuals-access-to-an-organization-repository)
+- or [team](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-team-access-to-an-organization-repository))
+
+responsible for managing the code in a repository.
+
+**Ownership best practice**
+
+- create and use a [CODEOWNERS.md](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) file in the repository
+- document ownership in further locations if it’s required (README.md file, architectural decision records)
+
+## Updates
+
+Managing software updates is a critical process in the development lifecycle. Dependencies and vulnerabilities can appear over time in code which has not been adapted to accommodate changes (operational or technical).
+
+**Update management best practice**
+
+- develop incrementally and continuously (updates deployed and integrated when ready)
+- avoid deploying multiple updates at once
+- confirm a priority level, as some updates (security fixes) will have greater importance
+
+To help manage code updates in GitHub, [Dependabot](https://docs.github.com/en/enterprise-cloud@latest/code-security/tutorials/secure-your-dependencies/dependabot-quickstart) checks for any conflict in dependencies and security vulnerabilities, generating automatic pull requests for any updates required by deploying the new version. The [MOJ developer portal](https://developer-portal.service.justice.gov.uk/) contains guidance on [using Dependabot in MOJ repositories](https://developer-portal.service.justice.gov.uk/guidelines/dependabot-guidelines).
+
+## GitHub Actions
+
+[GitHub Actions](https://docs.github.com/en/actions) documentation contains instructions on supporting versioning and updates, including
+
+- automated update management
+- scanning updates for vulnerabilities
+- using a CI/CD pipeline for testing and deploying updates
+
+**GitHub Actions best practice**
+
+When full Secure Hash Algorithm (**SHA**) commits are pinned to the version of each action, updates are defined according to the expected version.
+
+This secures against supply chain attacks by preventing malware from entering the system.
